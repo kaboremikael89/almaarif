@@ -1,0 +1,56 @@
+# Déploiement Netlify — Al Maarif Expertise
+# Site statique généré par Next.js (output: 'export') → dossier /out
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--legacy-peer-deps=false"
+
+# --- Racine : redirection vers la langue du visiteur -----------------
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+  conditions = { Language = ["en"] }
+
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = true
+
+# --- Anciennes URL / raccourcis pratiques ---------------------------
+[[redirects]]
+  from = "/formations/*"
+  to = "/fr/formations/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/fr/contact/"
+  status = 301
+
+# --- En-têtes de sécurité et de cache -------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://formspree.io https://api.web3forms.com; form-action 'self'; frame-src https://www.openstreetmap.org; frame-ancestors 'self'; base-uri 'self'"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
