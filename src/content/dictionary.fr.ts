@@ -11,6 +11,7 @@ export const fr = {
     about: 'À propos',
     contact: 'Contact',
     menu: 'Menu',
+    language: 'Choix de la langue',
     close: 'Fermer',
     cta: 'Demander une proposition',
   },

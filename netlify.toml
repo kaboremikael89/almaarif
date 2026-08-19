@@ -10,6 +10,19 @@
   NPM_FLAGS = "--legacy-peer-deps=false"
 
 # --- Racine : redirection vers la langue du visiteur -----------------
+# Les règles sont évaluées dans l'ordre, la première qui correspond gagne.
+# Le français passe en premier : la plupart des navigateurs francophones
+# acceptent aussi l'anglais, ils seraient sinon envoyés à tort vers /en/.
+
+# 1. Navigateur configuré en français → version française
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = true
+  conditions = { Language = ["fr"] }
+
+# 2. Navigateur anglophone (sans français) → version anglaise
 [[redirects]]
   from = "/"
   to = "/en/"
@@ -17,6 +30,7 @@
   force = true
   conditions = { Language = ["en"] }
 
+# 3. Toute autre langue → français (langue principale du cabinet)
 [[redirects]]
   from = "/"
   to = "/fr/"

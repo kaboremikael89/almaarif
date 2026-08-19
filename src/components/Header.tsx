@@ -22,9 +22,9 @@ export default function Header({ lang, dict }: HeaderProps) {
     { href: href(lang, '/contact'), label: dict.nav.contact },
   ]
 
-  const other = locales.find((l) => l !== lang) as Locale
   // Conserve la page courante lors du changement de langue
-  const otherHref = pathname.replace(new RegExp(`^/${lang}`), `/${other}`) || `/${other}`
+  const localeHref = (target: Locale) =>
+    pathname.replace(new RegExp(`^/(${locales.join('|')})`), `/${target}`) || `/${target}`
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -82,15 +82,7 @@ export default function Header({ lang, dict }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link
-            href={otherHref}
-            hrefLang={other}
-            className={`hidden text-[0.6875rem] font-semibold uppercase tracking-[0.2em] transition-colors sm:block ${
-              onDark ? 'text-ivory-100/80 hover:text-gold-400' : 'text-navy-700 hover:text-gold-600'
-            }`}
-          >
-            {dict.meta.switchLabel}
-          </Link>
+          <LanguageSwitch lang={lang} localeHref={localeHref} onDark={onDark} label={dict.nav.language} />
           <span
             className={`hidden h-4 w-px sm:block ${onDark ? 'bg-ivory-100/25' : 'bg-navy-900/15'}`}
           />
@@ -150,20 +142,57 @@ export default function Header({ lang, dict }: HeaderProps) {
               {link.label}
             </Link>
           ))}
-          <div className="mt-8 flex flex-col gap-5">
+          <div className="mt-8">
             <Link href={href(lang, '/contact')} className="btn btn-primary w-full">
               {dict.common.requestQuote}
-            </Link>
-            <Link
-              href={otherHref}
-              hrefLang={other}
-              className="self-start text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-navy-700"
-            >
-              {dict.meta.switchLabel}
             </Link>
           </div>
         </nav>
       </div>
     </header>
+  )
+}
+
+type LanguageSwitchProps = {
+  lang: Locale
+  localeHref: (target: Locale) => string
+  onDark: boolean
+  label: string
+}
+
+/** Sélecteur de langue explicite « FR | EN » — la langue active est mise en avant. */
+function LanguageSwitch({ lang, localeHref, onDark, label }: LanguageSwitchProps) {
+  return (
+    <div
+      aria-label={label}
+      className={`flex items-center gap-1 border px-1 py-1 ${
+        onDark ? 'border-ivory-100/20' : 'border-navy-900/15'
+      }`}
+    >
+      {locales.map((locale) =>
+        locale === lang ? (
+          <span
+            key={locale}
+            aria-current="true"
+            className={`px-2 py-0.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] ${
+              onDark ? 'bg-gold-500 text-navy-950' : 'bg-navy-900 text-ivory-50'
+            }`}
+          >
+            {locale}
+          </span>
+        ) : (
+          <Link
+            key={locale}
+            href={localeHref(locale)}
+            hrefLang={locale}
+            className={`px-2 py-0.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] transition-colors ${
+              onDark ? 'text-ivory-100/70 hover:text-gold-400' : 'text-navy-700 hover:text-gold-600'
+            }`}
+          >
+            {locale}
+          </Link>
+        ),
+      )}
+    </div>
   )
 }

@@ -13,6 +13,7 @@ export const en: Dictionary = {
     about: 'About',
     contact: 'Contact',
     menu: 'Menu',
+    language: 'Language selection',
     close: 'Close',
     cta: 'Request a proposal',
   },
