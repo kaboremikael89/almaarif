@@ -15,7 +15,7 @@ export default function Logo({ lang, light = false, className = '' }: LogoProps)
     <Link
       href={href(lang, '/')}
       className={`group inline-flex items-center gap-3 ${className}`}
-      aria-label={`${site.name} — ${site.baseline[lang]}`}
+      aria-label={`${site.name}, ${site.baseline[lang]}`}
     >
       <Rosette
         className={`h-9 w-9 shrink-0 transition-transform duration-700 group-hover:rotate-45 ${

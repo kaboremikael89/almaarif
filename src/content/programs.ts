@@ -14,7 +14,7 @@ export type Program = {
   objectives: I18nList
   modules: I18nList
   featured?: boolean
-  /** Sessions programmées — à compléter dès la publication du calendrier. */
+  /** Sessions programmées, à compléter dès la publication du calendrier. */
   sessions?: string[]
 }
 
@@ -722,8 +722,8 @@ export const programs: Program[] = [
       en: 'Data and artificial intelligence for executives',
     },
     summary: {
-      fr: "Trois jours pour comprendre ce que l'IA change concrètement dans le pilotage d'une organisation — et décider où l'utiliser, où s'en abstenir.",
-      en: 'Three days to understand what AI actually changes in running an organisation — and to decide where to use it and where not to.',
+      fr: "Trois jours pour comprendre ce que l'IA change concrètement dans le pilotage d'une organisation, et décider où l'utiliser et où s'en abstenir.",
+      en: 'Three days to understand what AI actually changes in running an organisation, and to decide where to use it and where not to.',
     },
     audience: {
       fr: [

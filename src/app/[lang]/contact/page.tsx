@@ -32,7 +32,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
     {
       icon: Pin,
       label: dict.contact.addressLabel,
-      value: `${site.address.street}, ${site.address.city} — ${site.address.country[lang]}`,
+      value: `${site.address.street}, ${site.address.city}, ${site.address.country[lang]}`,
       href: 'https://www.google.com/maps/search/?api=1&query=12+Rue+Saria+Ben+Zounaim+Palmier+Casablanca',
     },
     { icon: Phone, label: dict.contact.phoneLabel, value: site.contact.phone, href: `tel:${site.contact.phoneHref}` },
@@ -116,7 +116,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
       <section aria-label={dict.contact.addressLabel} className="border-t border-navy-900/10">
         <iframe
-          title={`${site.name} — ${site.address.city}`}
+          title={`${site.name}, ${site.address.city}`}
           src="https://www.openstreetmap.org/export/embed.html?bbox=-7.6425%2C33.5735%2C-7.6125%2C33.5935&layer=mapnik&marker=33.5835%2C-7.6275"
           className="h-[26rem] w-full border-0 grayscale-[0.35]"
           loading="lazy"

@@ -1,10 +1,10 @@
-# Al Maârif Expertise — site institutionnel
+# Al Maârif Expertise, site institutionnel
 
 Site vitrine bilingue (français / anglais) d'**AL MAARIF EXPERTISE**, cabinet de conseil de gestion
 et de formation professionnelle établi à Casablanca, spécialisé dans l'organisation au Maroc de
 formations pour les institutions et entreprises africaines.
 
-**Formation · Conseil · Performance — L'expertise au service des dirigeants et des institutions**
+**Formation · Conseil · Performance. L'expertise au service des dirigeants et des institutions.**
 
 ---
 
@@ -46,7 +46,7 @@ npm run typecheck    # vérification TypeScript
 
    | Variable | Rôle |
    | --- | --- |
-   | `NEXT_PUBLIC_SITE_URL` | URL canonique définitive (ex. `https://www.almaarif-expertise.com`) — sert aux métadonnées, au sitemap et aux balises `hreflang` |
+   | `NEXT_PUBLIC_SITE_URL` | URL canonique définitive (ex. `https://www.almaarif-expertise.com`), sert aux métadonnées, au sitemap et aux balises `hreflang` |
    | `NEXT_PUBLIC_FORM_ENDPOINT` | URL du service qui reçoit le formulaire de contact (Formspree, Web3Forms, Basin…). **Si la variable est vide, le formulaire bascule automatiquement sur un envoi par e-mail (mailto).** |
 
 4. Brancher le nom de domaine dans **Domain management** ; le certificat HTTPS est automatique.
@@ -61,7 +61,7 @@ Le fichier `netlify.toml` gère aussi :
 
 ## 4. Modifier le contenu
 
-Tout le contenu éditorial est centralisé dans `src/content/` — **aucun code à toucher** :
+Tout le contenu éditorial est centralisé dans `src/content/`, **aucun code à toucher** :
 
 | Fichier | Contenu |
 | --- | --- |
@@ -76,7 +76,7 @@ Tout le contenu éditorial est centralisé dans `src/content/` — **aucun code 
 sont générés automatiquement.
 
 **Publier un calendrier de sessions** : renseigner le champ optionnel `sessions` d'un programme,
-par exemple `sessions: ['16–20 mars 2027, Casablanca', '8–12 juin 2027, Rabat']`.
+par exemple `sessions: ['16 au 20 mars 2027, Casablanca', '8 au 12 juin 2027, Rabat']`.
 
 ## 5. Référencement et accessibilité
 
@@ -92,7 +92,7 @@ Les points suivants proviennent des documents fournis (certificat négatif OMPIC
 contrat de domiciliation) ; les champs manquants sont signalés par un `TODO` dans `src/content/site.ts` :
 
 - [ ] **Numéro de registre de commerce** (une fois l'immatriculation faite) → `site.legal.rc`
-- [ ] **Téléphone et e-mails définitifs** de la société — les valeurs actuelles reprennent la ligne
+- [ ] **Téléphone et e-mails définitifs** de la société : les valeurs actuelles reprennent la ligne
       du centre de domiciliation et des adresses à créer sur le domaine
 - [ ] **Profils LinkedIn / Facebook** → `site.social`
 - [ ] **Photo du gérant et visuels de sessions** (la page « À propos » utilise pour l'instant un motif

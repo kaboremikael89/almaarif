@@ -36,7 +36,7 @@ export const fr = {
     languages: 'Langues',
     languagesValue: 'Français · Anglais',
     location: 'Lieu',
-    locationValue: 'Casablanca, Rabat, Marrakech — ou dans vos locaux',
+    locationValue: 'Casablanca, Rabat, Marrakech ou dans vos locaux',
     price: 'Tarif',
     priceValue: 'Sur devis, selon le format et l’effectif',
     sessionsLabel: 'Sessions',
@@ -49,7 +49,7 @@ export const fr = {
   },
   home: {
     hero: {
-      eyebrow: 'Cabinet de formation & de conseil — Casablanca, Maroc',
+      eyebrow: 'Cabinet de formation et de conseil à Casablanca, Maroc',
       title: 'L’expertise au service des dirigeants et des institutions',
       lead: "Al Maarif Expertise conçoit et organise au Maroc des programmes de formation et des missions de conseil pour les administrations, les entreprises publiques et les organisations privées d’Afrique.",
       ctaPrimary: 'Consulter le catalogue',
@@ -59,7 +59,7 @@ export const fr = {
     stats: [
       { value: '06', label: 'domaines d’expertise' },
       { value: '12', label: 'programmes au catalogue' },
-      { value: '3–10', label: 'jours par session' },
+      { value: '3 à 10', label: 'jours par session' },
       { value: 'FR / EN', label: 'langues de travail' },
     ],
     intro: {
@@ -230,7 +230,7 @@ export const fr = {
     hero: {
       eyebrow: 'À propos',
       title: 'Al Maarif Expertise',
-      lead: "Al Maarif — « le savoir », « les connaissances ». Un nom qui dit l’essentiel de notre métier : transmettre ce qui permet de mieux décider et de mieux gérer.",
+      lead: "Al Maarif signifie « le savoir », « les connaissances ». Un nom qui dit l’essentiel de notre métier : transmettre ce qui permet de mieux décider et de mieux gérer.",
     },
     mission: {
       eyebrow: 'Notre mission',
@@ -255,7 +255,7 @@ export const fr = {
       title: 'Une direction engagée sur le terrain',
       name: 'Ousseni Soulama',
       role: 'Gérant',
-      body: "Al Maarif Expertise est dirigé par M. Ousseni Soulama, qui porte la relation avec les institutions clientes, le cadrage des besoins et la sélection des intervenants. Le cabinet s’appuie sur un réseau d’experts associés — praticiens des finances publiques, de l’audit, de la commande publique, de la gestion de projets et du numérique — mobilisés selon la nature de chaque mission.",
+      body: "Al Maarif Expertise est dirigé par M. Ousseni Soulama, qui porte la relation avec les institutions clientes, le cadrage des besoins et la sélection des intervenants. Le cabinet s’appuie sur un réseau d’experts associés (praticiens des finances publiques, de l’audit, de la commande publique, de la gestion de projets et du numérique), mobilisés selon la nature de chaque mission.",
     },
     network: {
       eyebrow: 'Nos intervenants',
@@ -295,7 +295,7 @@ export const fr = {
     phoneLabel: 'Téléphone',
     emailLabel: 'E-mail',
     hoursLabel: 'Horaires',
-    hoursValue: 'Du lundi au vendredi, 9h – 18h (GMT+1)',
+    hoursValue: 'Du lundi au vendredi, de 9h à 18h (GMT+1)',
     whatsapp: 'Écrire sur WhatsApp',
     whatsappMessage: 'Bonjour, je souhaite des informations sur vos formations.',
     form: {
@@ -345,7 +345,7 @@ export const fr = {
       sections: [
         {
           title: 'Éditeur du site',
-          body: "Le présent site est édité par AL MAARIF EXPERTISE, société de conseil de gestion et de formation, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca — Maroc. Identifiant commun de l’entreprise (ICE) : 004026098000053. Certificat négatif OMPIC n° 3281360. Représentant légal et directeur de la publication : M. Ousseni Soulama, gérant.",
+          body: "Le présent site est édité par AL MAARIF EXPERTISE, société de conseil de gestion et de formation, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Identifiant commun de l’entreprise (ICE) : 004026098000053. Certificat négatif OMPIC n° 3281360. Représentant légal et directeur de la publication : M. Ousseni Soulama, gérant.",
         },
         {
           title: 'Contact',
@@ -357,7 +357,7 @@ export const fr = {
         },
         {
           title: 'Propriété intellectuelle',
-          body: "L’ensemble des contenus présents sur ce site — textes, programmes de formation, identité visuelle, logo, supports pédagogiques — est la propriété exclusive d’Al Maarif Expertise ou de ses partenaires. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.",
+          body: "L’ensemble des contenus présents sur ce site (textes, programmes de formation, identité visuelle, logo, supports pédagogiques) est la propriété exclusive d’Al Maarif Expertise ou de ses partenaires. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.",
         },
         {
           title: 'Responsabilité',
@@ -375,7 +375,7 @@ export const fr = {
       sections: [
         {
           title: 'Responsable du traitement',
-          body: "Al Maarif Expertise, sise 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca — Maroc, est responsable des traitements de données réalisés depuis ce site.",
+          body: "Al Maarif Expertise, sise 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc, est responsable des traitements de données réalisés depuis ce site.",
         },
         {
           title: 'Données collectées',

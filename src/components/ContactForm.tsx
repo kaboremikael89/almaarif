@@ -19,7 +19,7 @@ export default function ContactForm({ lang, dict }: { lang: Locale; dict: Dictio
     const slug = new URLSearchParams(window.location.search).get('p')
     if (!slug) return
     const found = programs.find((p) => p.slug === slug)
-    if (found) setProgram(`${found.reference} — ${found.title[lang]}`)
+    if (found) setProgram(`${found.reference}${lang === 'fr' ? ' : ' : ': '}${found.title[lang]}`)
   }, [lang])
 
   const buildMailto = (data: Record<string, string>) => {

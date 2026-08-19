@@ -42,7 +42,7 @@ export async function generateMetadata({
   if (!isLocale(lang)) return {}
   const dict = getDictionary(lang)
 
-  const title = `${site.name} — ${site.tagline[lang]}`
+  const title = `${site.name}, ${site.tagline[lang]}`
   const description = dict.home.hero.lead
 
   return {

@@ -24,7 +24,7 @@ export function Rosette({ className = '', strokeWidth = 1.4 }: OrnamentProps) {
   )
 }
 
-/** Séparateur : filet or – rosette – filet or */
+/** Séparateur : filet or, rosette, filet or */
 export function Divider({ className = '' }: { className?: string }) {
   return (
     <div className={`flex items-center gap-4 text-gold-500 ${className}`} aria-hidden="true">

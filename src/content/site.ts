@@ -23,7 +23,7 @@ export const site = {
   formEndpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT || '',
 
   address: {
-    street: '12, rue Saria Ben Zounaim, étage 3, appt 3 — Palmier',
+    street: '12, rue Saria Ben Zounaim, étage 3, appt 3, Palmier',
     city: 'Casablanca',
     postalCode: '20340',
     country: { fr: 'Maroc', en: 'Morocco' } satisfies I18nText,
@@ -44,8 +44,8 @@ export const site = {
     rc: '', // TODO : n° de registre de commerce (tribunal de commerce de Casablanca)
     ompicCertificate: '3281360',
     activity: {
-      fr: 'Conseil de gestion — formation professionnelle continue',
-      en: 'Management consulting — professional training',
+      fr: 'Conseil de gestion et formation professionnelle continue',
+      en: 'Management consulting and professional training',
     } satisfies I18nText,
     manager: 'Ousseni Soulama',
     managerRole: { fr: 'Gérant', en: 'Managing Director' } satisfies I18nText,

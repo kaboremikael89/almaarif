@@ -20,7 +20,7 @@ export async function generateMetadata({
   const { lang } = await params
   const dict = getDictionary(lang)
   return {
-    title: `${site.name} — ${site.baseline[lang]}`,
+    title: `${site.name}${lang === 'fr' ? ' : ' : ': '}${site.baseline[lang]}`,
     description: dict.home.hero.lead,
   }
 }
@@ -127,7 +127,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <figcaption className="space-y-2 text-sm text-muted">
                 <p className="eyebrow text-navy-600">{site.tagline[lang]}</p>
                 <p>
-                  {site.address.city} — {site.address.country[lang]}
+                  {site.address.city}, {site.address.country[lang]}
                 </p>
               </figcaption>
             </figure>

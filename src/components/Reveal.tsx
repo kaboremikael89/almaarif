@@ -10,7 +10,7 @@ type RevealProps = {
   className?: string
 }
 
-/** Révèle son contenu au défilement — sans dépendance externe. */
+/** Révèle son contenu au défilement, sans dépendance externe. */
 export default function Reveal({ children, delay = 0, as: Tag = 'div', className = '' }: RevealProps) {
   const ref = useRef<HTMLElement>(null)
 

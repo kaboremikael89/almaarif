@@ -38,7 +38,7 @@ export const en: Dictionary = {
     languages: 'Languages',
     languagesValue: 'French · English',
     location: 'Location',
-    locationValue: 'Casablanca, Rabat, Marrakech — or on your premises',
+    locationValue: 'Casablanca, Rabat, Marrakech or on your premises',
     price: 'Fee',
     priceValue: 'On request, depending on format and group size',
     sessionsLabel: 'Sessions',
@@ -51,7 +51,7 @@ export const en: Dictionary = {
   },
   home: {
     hero: {
-      eyebrow: 'Training & advisory firm — Casablanca, Morocco',
+      eyebrow: 'Training and advisory firm in Casablanca, Morocco',
       title: 'Expertise at the service of leaders and institutions',
       lead: 'Al Maarif Expertise designs and runs training programmes and advisory assignments in Morocco for African administrations, state-owned enterprises and private organisations.',
       ctaPrimary: 'Browse the catalogue',
@@ -61,7 +61,7 @@ export const en: Dictionary = {
     stats: [
       { value: '06', label: 'fields of expertise' },
       { value: '12', label: 'programmes in the catalogue' },
-      { value: '3–10', label: 'days per session' },
+      { value: '3 to 10', label: 'days per session' },
       { value: 'FR / EN', label: 'working languages' },
     ],
     intro: {
@@ -232,7 +232,7 @@ export const en: Dictionary = {
     hero: {
       eyebrow: 'About',
       title: 'Al Maarif Expertise',
-      lead: 'Al Maarif — “knowledge”. A name that says the essential of our profession: passing on what allows better decisions and better management.',
+      lead: 'Al Maarif means “knowledge”. A name that says the essential of our profession: passing on what allows better decisions and better management.',
     },
     mission: {
       eyebrow: 'Our mission',
@@ -257,7 +257,7 @@ export const en: Dictionary = {
       title: 'Leadership present in the field',
       name: 'Ousseni Soulama',
       role: 'Managing Director',
-      body: 'Al Maarif Expertise is led by Mr Ousseni Soulama, who handles relationships with client institutions, the framing of needs and the selection of trainers. The firm draws on a network of associate experts — practitioners in public finance, audit, procurement, project management and digital — mobilised according to the nature of each assignment.',
+      body: 'Al Maarif Expertise is led by Mr Ousseni Soulama, who handles relationships with client institutions, the framing of needs and the selection of trainers. The firm draws on a network of associate experts (practitioners in public finance, audit, procurement, project management and digital), mobilised according to the nature of each assignment.',
     },
     network: {
       eyebrow: 'Our trainers',
@@ -297,7 +297,7 @@ export const en: Dictionary = {
     phoneLabel: 'Phone',
     emailLabel: 'Email',
     hoursLabel: 'Opening hours',
-    hoursValue: 'Monday to Friday, 9am – 6pm (GMT+1)',
+    hoursValue: 'Monday to Friday, from 9am to 6pm (GMT+1)',
     whatsapp: 'Message us on WhatsApp',
     whatsappMessage: 'Hello, I would like information about your training programmes.',
     form: {
@@ -347,7 +347,7 @@ export const en: Dictionary = {
       sections: [
         {
           title: 'Site publisher',
-          body: 'This website is published by AL MAARIF EXPERTISE, a management consulting and training company whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca — Morocco. Common enterprise identifier (ICE): 004026098000053. OMPIC negative certificate no. 3281360. Legal representative and publication director: Mr Ousseni Soulama, Managing Director.',
+          body: 'This website is published by AL MAARIF EXPERTISE, a management consulting and training company whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. Common enterprise identifier (ICE): 004026098000053. OMPIC negative certificate no. 3281360. Legal representative and publication director: Mr Ousseni Soulama, Managing Director.',
         },
         {
           title: 'Contact',
@@ -359,7 +359,7 @@ export const en: Dictionary = {
         },
         {
           title: 'Intellectual property',
-          body: 'All content on this website — texts, training programmes, visual identity, logo, teaching materials — is the exclusive property of Al Maarif Expertise or its partners. Any reproduction, representation or distribution, in whole or in part, without prior written authorisation is prohibited.',
+          body: 'All content on this website (texts, training programmes, visual identity, logo, teaching materials) is the exclusive property of Al Maarif Expertise or its partners. Any reproduction, representation or distribution, in whole or in part, without prior written authorisation is prohibited.',
         },
         {
           title: 'Liability',
@@ -377,7 +377,7 @@ export const en: Dictionary = {
       sections: [
         {
           title: 'Data controller',
-          body: 'Al Maarif Expertise, 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca — Morocco, is the controller of the data processed from this website.',
+          body: 'Al Maarif Expertise, 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco, is the controller of the data processed from this website.',
         },
         {
           title: 'Data collected',

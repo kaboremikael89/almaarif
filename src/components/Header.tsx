@@ -160,7 +160,7 @@ type LanguageSwitchProps = {
   label: string
 }
 
-/** Sélecteur de langue explicite « FR | EN » — la langue active est mise en avant. */
+/** Sélecteur de langue explicite « FR | EN » : la langue active est mise en avant. */
 function LanguageSwitch({ lang, localeHref, onDark, label }: LanguageSwitchProps) {
   return (
     <div

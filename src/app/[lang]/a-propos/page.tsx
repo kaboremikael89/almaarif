@@ -38,7 +38,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     { label: about.identity.rows.manager, value: site.legal.manager },
     {
       label: about.identity.rows.headquarters,
-      value: `${site.address.street}, ${site.address.city} — ${site.address.country[lang]}`,
+      value: `${site.address.street}, ${site.address.city}, ${site.address.country[lang]}`,
     },
     { label: about.identity.rows.court, value: site.legal.court[lang] },
   ]
