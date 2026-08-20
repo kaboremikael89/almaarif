@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
 import ProgramCard from '@/components/ProgramCard'
+import SplitImage from '@/components/SplitImage'
 import { Rosette, Divider } from '@/components/Ornament'
 import { ArrowRight } from '@/components/Icons'
 import { getDictionary } from '@/content/dictionary'
@@ -132,6 +133,16 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               </figcaption>
             </figure>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------- BANDE PHOTO */}
+      <section className="bg-navy-950 pb-0 pt-0">
+        <div className="container-page py-2 lg:py-3">
+          <SplitImage
+            src="/images/salle-de-formation.jpg"
+            alt={home.hero.title}
+          />
         </div>
       </section>
 

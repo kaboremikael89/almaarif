@@ -41,6 +41,14 @@ grep -rn "—\|–" src public README.md netlify.toml   # doit ne rien renvoyer
   `src/content/dictionary.en.ts` est typé d'après `dictionary.fr.ts` : un oubli
   de traduction casse le build, c'est voulu.
 
+## Images
+
+- Les photos vivent dans `public/images/`, jamais en base64 dans le code.
+- Remplacer une photo se fait en écrasant le fichier, sans toucher au code.
+- Compresser avant commit : largeur maximale 1920 px, moins de 300 ko par image.
+- Ne jamais présenter un visuel d'attente comme une photographie réelle du
+  cabinet dans une légende ou un texte alternatif.
+
 ## Technique
 
 - Site statique : `output: 'export'`, aucune fonction serveur. Toute

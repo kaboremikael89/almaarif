@@ -78,7 +78,29 @@ sont générés automatiquement.
 **Publier un calendrier de sessions** : renseigner le champ optionnel `sessions` d'un programme,
 par exemple `sessions: ['16 au 20 mars 2027, Casablanca', '8 au 12 juin 2027, Rabat']`.
 
-## 5. Référencement et accessibilité
+## 5. Photos
+
+Les images vivent dans `public/images/`. Pour remplacer une photo, écrasez le
+fichier en gardant le même nom : aucun code n'est à modifier.
+
+| Fichier | Emplacement | Format conseillé |
+| --- | --- | --- |
+| `salle-de-formation.jpg` | Bande triptyque de l'accueil | 1800 x 1100 px, JPEG, moins de 300 ko |
+
+Le composant `SplitImage` découpe une seule photo en trois rectangles séparés
+par un filet, qui recomposent l'image d'origine. Chaque panneau apparaît avec un
+léger décalage au défilement. Sur mobile, la photo reste entière : trois bandes
+verticales seraient illisibles.
+
+```tsx
+<SplitImage src="/images/salle-de-formation.jpg" alt="Salle de séminaire" />
+```
+
+Compressez les photos avant de les committer (objectif : moins de 300 ko par
+image, largeur maximale 1920 px). Le fichier livré aujourd'hui est un visuel
+d'attente aux dimensions définitives, à remplacer par une photographie réelle.
+
+## 6. Référencement et accessibilité
 
 - Métadonnées et Open Graph par page, image de partage `public/og-image.png`
 - Balises `hreflang` fr / en / x-default sur chaque page
@@ -86,7 +108,7 @@ par exemple `sessions: ['16 au 20 mars 2027, Casablanca', '8 au 12 juin 2027, Ra
 - Données structurées Schema.org : `Organization` / `EducationalOrganization`, `Course`, `ItemList`
 - Navigation clavier, lien d'évitement, contrastes conformes, `prefers-reduced-motion` respecté
 
-## 6. Informations à compléter
+## 7. Informations à compléter
 
 Les points suivants proviennent des documents fournis (certificat négatif OMPIC n° 3281360 et
 contrat de domiciliation) ; les champs manquants sont signalés par un `TODO` dans `src/content/site.ts` :
@@ -102,7 +124,7 @@ contrat de domiciliation) ; les champs manquants sont signalés par un `TODO` da
       pour le remplacer à l'identique.
 - [ ] **Calendrier des sessions 2027** et grille tarifaire, si vous souhaitez les afficher
 
-## 7. Structure du projet
+## 8. Structure du projet
 
 ```
 src/
