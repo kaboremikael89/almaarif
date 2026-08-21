@@ -3,6 +3,12 @@ export const fr = {
     locale: 'fr',
     switchLabel: 'English',
   },
+  topbar: {
+    locations: 'Casablanca · Rabat · Marrakech',
+    services: 'Formation · Conseil · Performance',
+    note: 'Sessions inter-entreprises et intra',
+    cta: 'Demander une proposition',
+  },
   nav: {
     home: 'Accueil',
     expertise: 'Expertise',
@@ -52,6 +58,7 @@ export const fr = {
       eyebrow: 'Cabinet de formation et de conseil à Casablanca, Maroc',
       title: 'L’expertise au service des dirigeants et des institutions',
       lead: "Al Maarif Expertise conçoit et organise au Maroc des programmes de formation et des missions de conseil pour les administrations, les entreprises publiques et les organisations privées d’Afrique.",
+      aside: "Chaque programme part de vos textes, de vos procédures et de vos dossiers réels. Il se termine par un plan d’action que vos cadres appliquent dès leur retour.",
       ctaPrimary: 'Consulter le catalogue',
       ctaSecondary: 'Parler de votre projet',
       scroll: 'Découvrir',
@@ -74,7 +81,40 @@ export const fr = {
     domains: {
       eyebrow: 'Nos domaines',
       title: 'Six domaines d’intervention',
+      titleTop: 'Six domaines',
+      titleAccent: 'd’intervention',
       lead: "Des thématiques choisies pour répondre aux priorités de modernisation des administrations et des entreprises du continent.",
+    },
+    audiences: {
+      eyebrow: 'À qui nous nous adressons',
+      titleTop: 'Deux publics,',
+      titleAccent: 'une même exigence',
+      items: [
+        {
+          index: '01 / Public',
+          tag: 'Institutions',
+          title: 'Administrations et établissements publics',
+          body: "Ministères, directions centrales, collectivités et opérateurs publics engagés dans une réforme budgétaire, une modernisation de la commande publique ou un renforcement du contrôle interne.",
+          bullets: [
+            'Ministères et directions centrales',
+            'Collectivités territoriales',
+            'Établissements et entreprises publics',
+            'Institutions régionales et bailleurs',
+          ],
+        },
+        {
+          index: '02 / Privé',
+          tag: 'Entreprises',
+          title: 'Entreprises et organisations privées',
+          body: "Groupes, banques, sociétés de services et organisations de la société civile qui veulent professionnaliser leur gestion, sécuriser leurs achats et faire monter leurs équipes en compétence.",
+          bullets: [
+            'Banques, assurances et télécoms',
+            'Groupes industriels et miniers',
+            'ONG, fondations et projets financés',
+            'Cabinets et bureaux d’études',
+          ],
+        },
+      ],
     },
     featured: {
       eyebrow: 'Programmes phares',
@@ -134,11 +174,11 @@ export const fr = {
       eyebrow: 'Comment ça se passe',
       title: 'De votre demande au retour d’expérience',
       steps: [
-        { title: 'Cadrage du besoin', body: 'Un échange avec vos équipes pour clarifier les objectifs, le public et le niveau de départ.' },
-        { title: 'Proposition détaillée', body: 'Programme, intervenants, calendrier, logistique et budget, sous 72 heures ouvrées.' },
-        { title: 'Préparation & logistique', body: 'Invitations officielles, appui visa, hôtel, transferts, supports et matériel pédagogique.' },
-        { title: 'Session de formation', body: 'Alternance d’apports, d’ateliers et de cas réels, avec évaluation continue des acquis.' },
-        { title: 'Suivi & capitalisation', body: 'Attestation, rapport de session, plan d’action individuel et point de suivi à distance.' },
+        { tag: 'Cadrage', title: 'Cadrage du besoin', body: 'Un échange avec vos équipes pour clarifier les objectifs, le public et le niveau de départ.' },
+        { tag: 'Proposition', title: 'Proposition détaillée', body: 'Programme, intervenants, calendrier, logistique et budget, sous 72 heures ouvrées.' },
+        { tag: 'Logistique', title: 'Préparation & logistique', body: 'Invitations officielles, appui visa, hôtel, transferts, supports et matériel pédagogique.' },
+        { tag: 'Session', title: 'Session de formation', body: 'Alternance d’apports, d’ateliers et de cas réels, avec évaluation continue des acquis.' },
+        { tag: 'Suivi', title: 'Suivi & capitalisation', body: 'Attestation, rapport de session, plan d’action individuel et point de suivi à distance.' },
       ],
     },
     cta: {

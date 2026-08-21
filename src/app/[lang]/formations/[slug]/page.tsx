@@ -123,13 +123,13 @@ export default async function ProgramPage({
           <div className="space-y-16">
             <div>
               <Reveal>
-                <h2 className="eyebrow eyebrow-line text-gold-600">{dict.common.objectives}</h2>
+                <h2 className="label label-square text-gold-600">{dict.common.objectives}</h2>
               </Reveal>
               <ul className="mt-8 space-y-5">
                 {program.objectives[lang].map((objective, i) => (
                   <Reveal key={objective} delay={i * 70} as="li">
                     <div className="flex gap-5">
-                      <span className="mt-1 font-display text-lg text-gold-500">
+                      <span className="mt-1 text-lg font-light text-gold-500">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <p className="text-lg leading-relaxed text-navy-800">{objective}</p>
@@ -143,13 +143,13 @@ export default async function ProgramPage({
 
             <div>
               <Reveal>
-                <h2 className="eyebrow eyebrow-line text-gold-600">{dict.common.modules}</h2>
+                <h2 className="label label-square text-gold-600">{dict.common.modules}</h2>
               </Reveal>
               <ol className="mt-8 grid gap-px border border-navy-900/10 bg-navy-900/10">
                 {program.modules[lang].map((module, i) => (
                   <Reveal key={module} delay={i * 70} as="li">
                     <div className="flex items-start gap-6 bg-white px-7 py-6">
-                      <span className="font-display text-2xl text-gold-500/70">{i + 1}</span>
+                      <span className="text-2xl font-light text-gold-500/70">{i + 1}</span>
                       <span className="pt-1 text-navy-900">{module}</span>
                     </div>
                   </Reveal>
@@ -161,7 +161,7 @@ export default async function ProgramPage({
 
             <div>
               <Reveal>
-                <h2 className="eyebrow eyebrow-line text-gold-600">{dict.common.audience}</h2>
+                <h2 className="label label-square text-gold-600">{dict.common.audience}</h2>
               </Reveal>
               <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {program.audience[lang].map((item, i) => (
@@ -180,7 +180,7 @@ export default async function ProgramPage({
           <Reveal delay={120}>
             <aside className="border border-navy-900/10 bg-white lg:sticky lg:top-28">
               <div className="border-b border-navy-900/10 bg-navy-950 px-8 py-7 text-ivory-50">
-                <p className="eyebrow text-gold-400">{program.reference}</p>
+                <p className="label text-gold-400">{program.reference}</p>
                 <p className="mt-4 flex items-center gap-3 text-sm text-ivory-100/80">
                   <Clock className="h-4 w-4 text-gold-400" />
                   {program.durationDays}{' '}
@@ -226,7 +226,7 @@ export default async function ProgramPage({
         <section className="border-t border-navy-900/10 bg-ivory-100 py-20">
           <div className="container-page">
             <div className="flex flex-wrap items-center justify-between gap-6">
-              <h2 className="font-display text-3xl text-navy-900">{dict.common.relatedPrograms}</h2>
+              <h2 className="text-3xl font-extralight text-navy-900">{dict.common.relatedPrograms}</h2>
               <Link
                 href={href(lang, '/formations')}
                 className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.14em] text-navy-900 transition-colors hover:text-gold-600"

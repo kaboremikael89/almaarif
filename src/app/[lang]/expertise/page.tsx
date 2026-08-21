@@ -56,7 +56,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ lang
             <div className="container-page grid gap-14 lg:grid-cols-[0.95fr_1.05fr]">
               <div>
                 <Reveal>
-                  <span className="font-display text-5xl text-gold-500/60">{domain.number}</span>
+                  <span className="text-5xl font-extralight text-gold-500/60">{domain.number}</span>
                 </Reveal>
                 <Reveal delay={80}>
                   <h2 className="mt-6 text-[clamp(1.85rem,3.4vw,2.75rem)] text-navy-900">
@@ -72,7 +72,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ lang
 
               <div>
                 <Reveal>
-                  <h3 className="eyebrow text-navy-600">{dict.expertise.topicsLabel}</h3>
+                  <h3 className="label text-navy-600">{dict.expertise.topicsLabel}</h3>
                 </Reveal>
                 <ul className="mt-6 grid gap-px border border-navy-900/10 bg-navy-900/10">
                   {domain.topics[lang].map((topic, i) => (
@@ -90,7 +90,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ lang
             {related.length > 0 && (
               <div className="container-page mt-14">
                 <Reveal>
-                  <h3 className="eyebrow text-gold-600">{dict.expertise.programsLabel}</h3>
+                  <h3 className="label text-gold-600">{dict.expertise.programsLabel}</h3>
                 </Reveal>
                 <div className="mt-6 grid gap-6 md:grid-cols-2">
                   {related.map((program, i) => (

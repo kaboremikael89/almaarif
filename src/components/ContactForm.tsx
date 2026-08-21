@@ -78,7 +78,7 @@ export default function ContactForm({ lang, dict }: { lang: Locale; dict: Dictio
   if (status === 'success') {
     return (
       <div className="border border-gold-500/50 bg-white p-10">
-        <p className="font-display text-2xl text-navy-900">{f.success}</p>
+        <p className="text-2xl font-light text-navy-900">{f.success}</p>
         {!site.formEndpoint && <p className="mt-4 text-sm text-muted">{f.mailtoNotice}</p>}
         <button
           type="button"
@@ -93,8 +93,8 @@ export default function ContactForm({ lang, dict }: { lang: Locale; dict: Dictio
 
   return (
     <form onSubmit={onSubmit} className="border border-navy-900/10 bg-white p-8 lg:p-10" noValidate={false}>
-      <h2 className="font-display text-2xl text-navy-900">{f.title}</h2>
-      <div className="rule-gold mt-6 mb-8" />
+      <h2 className="text-2xl font-light text-navy-900">{f.title}</h2>
+      <div className="mt-6 mb-8 h-px bg-gold-500/50" />
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div>

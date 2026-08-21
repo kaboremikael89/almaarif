@@ -51,7 +51,7 @@ export default function ProgramCatalogue({ programs, lang, dict }: Props) {
         </div>
 
         <p aria-live="polite" className="text-sm text-muted">
-          <span className="font-display text-2xl text-navy-900">{filtered.length}</span>{' '}
+          <span className="text-2xl font-light text-navy-900">{filtered.length}</span>{' '}
           {filtered.length > 1 ? dict.programs.resultsMany : dict.programs.resultsOne}
         </p>
       </div>

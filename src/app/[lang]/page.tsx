@@ -2,16 +2,19 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 import Reveal from '@/components/Reveal'
-import SectionHeading from '@/components/SectionHeading'
 import ProgramCard from '@/components/ProgramCard'
-import SplitImage from '@/components/SplitImage'
-import { Rosette, Divider } from '@/components/Ornament'
-import { ArrowRight } from '@/components/Icons'
+import { PortraitCard, WideCard } from '@/components/PhotoCard'
+import { SectionLabel, SplitTitle, StatRow, KeywordRibbon } from '@/components/Primitives'
+import { Rosette } from '@/components/Ornament'
+import { ArrowRight, ArrowUpRight } from '@/components/Icons'
 import { getDictionary } from '@/content/dictionary'
 import { domains } from '@/content/domains'
 import { featuredPrograms } from '@/content/programs'
 import { site } from '@/content/site'
 import { href, isLocale, type Locale } from '@/lib/i18n'
+
+const formatImages = ['/images/formats-1.jpg', '/images/formats-2.jpg', '/images/formats-3.jpg']
+const moroccoImages = ['/images/maroc-1.jpg', '/images/maroc-2.jpg', '/images/maroc-3.jpg']
 
 export async function generateMetadata({
   params,
@@ -34,122 +37,131 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
   return (
     <>
-      {/* ---------------------------------------------------------- HERO */}
-      <section className="relative isolate overflow-hidden bg-navy-950 pt-[calc(var(--header-h)+4rem)] pb-0 text-ivory-50">
-        <div className="zellige-bg pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true" />
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_15%_0%,rgba(193,154,69,0.20),transparent_55%)]"
-          aria-hidden="true"
-        />
-        <Rosette
-          className="pointer-events-none absolute -right-40 top-10 h-[38rem] w-[38rem] text-gold-500 opacity-[0.10]"
-          strokeWidth={0.5}
-        />
+      {/* ------------------------------------------------------------ HERO */}
+      <section className="relative overflow-hidden border-b border-navy-900/10 bg-ivory-50 pt-[calc(var(--header-h)+var(--bar-h)+3rem)]">
+        <div className="grid-texture pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
 
-        <div className="container-page relative pb-24 pt-16 lg:pb-32">
-          <div className="max-w-4xl">
-            <Reveal>
-              <p className="eyebrow eyebrow-line text-gold-400">{home.hero.eyebrow}</p>
+        <div className="container-page relative pb-16 lg:pb-24">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+            <Reveal className="lg:max-w-2xl lg:flex-1">
+              <SectionLabel>{home.hero.eyebrow}</SectionLabel>
             </Reveal>
-
-            <Reveal delay={120}>
-              <h1 className="mt-8 text-[clamp(2.5rem,6.2vw,5.25rem)] leading-[1.04] text-ivory-50">
-                {home.hero.title}
-              </h1>
-            </Reveal>
-
-            <Reveal delay={240}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ivory-100/75 lg:text-xl">
-                {home.hero.lead}
+            <Reveal delay={120} className="hidden lg:block">
+              <p className="max-w-xs text-sm leading-relaxed text-muted lg:text-right">
+                {home.hero.aside}
               </p>
             </Reveal>
-
-            <Reveal delay={360}>
-              <div className="mt-12 flex flex-wrap items-center gap-4">
-                <Link href={href(lang, '/formations')} className="btn btn-gold">
-                  {home.hero.ctaPrimary}
-                  <ArrowRight />
-                </Link>
-                <Link href={href(lang, '/contact')} className="btn btn-outline-light">
-                  {home.hero.ctaSecondary}
-                </Link>
-              </div>
-            </Reveal>
           </div>
-        </div>
 
-        {/* Bandeau de chiffres */}
-        <div className="relative border-t border-ivory-100/10 bg-navy-950/60 backdrop-blur-sm">
-          <div className="container-page grid grid-cols-2 divide-x divide-ivory-100/10 lg:grid-cols-4">
-            {home.stats.map((stat, i) => (
-              <Reveal
-                key={stat.label}
-                delay={i * 90}
-                className={`px-2 py-8 lg:px-8 ${i >= 2 ? 'border-t border-ivory-100/10 lg:border-t-0' : ''}`}
-              >
-                <p className="font-display text-4xl text-gold-400 lg:text-5xl">{stat.value}</p>
-                <p className="mt-3 text-xs uppercase tracking-[0.18em] text-ivory-100/55">{stat.label}</p>
+          <div className="mt-10 grid gap-14 lg:grid-cols-[1fr_0.92fr] lg:gap-12">
+            {/* Colonne texte */}
+            <div>
+              <Reveal delay={80}>
+                <h1 className="max-w-3xl text-[clamp(2.1rem,5.6vw,4.6rem)] text-navy-900">
+                  {home.hero.title}
+                </h1>
               </Reveal>
-            ))}
+
+              <Reveal delay={200}>
+                <div className="mt-10 flex items-center gap-4">
+                  <span className="flex h-11 w-11 items-center justify-center bg-gold-500">
+                    <Rosette className="h-6 w-6 text-navy-950" strokeWidth={2.4} />
+                  </span>
+                  <span className="label text-gold-700">{site.tagline[lang]}</span>
+                </div>
+              </Reveal>
+
+              <Reveal delay={280}>
+                <p className="mt-10 max-w-xl text-base leading-relaxed text-muted">
+                  {home.hero.lead}
+                </p>
+              </Reveal>
+
+              <Reveal delay={360}>
+                <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-5">
+                  <Link href={href(lang, '/formations')} className="btn btn-dark">
+                    {home.hero.ctaPrimary}
+                    <ArrowRight />
+                  </Link>
+                  <ul className="flex flex-wrap items-center gap-x-7 gap-y-2">
+                    {home.formats.items.slice(0, 3).map((item) => (
+                      <li key={item.tag} className="label label-square text-navy-700">
+                        {item.tag}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+
+              <StatRow stats={home.stats} className="mt-14" />
+            </div>
+
+            {/* Colonne photos */}
+            <div className="grid grid-cols-3 gap-3 lg:gap-4">
+              {home.formats.items.slice(0, 3).map((item, i) => (
+                <PortraitCard
+                  key={item.tag}
+                  src={formatImages[i]}
+                  index={`0${i + 1} / ${item.tag}`}
+                  title={item.title}
+                  offset={i === 1 ? 'up' : 'down'}
+                  delay={i * 140}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* -------------------------------------------------------- INTRO */}
-      <section className="relative bg-ivory-50 py-24 lg:py-32">
-        <div className="container-page grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
-          <div>
-            <SectionHeading eyebrow={home.intro.eyebrow} title={home.intro.title} />
-            <div className="mt-8 space-y-6">
-              {home.intro.body.map((paragraph, i) => (
-                <Reveal key={i} delay={120 + i * 90}>
-                  <p className="max-w-2xl text-lg leading-relaxed text-muted">{paragraph}</p>
-                </Reveal>
-              ))}
-            </div>
-            <Reveal delay={320}>
-              <Link
-                href={href(lang, '/a-propos')}
-                className="mt-10 inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-navy-900 transition-colors hover:text-gold-600"
-              >
-                {home.intro.cta}
-                <ArrowRight />
-              </Link>
-            </Reveal>
+      {/* -------------------------------------------------- ÉTAPES NUMÉROTÉES */}
+      <section className="bg-ivory-50 py-16 lg:py-20">
+        <div className="container-page">
+          <div className="grid gap-5 md:grid-cols-3">
+            {home.process.steps.slice(0, 3).map((step, i) => (
+              <Reveal key={step.title} delay={i * 110}>
+                <article className="relative flex h-full flex-col bg-ivory-100 p-8 pr-14">
+                  <p className="index">
+                    {String(i + 1).padStart(2, '0')} / {step.tag}
+                  </p>
+                  <h3 className="mt-5 text-xl text-navy-900">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{step.body}</p>
+                  <span className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center bg-gold-500 text-navy-950">
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </article>
+              </Reveal>
+            ))}
           </div>
 
-          <Reveal delay={200}>
-            <figure className="relative border border-navy-900/10 bg-white p-10 lg:mt-4">
-              <Rosette className="absolute -right-6 -top-6 h-16 w-16 bg-ivory-50 p-2 text-gold-500" strokeWidth={1.8} />
-              <blockquote className="font-display text-[1.75rem] leading-snug text-navy-900">
-                « {site.baseline[lang]} »
-              </blockquote>
-              <Divider className="my-8" />
-              <figcaption className="space-y-2 text-sm text-muted">
-                <p className="eyebrow text-navy-600">{site.tagline[lang]}</p>
-                <p>
-                  {site.address.city}, {site.address.country[lang]}
-                </p>
-              </figcaption>
-            </figure>
+          <Reveal delay={260}>
+            <Link
+              href={href(lang, '/approche')}
+              className="mt-10 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-navy-900 transition-colors hover:text-gold-700"
+            >
+              {dict.nav.approach}
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </Reveal>
         </div>
       </section>
 
-      {/* ------------------------------------------------- BANDE PHOTO */}
-      <section className="bg-navy-950 pb-0 pt-0">
-        <div className="container-page py-2 lg:py-3">
-          <SplitImage
-            src="/images/salle-de-formation.jpg"
-            alt={home.hero.title}
-          />
-        </div>
-      </section>
+      {/* ------------------------------------------------------------ BANDEAU */}
+      <KeywordRibbon items={domains.map((domain) => domain.short[lang])} />
 
-      {/* ------------------------------------------------------ DOMAINES */}
-      <section className="border-y border-navy-900/10 bg-ivory-100 py-24 lg:py-32">
+      {/* ------------------------------------------------------------ DOMAINES */}
+      <section className="bg-ivory-50 py-24 lg:py-32">
         <div className="container-page">
-          <SectionHeading eyebrow={home.domains.eyebrow} title={home.domains.title} lead={home.domains.lead} />
+          <Reveal>
+            <p className="label text-center text-gold-600">/ {home.domains.eyebrow} /</p>
+          </Reveal>
+          <Reveal delay={100}>
+            <SplitTitle top={home.domains.titleTop} accent={home.domains.titleAccent} className="mt-6" />
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="mx-auto mt-7 max-w-2xl text-center text-sm leading-relaxed text-muted">
+              {home.domains.lead}
+            </p>
+          </Reveal>
 
           <div className="mt-16 grid gap-px border border-navy-900/10 bg-navy-900/10 sm:grid-cols-2 lg:grid-cols-3">
             {domains.map((domain, i) => (
@@ -159,12 +171,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                   className="group flex h-full flex-col bg-ivory-50 p-9 transition-colors duration-500 hover:bg-white"
                 >
                   <div className="flex items-start justify-between">
-                    <span className="font-display text-3xl text-gold-500/70">{domain.number}</span>
-                    <ArrowRight className="h-4 w-4 -translate-x-2 text-gold-600 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" />
+                    <span className="index">{domain.number} / {domain.short[lang]}</span>
+                    <ArrowUpRight className="h-4 w-4 text-gold-600 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   </div>
-                  <h3 className="mt-8 text-2xl text-navy-900">{domain.title[lang]}</h3>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{domain.description[lang]}</p>
-                  <span className="mt-8 h-px w-12 bg-gold-500 transition-all duration-500 group-hover:w-24" />
+                  <h3 className="mt-7 text-xl text-navy-900">{domain.title[lang]}</h3>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">
+                    {domain.description[lang]}
+                  </p>
+                  <span className="mt-8 h-px w-10 bg-gold-500 transition-all duration-500 group-hover:w-20" />
                 </Link>
               </Reveal>
             ))}
@@ -172,23 +186,142 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* ----------------------------------------------- PROGRAMMES PHARES */}
+      {/* ------------------------------------------------------------ PUBLICS */}
+      <section className="border-y border-navy-900/10 bg-ivory-100 py-24 lg:py-32">
+        <div className="container-page">
+          <Reveal>
+            <p className="label text-center text-gold-600">/ {home.audiences.eyebrow} /</p>
+          </Reveal>
+          <Reveal delay={100}>
+            <SplitTitle
+              top={home.audiences.titleTop}
+              accent={home.audiences.titleAccent}
+              className="mt-6"
+            />
+          </Reveal>
+
+          <div className="mt-16 grid gap-6 lg:grid-cols-2">
+            {home.audiences.items.map((item, i) => {
+              const dark = i === 1
+              return (
+                <Reveal key={item.index} delay={i * 140}>
+                  <article
+                    className={`relative h-full overflow-hidden p-10 lg:p-12 ${
+                      dark ? 'bg-navy-950 text-ivory-50' : 'grid-texture border border-navy-900/12 bg-ivory-50'
+                    }`}
+                  >
+                    <div className="relative flex items-center justify-between">
+                      <span className={`index ${dark ? 'text-gold-400' : ''}`}>{item.index}</span>
+                      <span className={`label ${dark ? 'text-ivory-100/50' : 'text-muted/70'}`}>
+                        {item.tag}
+                      </span>
+                    </div>
+
+                    <h3
+                      className={`relative mt-10 text-2xl lg:text-3xl ${
+                        dark ? 'text-ivory-50' : 'text-navy-900'
+                      }`}
+                    >
+                      {item.title}
+                    </h3>
+
+                    <p
+                      className={`relative mt-6 max-w-xl text-sm leading-relaxed ${
+                        dark ? 'text-ivory-100/70' : 'text-muted'
+                      }`}
+                    >
+                      {item.body}
+                    </p>
+
+                    <ul className="relative mt-10 grid gap-4 sm:grid-cols-2">
+                      {item.bullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className={`flex items-start gap-3 text-sm ${
+                            dark ? 'text-ivory-100/85' : 'text-navy-800'
+                          }`}
+                        >
+                          <span
+                            className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold-500"
+                            aria-hidden="true"
+                          />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </Reveal>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------ POURQUOI LE MAROC */}
       <section className="bg-ivory-50 py-24 lg:py-32">
         <div className="container-page">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <Reveal>
+                <SectionLabel>{home.morocco.eyebrow}</SectionLabel>
+              </Reveal>
+              <Reveal delay={100}>
+                <h2 className="mt-7 text-[clamp(1.75rem,3.8vw,3rem)] text-navy-900">
+                  {home.morocco.title}
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={180}>
+              <p className="max-w-xl text-sm leading-relaxed text-muted">{home.morocco.lead}</p>
+            </Reveal>
+          </div>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {home.morocco.items.slice(0, 3).map((item, i) => (
+              <WideCard
+                key={item.title}
+                src={moroccoImages[i]}
+                index={`0${i + 1}`}
+                title={item.title}
+                body={item.body}
+                delay={i * 120}
+              />
+            ))}
+          </div>
+
+          <Reveal delay={200}>
+            <div className="mt-10 border-t border-navy-900/10 pt-8">
+              <p className="max-w-3xl text-sm leading-relaxed text-muted">
+                {home.morocco.items[3].title}. {home.morocco.items[3].body}
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* --------------------------------------------------------- PROGRAMMES */}
+      <section className="border-t border-navy-900/10 bg-ivory-100 py-24 lg:py-32">
+        <div className="container-page">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-            <SectionHeading
-              eyebrow={home.featured.eyebrow}
-              title={home.featured.title}
-              lead={home.featured.lead}
-            />
-            <Reveal delay={200}>
-              <Link href={href(lang, '/formations')} className="btn btn-outline whitespace-nowrap">
+            <div>
+              <Reveal>
+                <SectionLabel>{home.featured.eyebrow}</SectionLabel>
+              </Reveal>
+              <Reveal delay={100}>
+                <h2 className="mt-7 max-w-2xl text-[clamp(1.75rem,3.8vw,3rem)] text-navy-900">
+                  {home.featured.title}
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={180}>
+              <Link href={href(lang, '/formations')} className="btn btn-outline">
                 {dict.common.allPrograms}
+                <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featuredPrograms.slice(0, 4).map((program, i) => (
               <Reveal key={program.slug} delay={(i % 4) * 90} className="h-full">
                 <ProgramCard program={program} lang={lang} dict={dict} />
@@ -198,81 +331,19 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* --------------------------------------------------- POURQUOI LE MAROC */}
-      <section className="relative overflow-hidden bg-navy-900 py-24 text-ivory-50 lg:py-32">
-        <div className="zellige-bg pointer-events-none absolute inset-0 opacity-[0.05]" aria-hidden="true" />
-        <div className="container-page relative grid gap-16 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeading
-            eyebrow={home.morocco.eyebrow}
-            title={home.morocco.title}
-            lead={home.morocco.lead}
-            light
-          />
-
-          <div className="grid gap-px bg-ivory-100/10 sm:grid-cols-2">
-            {home.morocco.items.map((item, i) => (
-              <Reveal key={item.title} delay={i * 100} className="bg-navy-900 p-8">
-                <span className="font-display text-2xl text-gold-400">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="mt-5 text-xl text-ivory-50">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ivory-100/65">{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------- MODALITÉS */}
-      <section className="bg-ivory-100 py-24 lg:py-32">
-        <div className="container-page">
-          <SectionHeading eyebrow={home.formats.eyebrow} title={home.formats.title} align="center" />
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {home.formats.items.map((item, i) => (
-              <Reveal key={item.tag} delay={(i % 4) * 90} className="h-full">
-                <article className="relative flex h-full flex-col border border-navy-900/10 bg-ivory-50 p-8">
-                  <span className="eyebrow text-gold-600">{item.tag}</span>
-                  <h3 className="mt-6 text-xl text-navy-900">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted">{item.body}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -------------------------------------------------------- PROCESSUS */}
-      <section className="bg-ivory-50 py-24 lg:py-32">
-        <div className="container-page">
-          <SectionHeading eyebrow={home.process.eyebrow} title={home.process.title} />
-
-          <ol className="mt-16 grid gap-px border-y border-navy-900/10 bg-navy-900/10 lg:grid-cols-5">
-            {home.process.steps.map((step, i) => (
-              <Reveal key={step.title} delay={i * 90} as="li" className="bg-ivory-50 p-8">
-                <span className="font-display text-4xl text-gold-500/60">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="mt-6 text-lg text-navy-900">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{step.body}</p>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* -------------------------------------------------------------- CTA */}
-      <section className="relative overflow-hidden bg-navy-950 py-24 text-ivory-50 lg:py-28">
-        <Rosette
-          className="pointer-events-none absolute -bottom-28 -left-24 h-96 w-96 text-gold-500 opacity-[0.08]"
-          strokeWidth={0.7}
-        />
+      {/* --------------------------------------------------------------- CTA */}
+      <section className="relative overflow-hidden bg-navy-950 py-20 text-ivory-50 lg:py-24">
+        <div className="zellige-bg pointer-events-none absolute inset-0 opacity-[0.06]" aria-hidden="true" />
         <div className="container-page relative flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
           <div className="max-w-2xl">
             <Reveal>
-              <h2 className="text-[clamp(1.9rem,3.4vw,3rem)] text-ivory-50">{home.cta.title}</h2>
+              <h2 className="text-[clamp(1.6rem,3.2vw,2.75rem)] text-ivory-50">{home.cta.title}</h2>
             </Reveal>
             <Reveal delay={120}>
-              <p className="mt-5 text-lg leading-relaxed text-ivory-100/70">{home.cta.body}</p>
+              <p className="mt-6 text-sm leading-relaxed text-ivory-100/70">{home.cta.body}</p>
             </Reveal>
           </div>
-          <Reveal delay={220}>
+          <Reveal delay={200}>
             <div className="flex flex-wrap gap-4">
               <Link href={href(lang, '/contact')} className="btn btn-gold">
                 {home.cta.button}

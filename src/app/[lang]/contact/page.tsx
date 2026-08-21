@@ -63,8 +63,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 strokeWidth={0.9}
               />
               <div className="relative">
-                <h2 className="font-display text-2xl">{dict.contact.infoTitle}</h2>
-                <div className="rule-gold mt-6 mb-8" />
+                <h2 className="text-2xl font-light">{dict.contact.infoTitle}</h2>
+                <div className="mt-6 mb-8 h-px bg-gold-500/50" />
 
                 <dl className="space-y-7">
                   {details.map(({ icon: Icon, label, value, href: link }) => (

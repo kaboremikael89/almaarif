@@ -5,6 +5,12 @@ export const en: Dictionary = {
     locale: 'en',
     switchLabel: 'Français',
   },
+  topbar: {
+    locations: 'Casablanca · Rabat · Marrakech',
+    services: 'Training · Advisory · Performance',
+    note: 'Open-enrolment and in-house sessions',
+    cta: 'Request a proposal',
+  },
   nav: {
     home: 'Home',
     expertise: 'Expertise',
@@ -54,6 +60,7 @@ export const en: Dictionary = {
       eyebrow: 'Training and advisory firm in Casablanca, Morocco',
       title: 'Expertise at the service of leaders and institutions',
       lead: 'Al Maarif Expertise designs and runs training programmes and advisory assignments in Morocco for African administrations, state-owned enterprises and private organisations.',
+      aside: 'Every programme starts from your own regulations, procedures and live files. It ends with an action plan your managers apply the week they return.',
       ctaPrimary: 'Browse the catalogue',
       ctaSecondary: 'Discuss your project',
       scroll: 'Explore',
@@ -76,7 +83,40 @@ export const en: Dictionary = {
     domains: {
       eyebrow: 'Our fields',
       title: 'Six fields of intervention',
+      titleTop: 'Six fields',
+      titleAccent: 'of intervention',
       lead: 'Themes selected to match the modernisation priorities of administrations and enterprises across the continent.',
+    },
+    audiences: {
+      eyebrow: 'Who we work with',
+      titleTop: 'Two audiences,',
+      titleAccent: 'one standard',
+      items: [
+        {
+          index: '01 / Public',
+          tag: 'Institutions',
+          title: 'Administrations and public agencies',
+          body: 'Ministries, central directorates, local authorities and public operators engaged in budget reform, procurement modernisation or stronger internal control.',
+          bullets: [
+            'Ministries and central directorates',
+            'Local and regional authorities',
+            'Public agencies and state-owned enterprises',
+            'Regional institutions and donors',
+          ],
+        },
+        {
+          index: '02 / Private',
+          tag: 'Companies',
+          title: 'Companies and private organisations',
+          body: 'Groups, banks, service companies and civil society organisations that want to professionalise management, secure procurement and build their teams’ skills.',
+          bullets: [
+            'Banks, insurers and telecoms',
+            'Industrial and mining groups',
+            'NGOs, foundations and financed projects',
+            'Consultancies and engineering firms',
+          ],
+        },
+      ],
     },
     featured: {
       eyebrow: 'Flagship programmes',
@@ -136,11 +176,11 @@ export const en: Dictionary = {
       eyebrow: 'How it works',
       title: 'From your enquiry to the debrief',
       steps: [
-        { title: 'Needs framing', body: 'A conversation with your teams to clarify objectives, audience and starting level.' },
-        { title: 'Detailed proposal', body: 'Programme, trainers, schedule, logistics and budget within 72 working hours.' },
-        { title: 'Preparation & logistics', body: 'Official invitations, visa support, hotels, transfers, materials and teaching resources.' },
-        { title: 'Delivery', body: 'Alternating inputs, workshops and live cases, with continuous assessment of learning.' },
-        { title: 'Follow-up', body: 'Certificate, session report, individual action plan and a remote follow-up session.' },
+        { tag: 'Brief', title: 'Needs framing', body: 'A conversation with your teams to clarify objectives, audience and starting level.' },
+        { tag: 'Proposal', title: 'Detailed proposal', body: 'Programme, trainers, schedule, logistics and budget within 72 working hours.' },
+        { tag: 'Logistics', title: 'Preparation & logistics', body: 'Official invitations, visa support, hotels, transfers, materials and teaching resources.' },
+        { tag: 'Delivery', title: 'Delivery', body: 'Alternating inputs, workshops and live cases, with continuous assessment of learning.' },
+        { tag: 'Follow-up', title: 'Follow-up', body: 'Certificate, session report, individual action plan and a remote follow-up session.' },
       ],
     },
     cta: {

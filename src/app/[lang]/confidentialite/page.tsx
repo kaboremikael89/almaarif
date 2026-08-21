@@ -40,7 +40,7 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
           {dict.legal.privacy.sections.map((section, i) => (
             <Reveal key={section.title} delay={i * 60}>
               <article className="border-b border-navy-900/10 py-9 first:pt-0">
-                <h2 className="font-display text-2xl text-navy-900">{section.title}</h2>
+                <h2 className="text-2xl font-light text-navy-900">{section.title}</h2>
                 <p className="mt-4 leading-relaxed text-muted">{section.body}</p>
               </article>
             </Reveal>

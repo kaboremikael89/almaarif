@@ -73,8 +73,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             <div className="relative overflow-hidden border border-navy-900/10 bg-navy-950 p-10 text-ivory-50">
               <div className="zellige-bg pointer-events-none absolute inset-0 opacity-[0.08]" aria-hidden="true" />
               <div className="relative">
-                <p className="eyebrow text-gold-400">{site.tagline[lang]}</p>
-                <p className="mt-6 font-display text-[1.6rem] leading-snug">« {site.baseline[lang]} »</p>
+                <p className="label text-gold-400">{site.tagline[lang]}</p>
+                <p className="mt-6 text-[1.6rem] font-light leading-snug">« {site.baseline[lang]} »</p>
                 <Divider className="my-8" />
                 <dl className="space-y-4 text-sm">
                   <div className="flex justify-between gap-6">
@@ -118,8 +118,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               <div className="zellige-bg pointer-events-none absolute inset-0 opacity-[0.10]" aria-hidden="true" />
               <Rosette className="h-40 w-40 text-gold-500/70" strokeWidth={0.9} />
               <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-950 to-transparent p-8 pt-20">
-                <p className="font-display text-2xl text-ivory-50">{about.direction.name}</p>
-                <p className="eyebrow mt-2 text-gold-400">{about.direction.role}</p>
+                <p className="text-2xl font-light text-ivory-50">{about.direction.name}</p>
+                <p className="label mt-2 text-gold-400">{about.direction.role}</p>
               </div>
             </div>
           </Reveal>
@@ -132,7 +132,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 
             <div className="mt-12">
               <Reveal>
-                <h3 className="eyebrow eyebrow-line text-gold-600">{about.network.eyebrow}</h3>
+                <h3 className="label label-square text-gold-600">{about.network.eyebrow}</h3>
               </Reveal>
               <Reveal delay={80}>
                 <p className="mt-6 max-w-2xl leading-relaxed text-muted">{about.network.lead}</p>

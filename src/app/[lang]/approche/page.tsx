@@ -54,7 +54,7 @@ export default async function ApproachPage({ params }: { params: Promise<{ lang:
                 className={`bg-ivory-50 p-10 ${i === 4 ? 'lg:col-span-2' : ''}`}
               >
                 <div className="flex items-baseline gap-5">
-                  <span className="font-display text-3xl text-gold-500/70">
+                  <span className="text-3xl font-extralight text-gold-500/70">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <h3 className="text-2xl text-navy-900">{item.title}</h3>
@@ -75,7 +75,7 @@ export default async function ApproachPage({ params }: { params: Promise<{ lang:
           <ol className="mt-16 grid gap-px bg-ivory-100/10 md:grid-cols-2 xl:grid-cols-4">
             {a.engineering.items.map((item, i) => (
               <Reveal key={item.title} delay={i * 90} as="li" className="bg-navy-900 p-8">
-                <span className="font-display text-4xl text-gold-400/70">
+                <span className="text-4xl font-extralight text-gold-400/70">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3 className="mt-6 text-xl text-ivory-50">{item.title}</h3>
@@ -122,7 +122,7 @@ export default async function ApproachPage({ params }: { params: Promise<{ lang:
             {a.evaluation.items.map((item, i) => (
               <Reveal key={item.title} delay={i * 90} className="h-full">
                 <article className="flex h-full flex-col border-t-2 border-gold-500 bg-white p-8">
-                  <h3 className="font-display text-2xl text-navy-900">{item.title}</h3>
+                  <h3 className="text-2xl font-light text-navy-900">{item.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-muted">{item.body}</p>
                 </article>
               </Reveal>

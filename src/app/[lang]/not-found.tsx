@@ -11,7 +11,7 @@ export default function NotFound() {
         strokeWidth={0.6}
       />
       <div className="container-page relative py-32">
-        <p className="eyebrow eyebrow-line text-gold-400">Erreur 404</p>
+        <p className="label label-square text-gold-400">Erreur 404</p>
         <h1 className="mt-7 text-[clamp(2.25rem,5vw,4rem)]">Page introuvable / Page not found</h1>
         <p className="mt-6 max-w-xl text-lg text-ivory-100/70">
           La page demandée n’existe pas ou a été déplacée.

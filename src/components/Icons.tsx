@@ -8,6 +8,22 @@ export function ArrowRight({ className = 'h-4 w-4' }: IconProps) {
   )
 }
 
+export function ArrowUpRight({ className = 'h-4 w-4' }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path d="M7 17 17 7m0 0H8m9 0v9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+    </svg>
+  )
+}
+
+export function Diamond({ className = 'h-2 w-2' }: IconProps) {
+  return (
+    <svg viewBox="0 0 10 10" className={className} aria-hidden="true">
+      <rect x="1.5" y="1.5" width="7" height="7" transform="rotate(45 5 5)" fill="currentColor" />
+    </svg>
+  )
+}
+
 export function Clock({ className = 'h-4 w-4' }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">

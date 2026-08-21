@@ -29,12 +29,12 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
         <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Logo lang={lang} light />
-            <p className="mt-6 max-w-xs text-sm leading-relaxed text-ivory-100/65">{dict.footer.tagline}</p>
-            <p className="eyebrow mt-8 text-gold-400">{site.tagline[lang]}</p>
+            <p className="mt-7 max-w-xs text-sm leading-relaxed text-ivory-100/60">{dict.footer.tagline}</p>
+            <p className="label mt-8 text-gold-400">{site.tagline[lang]}</p>
           </div>
 
           <nav aria-label={dict.footer.navTitle}>
-            <h2 className="eyebrow text-gold-400">{dict.footer.navTitle}</h2>
+            <h2 className="label text-gold-500">{dict.footer.navTitle}</h2>
             <ul className="mt-6 space-y-3 text-sm">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -47,7 +47,7 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
           </nav>
 
           <nav aria-label={dict.footer.programsTitle}>
-            <h2 className="eyebrow text-gold-400">{dict.footer.programsTitle}</h2>
+            <h2 className="label text-gold-500">{dict.footer.programsTitle}</h2>
             <ul className="mt-6 space-y-3 text-sm">
               {domains.map((domain) => (
                 <li key={domain.slug}>
@@ -63,7 +63,7 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
           </nav>
 
           <div>
-            <h2 className="eyebrow text-gold-400">{dict.footer.contactTitle}</h2>
+            <h2 className="label text-gold-500">{dict.footer.contactTitle}</h2>
             <address className="mt-6 space-y-3 text-sm not-italic text-ivory-100/75">
               <p>
                 {site.address.street}
