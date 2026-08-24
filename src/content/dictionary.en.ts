@@ -183,6 +183,16 @@ export const en: Dictionary = {
         { tag: 'Follow-up', title: 'Follow-up', body: 'Certificate, session report, individual action plan and a remote follow-up session.' },
       ],
     },
+    legalStrip: {
+      eyebrow: 'Legal standing',
+      body: 'Al Maarif Expertise is a company incorporated under Moroccan law and based in Casablanca. Its trade name is registered with the Moroccan Industrial and Commercial Property Office, and it holds a common enterprise identifier. Sessions held in Morocco operate under Moroccan legal and tax rules.',
+      items: [
+        { label: 'Legal form', value: 'Company under Moroccan law' },
+        { label: 'Common enterprise identifier', value: '004026098000053' },
+        { label: 'OMPIC certificate', value: 'no. 3281360' },
+        { label: 'Competent court', value: 'Casablanca Commercial Court' },
+      ],
+    },
     cta: {
       title: 'A training need to cover this year?',
       body: 'Tell us about your situation: headcount, topic, preferred dates. We come back with a costed proposal and a programme that fits.',

@@ -5,6 +5,7 @@ import Reveal from '@/components/Reveal'
 import ProgramCard from '@/components/ProgramCard'
 import { PortraitCard, WideCard } from '@/components/PhotoCard'
 import { SectionLabel, SplitTitle, StatRow, KeywordRibbon } from '@/components/Primitives'
+import { StarFrame } from '@/components/Ornament'
 import { Rosette } from '@/components/Ornament'
 import { ArrowRight, ArrowUpRight } from '@/components/Icons'
 import { getDictionary } from '@/content/dictionary'
@@ -327,6 +328,35 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                 <ProgramCard program={program} lang={lang} dict={dict} />
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --------------------------------------------------------- CADRE LÉGAL */}
+      <section className="border-t border-navy-900/10 bg-ivory-50 py-16">
+        <div className="container-page grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <Reveal>
+              <SectionLabel rule={false}>{home.legalStrip.eyebrow}</SectionLabel>
+            </Reveal>
+            <Reveal delay={100}>
+              <StarFrame className="mt-8 h-12 w-12 text-gold-500" strokeWidth={2.2} />
+            </Reveal>
+          </div>
+
+          <div>
+            <Reveal delay={80}>
+              <p className="max-w-3xl text-sm leading-relaxed text-muted">{home.legalStrip.body}</p>
+            </Reveal>
+
+            <dl className="mt-10 grid gap-px border border-navy-900/10 bg-navy-900/10 sm:grid-cols-2 lg:grid-cols-4">
+              {home.legalStrip.items.map((item, i) => (
+                <Reveal key={item.label} delay={i * 80} className="bg-ivory-50 px-6 py-5">
+                  <dt className="label text-muted/75">{item.label}</dt>
+                  <dd className="mt-2 text-sm text-navy-900">{item.value}</dd>
+                </Reveal>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
