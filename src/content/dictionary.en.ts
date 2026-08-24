@@ -44,7 +44,7 @@ export const en: Dictionary = {
     languages: 'Languages',
     languagesValue: 'French · English',
     location: 'Location',
-    locationValue: 'Casablanca, Rabat, Marrakech or on your premises',
+    locationValue: 'Casablanca, Rabat, Marrakech, your premises or the country of your choice',
     price: 'Fee',
     priceValue: 'On request, depending on format and group size',
     sessionsLabel: 'Sessions',
@@ -59,7 +59,7 @@ export const en: Dictionary = {
     hero: {
       eyebrow: 'Training and advisory firm in Casablanca, Morocco',
       title: 'Expertise at the service of leaders and institutions',
-      lead: 'Al Maarif Expertise designs and runs training programmes and advisory assignments in Morocco for African administrations, state-owned enterprises and private organisations.',
+      lead: 'Al Maarif Expertise designs and runs training programmes and advisory assignments for public administrations, international organisations, non-governmental organisations and private companies, in Africa and worldwide.',
       aside: 'Every programme starts from your own regulations, procedures and live files. It ends with an action plan your managers apply the week they return.',
       ctaPrimary: 'Browse the catalogue',
       ctaSecondary: 'Discuss your project',
@@ -75,7 +75,7 @@ export const en: Dictionary = {
       eyebrow: 'Who we are',
       title: 'A firm built for African institutions',
       body: [
-        'Al Maarif Expertise is a management consulting and professional training firm based in Casablanca. We work with public administrations, local authorities, state agencies and enterprises, private organisations and development partners.',
+        'Al Maarif Expertise is a management consulting and professional training firm based in Casablanca. We work with public administrations, international organisations, non-governmental organisations and private companies, in Africa and across the world.',
         'Our position is simple: training is only worth what it changes once people are back at their desks. Every programme starts from your own regulations, procedures and live files, and ends with an action plan your managers take home.',
       ],
       cta: 'About the firm',
@@ -85,7 +85,7 @@ export const en: Dictionary = {
       title: 'Six fields of intervention',
       titleTop: 'Six fields',
       titleAccent: 'of intervention',
-      lead: 'Themes selected to match the modernisation priorities of administrations and enterprises across the continent.',
+      lead: 'Themes selected to match the modernisation priorities of the administrations and organisations we work with.',
     },
     audiences: {
       eyebrow: 'Who we work with',
@@ -126,15 +126,15 @@ export const en: Dictionary = {
     morocco: {
       eyebrow: 'Why Morocco',
       title: 'A training location that makes sense',
-      lead: 'Learning away from day-to-day duties changes the quality of attention. Morocco also offers practical and financial conditions that are hard to match for an African seminar.',
+      lead: 'Our sessions take place wherever you need them: on your premises, in the country of your choice, or in Morocco where the firm is based. Learning away from day-to-day duties changes the quality of attention.',
       items: [
         {
           title: 'Accessible from across Africa',
-          body: 'Casablanca has direct flights to most capitals on the continent, with simplified entry formalities for many countries.',
+          body: 'Casablanca has direct flights to most African capitals and to major European cities, with simplified entry formalities for many countries.',
         },
         {
           title: 'Controlled cost',
-          body: 'Accommodation, catering and transport well below European destinations, for an equivalent standard of hospitality.',
+          body: 'Accommodation, catering and transport arranged on request, at controlled costs.',
         },
         {
           title: 'Bilingual expertise',
@@ -188,13 +188,13 @@ export const en: Dictionary = {
     },
     legalStrip: {
       eyebrow: 'Legal standing',
-      body: 'Al Maarif Expertise is a company incorporated under Moroccan law and based in Casablanca. Its trade name is registered with the Moroccan Industrial and Commercial Property Office, and it holds a common enterprise identifier. Sessions held in Morocco operate under Moroccan legal and tax rules.',
-      items: [
-        { label: 'Legal form', value: 'Company under Moroccan law' },
-        { label: 'Common enterprise identifier', value: '004026098000053' },
-        { label: 'OMPIC certificate', value: 'no. 3281360' },
-        { label: 'Competent court', value: 'Casablanca Commercial Court' },
-      ],
+      body: 'Al Maarif Expertise is a company incorporated under Moroccan law and based in Casablanca. Its trade name is registered with the Moroccan Industrial and Commercial Property Office. Sessions held in Morocco take place within the Moroccan legal and tax framework.',
+      formLabel: 'Legal form',
+      formValue: 'Company under Moroccan law',
+      rccmLabel: 'Trade register',
+      ifuLabel: 'Tax identifier',
+      courtLabel: 'Competent court',
+      courtValue: 'Casablanca Commercial Court',
     },
     cta: {
       title: 'A training need to cover this year?',
@@ -221,14 +221,14 @@ export const en: Dictionary = {
     hero: {
       eyebrow: 'Catalogue',
       title: 'Training & seminars',
-      lead: 'Twelve structured programmes, available as open-enrolment sessions in Morocco, in-house on your premises, or fully tailored.',
+      lead: 'Twelve structured programmes, available as open-enrolment sessions in Morocco, in-house on your premises anywhere in the world, or fully tailored.',
     },
     filterAll: 'All fields',
     filterLabel: 'Filter by field',
     resultsOne: 'programme',
     resultsMany: 'programmes',
     empty: 'No programme matches this filter.',
-    note: 'Every programme can be adapted in length, level and language. In-house sessions can be held in Morocco or in your country.',
+    note: 'Every programme can be adapted in length, level and language. In-house sessions can be held in Morocco or in the country of your choice.',
   },
   approach: {
     hero: {
@@ -292,7 +292,7 @@ export const en: Dictionary = {
       title: 'Strengthening the capacity of those who lead',
       body: [
         'African administrations and enterprises are running demanding reforms: programme budgeting, procurement modernisation, accountability, digital transformation. Those reforms only succeed if the people carrying them master the tools.',
-        'That is the role we set ourselves: giving the continent’s institutions access to international-standard training and advisory services, in an accessible setting, in Casablanca and wherever our clients need us.',
+        'That is the role we set ourselves: giving public and private institutions access to international-standard training and advisory services, in an accessible setting, in Casablanca and wherever our clients need us.',
       ],
     },
     values: {
@@ -330,8 +330,8 @@ export const en: Dictionary = {
       rows: {
         legalName: 'Legal name',
         activity: 'Activity',
-        ice: 'ICE number',
-        rc: 'Trade register',
+        rccm: 'Trade register',
+        ifu: 'Tax identifier',
         manager: 'Managing Director',
         headquarters: 'Registered office',
         court: 'Competent court',
@@ -383,7 +383,7 @@ export const en: Dictionary = {
     },
   },
   footer: {
-    tagline: 'Training, advisory and support for African institutions and enterprises, from Casablanca.',
+    tagline: 'Training, advisory and support for public and private institutions, in Africa and worldwide.',
     navTitle: 'Navigation',
     programsTitle: 'Fields',
     contactTitle: 'Contact',
@@ -391,7 +391,6 @@ export const en: Dictionary = {
     legalNotice: 'Legal notice',
     privacy: 'Privacy policy',
     rights: 'All rights reserved.',
-    ice: 'ICE',
   },
   legal: {
     notice: {
@@ -400,7 +399,7 @@ export const en: Dictionary = {
       sections: [
         {
           title: 'Site publisher',
-          body: 'This website is published by AL MAARIF EXPERTISE, a management consulting and training company whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. Common enterprise identifier (ICE): 004026098000053. OMPIC negative certificate no. 3281360. Legal representative and publication director: Mr Ousseni Soulama, Managing Director.',
+          body: 'This website is published by AL MAARIF EXPERTISE, a management consulting and training company whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. OMPIC negative certificate no. 3281360. Legal representative and publication director: Mr Ousseni Soulama, Managing Director.',
         },
         {
           title: 'Contact',

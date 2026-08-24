@@ -37,6 +37,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
   const dict = getDictionary(lang)
   const home = dict.home
 
+  // Les numéros d'immatriculation ne s'affichent qu'une fois renseignés
+  const legalItems = [
+    { label: home.legalStrip.formLabel, value: home.legalStrip.formValue },
+    { label: home.legalStrip.rccmLabel, value: site.legal.rccm },
+    { label: home.legalStrip.ifuLabel, value: site.legal.ifu },
+    { label: home.legalStrip.courtLabel, value: home.legalStrip.courtValue },
+  ].filter((item) => item.value)
+
   return (
     <>
       {/* ------------------------------------------------------------ HERO */}
@@ -358,7 +366,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             </Reveal>
 
             <dl className="mt-10 grid gap-px border border-navy-900/10 bg-navy-900/10 sm:grid-cols-2 lg:grid-cols-4">
-              {home.legalStrip.items.map((item, i) => (
+              {legalItems.map((item, i) => (
                 <Reveal key={item.label} delay={i * 80} className="bg-ivory-50 px-6 py-5">
                   <dt className="label text-muted/75">{item.label}</dt>
                   <dd className="mt-2 text-sm text-navy-900">{item.value}</dd>

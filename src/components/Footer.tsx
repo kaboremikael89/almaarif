@@ -86,7 +86,7 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
 
         <div className="mt-16 flex flex-col gap-4 border-t border-ivory-100/10 pt-8 text-xs text-ivory-100/50 md:flex-row md:items-center md:justify-between">
           <p>
-            © {year} {site.legalName}. {dict.footer.rights} {dict.footer.ice} {site.legal.ice}
+            © {year} {site.legalName}. {dict.footer.rights}
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link href={href(lang, '/mentions-legales')} className="link-underline hover:text-ivory-100">

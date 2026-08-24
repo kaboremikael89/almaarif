@@ -40,8 +40,10 @@ export const site = {
   },
 
   legal: {
-    ice: '004026098000053',
-    rc: '', // TODO : n° de registre de commerce (tribunal de commerce de Casablanca)
+    // Numéros d'immatriculation, à renseigner dès leur attribution.
+    // Tant qu'une valeur est vide, la ligne correspondante n'est pas affichée.
+    rccm: '', // TODO : n° d'immatriculation au registre du commerce
+    ifu: '', // TODO : identifiant fiscal unique
     ompicCertificate: '3281360',
     activity: {
       fr: 'Conseil de gestion et formation professionnelle continue',

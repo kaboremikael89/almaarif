@@ -42,7 +42,7 @@ export const fr = {
     languages: 'Langues',
     languagesValue: 'Français · Anglais',
     location: 'Lieu',
-    locationValue: 'Casablanca, Rabat, Marrakech ou dans vos locaux',
+    locationValue: 'Casablanca, Rabat, Marrakech, dans vos locaux ou dans le pays de votre choix',
     price: 'Tarif',
     priceValue: 'Sur devis, selon le format et l’effectif',
     sessionsLabel: 'Sessions',
@@ -57,7 +57,7 @@ export const fr = {
     hero: {
       eyebrow: 'Cabinet de formation et de conseil à Casablanca, Maroc',
       title: 'L’expertise au service des dirigeants et des institutions',
-      lead: "Al Maarif Expertise conçoit et organise au Maroc des programmes de formation et des missions de conseil pour les administrations, les entreprises publiques et les organisations privées d’Afrique.",
+      lead: "Al Maarif Expertise conçoit et organise des programmes de formation et des missions de conseil pour les administrations publiques, les organisations internationales, les organisations non gouvernementales et les structures privées d’Afrique et du monde.",
       aside: "Chaque programme part de vos textes, de vos procédures et de vos dossiers réels. Il se termine par un plan d’action que vos cadres appliquent dès leur retour.",
       ctaPrimary: 'Consulter le catalogue',
       ctaSecondary: 'Parler de votre projet',
@@ -73,7 +73,7 @@ export const fr = {
       eyebrow: 'Qui sommes-nous',
       title: 'Un cabinet pensé pour les institutions africaines',
       body: [
-        "Al Maarif Expertise est un cabinet de conseil de gestion et de formation professionnelle établi à Casablanca. Nous accompagnons les administrations publiques, les collectivités, les établissements et entreprises publics ainsi que les organisations privées et les partenaires au développement.",
+        "Al Maarif Expertise est un cabinet de conseil de gestion et de formation professionnelle établi à Casablanca. Nous accompagnons les administrations publiques, les organisations internationales, les organisations non gouvernementales et les structures privées, en Afrique et dans le reste du monde.",
         "Notre parti pris est simple : une formation ne vaut que par ce qu’elle change au retour au bureau. Chaque programme part de vos textes, de vos procédures et de vos dossiers réels, et se termine par un plan d’action que vos cadres emportent avec eux.",
       ],
       cta: 'Découvrir le cabinet',
@@ -83,7 +83,7 @@ export const fr = {
       title: 'Six domaines d’intervention',
       titleTop: 'Six domaines',
       titleAccent: 'd’intervention',
-      lead: "Des thématiques choisies pour répondre aux priorités de modernisation des administrations et des entreprises du continent.",
+      lead: "Des thématiques choisies pour répondre aux priorités de modernisation des administrations et des organisations que nous accompagnons.",
     },
     audiences: {
       eyebrow: 'À qui nous nous adressons',
@@ -124,15 +124,15 @@ export const fr = {
     morocco: {
       eyebrow: 'Pourquoi le Maroc',
       title: 'Un lieu de formation qui a du sens',
-      lead: "Se former hors du quotidien professionnel change la qualité de l’attention. Le Maroc offre en plus un cadre pratique et économique difficile à égaler pour un séminaire africain.",
+      lead: "Nos sessions se tiennent là où vous le souhaitez : dans vos locaux, dans le pays de votre choix, ou au Maroc où le cabinet est établi. Se former hors du quotidien professionnel change la qualité de l’attention.",
       items: [
         {
           title: 'Accessible depuis toute l’Afrique',
-          body: 'Casablanca est reliée par vol direct à la plupart des capitales du continent, avec des formalités d’entrée simplifiées pour de nombreux pays.',
+          body: 'Casablanca est reliée par vol direct à la plupart des capitales africaines et aux grandes villes européennes, avec des formalités d’entrée simplifiées pour de nombreux pays.',
         },
         {
           title: 'Un coût maîtrisé',
-          body: 'Hébergement, restauration et transport à des niveaux très inférieurs aux destinations européennes, pour une qualité d’accueil équivalente.',
+          body: 'Hébergement, restauration et transport à la demande, à des coûts maîtrisés.',
         },
         {
           title: 'Une expertise bilingue',
@@ -186,13 +186,13 @@ export const fr = {
     },
     legalStrip: {
       eyebrow: 'Cadre légal',
-      body: "Al Maarif Expertise est une société de droit marocain établie à Casablanca. Sa dénomination est enregistrée auprès de l’Office marocain de la propriété industrielle et commerciale, et elle dispose d’un identifiant commun de l’entreprise. Les sessions organisées au Maroc se tiennent dans le cadre juridique et fiscal marocain.",
-      items: [
-        { label: 'Forme', value: 'Société de droit marocain' },
-        { label: 'Identifiant commun de l’entreprise', value: '004026098000053' },
-        { label: 'Certificat OMPIC', value: 'n° 3281360' },
-        { label: 'Tribunal compétent', value: 'Commerce de Casablanca' },
-      ],
+      body: "Al Maarif Expertise est une société de droit marocain établie à Casablanca. Sa dénomination est enregistrée auprès de l’Office marocain de la propriété industrielle et commerciale. Les sessions organisées au Maroc se tiennent dans le cadre juridique et fiscal marocain.",
+      formLabel: 'Forme',
+      formValue: 'Société de droit marocain',
+      rccmLabel: 'RCCM',
+      ifuLabel: 'IFU',
+      courtLabel: 'Tribunal compétent',
+      courtValue: 'Commerce de Casablanca',
     },
     cta: {
       title: 'Un besoin de formation à couvrir cette année ?',
@@ -219,14 +219,14 @@ export const fr = {
     hero: {
       eyebrow: 'Catalogue',
       title: 'Formations & séminaires',
-      lead: "Douze programmes structurés, disponibles en session inter-entreprises au Maroc, en intra dans vos locaux ou en version sur mesure.",
+      lead: "Douze programmes structurés, disponibles en session inter-entreprises au Maroc, en intra dans vos locaux partout dans le monde, ou en version sur mesure.",
     },
     filterAll: 'Tous les domaines',
     filterLabel: 'Filtrer par domaine',
     resultsOne: 'programme',
     resultsMany: 'programmes',
     empty: 'Aucun programme ne correspond à ce filtre.',
-    note: "Chaque programme est adaptable en durée, en niveau et en langue. Les sessions intra peuvent se tenir au Maroc comme dans votre pays.",
+    note: "Chaque programme est adaptable en durée, en niveau et en langue. Les sessions intra peuvent se tenir au Maroc comme dans le pays de votre choix.",
   },
   approach: {
     hero: {
@@ -290,7 +290,7 @@ export const fr = {
       title: 'Renforcer les capacités de ceux qui dirigent',
       body: [
         "Les administrations et les entreprises africaines conduisent des réformes exigeantes : budget-programme, modernisation de la commande publique, redevabilité, transformation numérique. Ces réformes ne réussissent que si les femmes et les hommes qui les portent en maîtrisent les outils.",
-        "C’est le rôle que nous nous donnons : mettre à disposition des institutions du continent une offre de formation et de conseil de niveau international, dans un cadre accessible, à Casablanca et partout où nos clients en ont besoin.",
+        "C’est le rôle que nous nous donnons : mettre à disposition des institutions publiques et privées une offre de formation et de conseil de niveau international, dans un cadre accessible, à Casablanca et partout où nos clients en ont besoin.",
       ],
     },
     values: {
@@ -328,8 +328,8 @@ export const fr = {
       rows: {
         legalName: 'Dénomination',
         activity: 'Activité',
-        ice: 'ICE',
-        rc: 'Registre de commerce',
+        rccm: 'RCCM',
+        ifu: 'IFU',
         manager: 'Gérant',
         headquarters: 'Siège social',
         court: 'Tribunal compétent',
@@ -381,7 +381,7 @@ export const fr = {
     },
   },
   footer: {
-    tagline: "Formation, conseil et accompagnement des institutions et des entreprises africaines, depuis Casablanca.",
+    tagline: "Formation, conseil et accompagnement des institutions publiques et privées, en Afrique et dans le monde.",
     navTitle: 'Navigation',
     programsTitle: 'Domaines',
     contactTitle: 'Contact',
@@ -389,7 +389,6 @@ export const fr = {
     legalNotice: 'Mentions légales',
     privacy: 'Politique de confidentialité',
     rights: 'Tous droits réservés.',
-    ice: 'ICE',
   },
   legal: {
     notice: {
@@ -398,7 +397,7 @@ export const fr = {
       sections: [
         {
           title: 'Éditeur du site',
-          body: "Le présent site est édité par AL MAARIF EXPERTISE, société de conseil de gestion et de formation, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Identifiant commun de l’entreprise (ICE) : 004026098000053. Certificat négatif OMPIC n° 3281360. Représentant légal et directeur de la publication : M. Ousseni Soulama, gérant.",
+          body: "Le présent site est édité par AL MAARIF EXPERTISE, société de conseil de gestion et de formation, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Certificat négatif OMPIC n° 3281360. Représentant légal et directeur de la publication : M. Ousseni Soulama, gérant.",
         },
         {
           title: 'Contact',

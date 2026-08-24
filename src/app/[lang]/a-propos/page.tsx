@@ -33,8 +33,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const identity = [
     { label: about.identity.rows.legalName, value: site.legalName },
     { label: about.identity.rows.activity, value: site.legal.activity[lang] },
-    { label: about.identity.rows.ice, value: site.legal.ice },
-    { label: about.identity.rows.rc, value: site.legal.rc || about.identity.pending },
+    { label: about.identity.rows.rccm, value: site.legal.rccm || about.identity.pending },
+    { label: about.identity.rows.ifu, value: site.legal.ifu || about.identity.pending },
     { label: about.identity.rows.manager, value: site.legal.manager },
     {
       label: about.identity.rows.headquarters,
@@ -78,8 +78,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                 <Divider className="my-8" />
                 <dl className="space-y-4 text-sm">
                   <div className="flex justify-between gap-6">
-                    <dt className="text-ivory-100/50">{about.identity.rows.ice}</dt>
-                    <dd className="text-ivory-100">{site.legal.ice}</dd>
+                    <dt className="text-ivory-100/50">{about.identity.rows.manager}</dt>
+                    <dd className="text-ivory-100">{site.legal.manager}</dd>
                   </div>
                   <div className="flex justify-between gap-6">
                     <dt className="text-ivory-100/50">{about.identity.rows.headquarters}</dt>
