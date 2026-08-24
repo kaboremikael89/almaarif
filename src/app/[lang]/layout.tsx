@@ -24,7 +24,7 @@ const archivo = Archivo({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#082140',
+  themeColor: '#12294a',
   width: 'device-width',
   initialScale: 1,
 }
