@@ -85,7 +85,11 @@ fichier en gardant le même nom : aucun code n'est à modifier.
 
 | Fichier | Emplacement | Format conseillé |
 | --- | --- | --- |
-| `salle-de-formation.jpg` | Bande triptyque de l'accueil | 1800 x 1100 px, JPEG, moins de 300 ko |
+| `logo.png`, `logo-clair.png` | Logo complet, fond clair et fond sombre | PNG détouré |
+| `logo-embleme.png`, `logo-embleme-clair.png` | Emblème seul, en-tête et favicon | PNG détouré |
+| `salle-de-formation.jpg` | Bande triptyque de l'accueil | 1290 x 896 px, JPEG |
+| `formats-1.jpg` à `formats-3.jpg` | Cartes verticales de la page d'accueil | 900 x 1200 px |
+| `maroc-1.jpg` à `maroc-3.jpg` | Cartes horizontales, section sur le Maroc | 1200 x 800 px |
 
 Le composant `SplitImage` découpe une seule photo en trois rectangles séparés
 par un filet, qui recomposent l'image d'origine. Chaque panneau apparaît avec un
@@ -97,8 +101,8 @@ verticales seraient illisibles.
 ```
 
 Compressez les photos avant de les committer (objectif : moins de 300 ko par
-image, largeur maximale 1920 px). Le fichier livré aujourd'hui est un visuel
-d'attente aux dimensions définitives, à remplacer par une photographie réelle.
+image, largeur maximale 1920 px). Les fichiers `formats-*` et `maroc-*` sont encore des visuels d'attente aux
+dimensions définitives, à remplacer par des photographies réelles.
 
 ## 6. Référencement et accessibilité
 

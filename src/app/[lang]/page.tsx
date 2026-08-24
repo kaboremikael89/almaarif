@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 
 import Reveal from '@/components/Reveal'
 import ProgramCard from '@/components/ProgramCard'
+import SplitImage from '@/components/SplitImage'
 import { PortraitCard, WideCard } from '@/components/PhotoCard'
 import { SectionLabel, SplitTitle, StatRow, KeywordRibbon } from '@/components/Primitives'
 import { StarFrame } from '@/components/Ornament'
@@ -255,6 +256,13 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               )
             })}
           </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------- BANDE PHOTO */}
+      <section className="bg-ivory-50 pt-16 lg:pt-20">
+        <div className="container-page">
+          <SplitImage src="/images/salle-de-formation.jpg" alt={home.photos.roomAlt} />
         </div>
       </section>
 

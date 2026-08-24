@@ -183,6 +183,9 @@ export const en: Dictionary = {
         { tag: 'Follow-up', title: 'Follow-up', body: 'Certificate, session report, individual action plan and a remote follow-up session.' },
       ],
     },
+    photos: {
+      roomAlt: 'Equipped meeting room, seminar configuration',
+    },
     legalStrip: {
       eyebrow: 'Legal standing',
       body: 'Al Maarif Expertise is a company incorporated under Moroccan law and based in Casablanca. Its trade name is registered with the Moroccan Industrial and Commercial Property Office, and it holds a common enterprise identifier. Sessions held in Morocco operate under Moroccan legal and tax rules.',

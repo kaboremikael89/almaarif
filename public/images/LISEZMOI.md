@@ -10,15 +10,18 @@ code n'est nécessaire.
 
 | Fichier à déposer | Usage sur le site | Format conseillé |
 | --- | --- | --- |
-| `logo.png` | Logo officiel, version couleur sur fond clair | PNG à fond transparent, 1200 px de large minimum |
-| `logo-blanc.png` | Logo pour les fonds bleu nuit (pied de page) | PNG à fond transparent, même largeur |
-| `logo.svg` | Version vectorielle si vous l'avez | SVG, la meilleure qualité à toutes les tailles |
+| `logo.png` | Logo complet sur fond clair. **En place**, détouré à partir du JPEG fourni | PNG à fond transparent |
+| `logo-clair.png` | Logo complet pour les fonds bleu nuit, bleu remplacé par l'ivoire. **En place** | PNG à fond transparent |
+| `logo-embleme.png` | Emblème seul, sans le mot EXPERTISE, pour l'en-tête. **En place** | PNG à fond transparent |
+| `logo-embleme-clair.png` | Emblème seul pour fonds sombres, favicon. **En place** | PNG à fond transparent |
+| `logo.svg` | Version vectorielle, si le graphiste vous la fournit | SVG, meilleure qualité à toutes les tailles |
 | `formats-1.jpg` | Carte verticale gauche de la page d'accueil | 900 x 1200 px |
 | `formats-2.jpg` | Carte verticale centrale | 900 x 1200 px |
 | `formats-3.jpg` | Carte verticale droite | 900 x 1200 px |
 | `maroc-1.jpg` | Carte horizontale, section sur le Maroc | 1200 x 800 px |
 | `maroc-2.jpg` | Carte horizontale, section sur le Maroc | 1200 x 800 px |
 | `maroc-3.jpg` | Carte horizontale, section sur le Maroc | 1200 x 800 px |
+| `salle-de-formation.jpg` | Bande triptyque de l'accueil. **En place** | 1290 x 896 px |
 | `direction.jpg` | Portrait du gérant, page À propos | 900 x 1200 px |
 
 Déposer un fichier portant l'un de ces noms remplace le visuel d'attente

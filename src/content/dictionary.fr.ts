@@ -181,6 +181,9 @@ export const fr = {
         { tag: 'Suivi', title: 'Suivi & capitalisation', body: 'Attestation, rapport de session, plan d’action individuel et point de suivi à distance.' },
       ],
     },
+    photos: {
+      roomAlt: 'Salle de réunion équipée, en configuration séminaire',
+    },
     legalStrip: {
       eyebrow: 'Cadre légal',
       body: "Al Maarif Expertise est une société de droit marocain établie à Casablanca. Sa dénomination est enregistrée auprès de l’Office marocain de la propriété industrielle et commerciale, et elle dispose d’un identifiant commun de l’entreprise. Les sessions organisées au Maroc se tiennent dans le cadre juridique et fiscal marocain.",

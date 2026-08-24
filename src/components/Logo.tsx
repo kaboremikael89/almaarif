@@ -1,38 +1,60 @@
 import Link from 'next/link'
-import { Rosette } from './Ornament'
 import { site } from '@/content/site'
 import { href, type Locale } from '@/lib/i18n'
 
 type LogoProps = {
   lang: Locale
-  /** Variante claire pour les fonds bleu nuit */
+  /** Variante posée sur un fond bleu nuit */
   light?: boolean
   /** Encadré à filet, comme dans l'en-tête */
   boxed?: boolean
+  /**
+   * emblem : emblème seul suivi du nom composé en typographie
+   * lockup : logo complet fourni par le client, emblème et mot EXPERTISE
+   */
+  variant?: 'emblem' | 'lockup'
   className?: string
 }
 
-export default function Logo({ lang, light = false, boxed = false, className = '' }: LogoProps) {
+export default function Logo({
+  lang,
+  light = false,
+  boxed = false,
+  variant = 'emblem',
+  className = '',
+}: LogoProps) {
+  const label = `${site.name}, ${site.baseline[lang]}`
+
+  if (variant === 'lockup') {
+    return (
+      <Link href={href(lang, '/')} className={`inline-block ${className}`} aria-label={label}>
+        <img
+          src={light ? '/images/logo-clair.png' : '/images/logo.png'}
+          alt={site.name}
+          width={1000}
+          height={911}
+          className="h-auto w-40"
+        />
+      </Link>
+    )
+  }
+
   return (
     <Link
       href={href(lang, '/')}
       className={`group inline-flex items-center gap-3 ${
-        boxed ? 'border border-navy-900/15 py-2 pl-2 pr-4' : ''
+        boxed ? `border py-2 pl-2.5 pr-4 ${light ? 'border-ivory-100/20' : 'border-navy-900/15'}` : ''
       } ${className}`}
-      aria-label={`${site.name}, ${site.baseline[lang]}`}
+      aria-label={label}
     >
-      <span
-        className={`flex h-9 w-9 shrink-0 items-center justify-center ${
-          light ? 'bg-gold-500' : 'bg-navy-900'
-        }`}
-      >
-        <Rosette
-          className={`h-5 w-5 transition-transform duration-700 group-hover:rotate-45 ${
-            light ? 'text-navy-950' : 'text-gold-400'
-          }`}
-          strokeWidth={2.6}
-        />
-      </span>
+      <img
+        src={light ? '/images/logo-embleme-clair.png' : '/images/logo-embleme.png'}
+        alt=""
+        aria-hidden="true"
+        width={400}
+        height={352}
+        className="h-10 w-auto shrink-0 transition-transform duration-500 group-hover:scale-105"
+      />
       <span className="flex flex-col leading-none">
         <span
           className={`whitespace-nowrap font-logo text-[0.95rem] uppercase tracking-[0.2em] ${

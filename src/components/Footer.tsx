@@ -28,7 +28,7 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
       <div className="container-page relative py-20">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Logo lang={lang} light />
+            <Logo lang={lang} light variant="lockup" />
             <p className="mt-7 max-w-xs text-sm leading-relaxed text-ivory-100/60">{dict.footer.tagline}</p>
             <p className="label mt-8 text-gold-400">{site.tagline[lang]}</p>
           </div>
