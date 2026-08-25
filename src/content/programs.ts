@@ -7,8 +7,6 @@ export type Program = {
   reference: string
   title: I18nText
   summary: I18nText
-  /** Durée en semaines */
-  durationWeeks: 1 | 2
   level: 'fondamental' | 'perfectionnement' | 'expert'
   audience: I18nList
   objectives: I18nList
@@ -24,7 +22,6 @@ export const programs: Program[] = [
     domain: 'finances-publiques',
     reference: 'FP-101',
     featured: true,
-    durationWeeks: 1,
     level: 'perfectionnement',
     title: {
       fr: 'Budget-programme et pilotage de la performance publique',
@@ -110,7 +107,6 @@ export const programs: Program[] = [
     slug: 'comptabilite-publique-ipsas',
     domain: 'finances-publiques',
     reference: 'FP-102',
-    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: 'Comptabilité publique et normes IPSAS',
@@ -197,7 +193,6 @@ export const programs: Program[] = [
     domain: 'commande-publique',
     reference: 'CP-201',
     featured: true,
-    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Passation et exécution des marchés publics',
@@ -283,7 +278,6 @@ export const programs: Program[] = [
     slug: 'passation-marches-bailleurs',
     domain: 'commande-publique',
     reference: 'CP-202',
-    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: 'Passation des marchés financés par les bailleurs',
@@ -370,7 +364,6 @@ export const programs: Program[] = [
     domain: 'audit-risques',
     reference: 'AR-301',
     featured: true,
-    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: 'Audit interne : de la cartographie des risques au rapport',
@@ -456,7 +449,6 @@ export const programs: Program[] = [
     slug: 'controle-interne-anti-fraude',
     domain: 'audit-risques',
     reference: 'AR-302',
-    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Contrôle interne et dispositif anti-fraude',
@@ -540,7 +532,6 @@ export const programs: Program[] = [
     domain: 'gouvernance-leadership',
     reference: 'GL-401',
     featured: true,
-    durationWeeks: 1,
     level: 'perfectionnement',
     title: {
       fr: 'Leadership exécutif et conduite du changement',
@@ -626,7 +617,6 @@ export const programs: Program[] = [
     slug: 'gouvernance-entreprises-publiques',
     domain: 'gouvernance-leadership',
     reference: 'GL-402',
-    durationWeeks: 1,
     level: 'expert',
     title: {
       fr: 'Gouvernance des entreprises et établissements publics',
@@ -709,7 +699,6 @@ export const programs: Program[] = [
     slug: 'gestion-projets-developpement',
     domain: 'projets-evaluation',
     reference: 'PE-501',
-    durationWeeks: 2,
     level: 'fondamental',
     title: {
       fr: 'Gestion des projets de développement : cycle et GAR',
@@ -795,7 +784,6 @@ export const programs: Program[] = [
     slug: 'suivi-evaluation-impact',
     domain: 'projets-evaluation',
     reference: 'PE-502',
-    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: "Suivi-évaluation et mesure d'impact des politiques publiques",
@@ -881,7 +869,6 @@ export const programs: Program[] = [
     slug: 'transformation-digitale-administrations',
     domain: 'transformation-digitale',
     reference: 'TD-601',
-    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Transformation digitale des administrations',
@@ -965,7 +952,6 @@ export const programs: Program[] = [
     domain: 'transformation-digitale',
     reference: 'TD-602',
     featured: true,
-    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Data et intelligence artificielle pour dirigeants',

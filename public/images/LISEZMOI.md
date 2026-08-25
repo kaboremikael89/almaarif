@@ -36,3 +36,37 @@ provisoires, ce ne sont pas des photographies.
   se verrait sur les sections bleu nuit.
 - Si vous ne disposez que d'un logo en JPEG avec fond blanc, déposez-le quand
   même sous le nom `logo-source.jpg` : le détourage sera fait ensuite.
+
+## Composition des photos
+
+Les visuels doivent refléter les marchés visés : le Maroc et le Maghreb, l'Afrique
+francophone, l'Afrique anglophone. Concrètement, dans chaque image de groupe :
+
+- une **majorité de profils maghrébins**, puisque la prospection porte d'abord sur
+  le Maroc et que le visiteur doit se reconnaître ;
+- des **profils d'Afrique subsaharienne**, francophones et anglophones, qui
+  correspondent à l'autre moitié de la clientèle ;
+- des **profils internationaux**, pour les organisations internationales et les
+  bailleurs ;
+- une **mixité femmes et hommes** réelle, et des âges variés, cadres confirmés
+  plutôt que juniors.
+
+Décor : salle de réunion ou de séminaire, tenue professionnelle sobre, éléments
+d'architecture marocaine discrets (arcs, zellige, claustras, lumière chaude).
+Éviter les mises en scène trop souriantes de banque d'images : le registre du site
+est institutionnel.
+
+### Consigne prête à coller dans un générateur d'images
+
+> Photographie professionnelle d'une session de formation pour cadres dirigeants
+> dans une salle de séminaire à Casablanca. Autour de la table, huit participants
+> en tenue professionnelle sobre : une majorité de cadres maghrébins, femmes et
+> hommes, accompagnés de cadres d'Afrique de l'Ouest et de deux profils
+> internationaux. Un intervenant debout anime la séance. Décor contemporain avec
+> arcs et claustras en bois, lumière naturelle chaude, vue sur la ville en arrière
+> plan. Cadrage large, format 2400 x 1200, ambiance sérieuse et haut de gamme,
+> pas de sourires forcés.
+
+Adapter le nombre de personnes et le cadrage selon le fichier : `formats.jpg` est
+découpé en trois barres verticales, il faut donc une personne bien lisible dans
+chaque tiers de l'image.

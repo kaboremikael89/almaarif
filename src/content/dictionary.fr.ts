@@ -25,8 +25,7 @@ export const fr = {
     readMore: 'En savoir plus',
     discover: 'Découvrir',
     allPrograms: 'Voir tous les programmes',
-    weeks: 'semaines',
-    week: 'semaine',
+    durationValue: '1 à 2 semaines, selon le contenu',
     reference: 'Réf.',
     level: 'Niveau',
     levels: {
@@ -73,7 +72,7 @@ export const fr = {
       eyebrow: 'Qui sommes-nous',
       title: 'Un cabinet pensé pour les institutions africaines',
       body: [
-        "Al Maarif Expertise est un cabinet de conseil de gestion et de formation professionnelle établi à Casablanca. Nous accompagnons les administrations publiques, les organisations internationales, les organisations non gouvernementales et les structures privées, en Afrique et dans le reste du monde.",
+        "Al Maarif Expertise est un cabinet de conseil de gestion et de formation professionnelle établi à Casablanca. Nous accompagnons les administrations publiques, les organisations internationales, les organisations non gouvernementales et les structures privées, en Afrique francophone et anglophone, dans le monde arabe et au-delà.",
         "Notre parti pris est simple : une formation ne vaut que par ce qu’elle change au retour au bureau. Chaque programme part de vos textes, de vos procédures et de vos dossiers réels, et se termine par un plan d’action que vos cadres emportent avec eux.",
       ],
       cta: 'Découvrir le cabinet',
@@ -136,7 +135,7 @@ export const fr = {
         },
         {
           title: 'Une expertise bilingue',
-          body: 'Un vivier d’intervenants francophones et anglophones formés aux standards internationaux et familiers des réalités administratives africaines.',
+          body: 'Un vivier d’intervenants francophones et anglophones formés aux standards internationaux, familiers des réalités administratives maghrébines et africaines.',
         },
         {
           title: 'Une logistique prise en charge',
@@ -290,7 +289,7 @@ export const fr = {
       title: 'Renforcer les capacités de ceux qui dirigent',
       body: [
         "Les administrations et les entreprises africaines conduisent des réformes exigeantes : budget-programme, modernisation de la commande publique, redevabilité, transformation numérique. Ces réformes ne réussissent que si les femmes et les hommes qui les portent en maîtrisent les outils.",
-        "C’est le rôle que nous nous donnons : mettre à disposition des institutions publiques et privées une offre de formation et de conseil de niveau international, dans un cadre accessible, à Casablanca et partout où nos clients en ont besoin.",
+        "C’est le rôle que nous nous donnons : mettre à disposition des institutions publiques et privées du monde arabe, de l’Afrique francophone et de l’Afrique anglophone une offre de formation et de conseil de niveau international, dans un cadre accessible, à Casablanca et partout où nos clients en ont besoin.",
       ],
     },
     values: {

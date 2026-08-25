@@ -64,7 +64,7 @@ export default async function ProgramPage({
     { label: dict.common.domain, value: domain.title[lang] },
     {
       label: dict.common.duration,
-      value: `${program.durationWeeks} ${program.durationWeeks > 1 ? dict.common.weeks : dict.common.week}`,
+      value: dict.common.durationValue,
     },
     { label: dict.common.level, value: dict.common.levels[program.level] },
     { label: dict.common.languages, value: dict.common.languagesValue },
@@ -89,7 +89,6 @@ export default async function ProgramPage({
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: ['onsite', 'blended'],
-      courseWorkload: `P${program.durationWeeks}W`,
       location: {
         '@type': 'Place',
         name: site.address.city.fr,
@@ -183,8 +182,7 @@ export default async function ProgramPage({
                 <p className="label text-gold-400">{program.reference}</p>
                 <p className="mt-4 flex items-center gap-3 text-sm text-ivory-100/80">
                   <Clock className="h-4 w-4 text-gold-400" />
-                  {program.durationWeeks}{' '}
-                  {program.durationWeeks > 1 ? dict.common.weeks : dict.common.week}
+                  {dict.common.durationValue}
                 </p>
                 <p className="mt-2 flex items-center gap-3 text-sm text-ivory-100/80">
                   <Pin className="h-4 w-4 text-gold-400" />

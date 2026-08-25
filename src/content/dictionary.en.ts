@@ -27,8 +27,7 @@ export const en: Dictionary = {
     readMore: 'Learn more',
     discover: 'Explore',
     allPrograms: 'View all programmes',
-    weeks: 'weeks',
-    week: 'week',
+    durationValue: '1 to 2 weeks, depending on content',
     reference: 'Ref.',
     level: 'Level',
     levels: {
@@ -75,7 +74,7 @@ export const en: Dictionary = {
       eyebrow: 'Who we are',
       title: 'A firm built for African institutions',
       body: [
-        'Al Maarif Expertise is a management consulting and professional training firm based in Casablanca. We work with public administrations, international organisations, non-governmental organisations and private companies, in Africa and across the world.',
+        'Al Maarif Expertise is a management consulting and professional training firm based in Casablanca. We work with public administrations, international organisations, non-governmental organisations and private companies, across francophone and anglophone Africa, the Arab world and beyond.',
         'Our position is simple: training is only worth what it changes once people are back at their desks. Every programme starts from your own regulations, procedures and live files, and ends with an action plan your managers take home.',
       ],
       cta: 'About the firm',
@@ -138,7 +137,7 @@ export const en: Dictionary = {
         },
         {
           title: 'Bilingual expertise',
-          body: 'A pool of French- and English-speaking practitioners trained to international standards and familiar with African administrative realities.',
+          body: 'A pool of French- and English-speaking practitioners trained to international standards, familiar with North African and sub-Saharan administrative realities.',
         },
         {
           title: 'Logistics handled for you',
@@ -292,7 +291,7 @@ export const en: Dictionary = {
       title: 'Strengthening the capacity of those who lead',
       body: [
         'African administrations and enterprises are running demanding reforms: programme budgeting, procurement modernisation, accountability, digital transformation. Those reforms only succeed if the people carrying them master the tools.',
-        'That is the role we set ourselves: giving public and private institutions access to international-standard training and advisory services, in an accessible setting, in Casablanca and wherever our clients need us.',
+        'That is the role we set ourselves: giving public and private institutions across the Arab world, francophone and anglophone Africa access to international-standard training and advisory services, in an accessible setting, in Casablanca and wherever our clients need us.',
       ],
     },
     values: {
