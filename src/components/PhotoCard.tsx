@@ -4,6 +4,11 @@ import { ArrowUpRight } from './Icons'
 
 type PortraitCardProps = {
   src: string
+  /**
+   * Tranche de l'image à afficher, de 0 à 2. Renseignée sur les trois cartes,
+   * une seule photo large se répartit entre elles et recompose la scène.
+   */
+  slice?: 0 | 1 | 2
   index: string
   title: string
   body?: string
@@ -16,6 +21,7 @@ type PortraitCardProps = {
 /** Carte photo verticale, texte posé sur un dégradé sombre */
 export function PortraitCard({
   src,
+  slice,
   index,
   title,
   body,
@@ -23,24 +29,43 @@ export function PortraitCard({
   cta,
   delay = 0,
 }: PortraitCardProps) {
-  // La carte centrale monte et s'allonge, les deux autres descendent
+  // Hauteurs égales quand une seule photo est répartie entre les cartes,
+  // sinon la scène ne se recompose plus. Le décalage vertical reste.
+  const sliced = slice !== undefined
+  const height = sliced
+    ? 'h-[18rem] sm:h-[25rem] lg:h-[32rem]'
+    : offset === 'up'
+      ? 'h-[19rem] sm:h-[26rem] lg:h-[34rem]'
+      : 'h-[17rem] sm:h-[23rem] lg:h-[30rem]'
   const shift =
     offset === 'up'
-      ? 'sm:-translate-y-8 h-[19rem] sm:h-[26rem] lg:h-[34rem]'
+      ? `sm:-translate-y-8 ${height}`
       : offset === 'down'
-        ? 'sm:translate-y-8 h-[17rem] sm:h-[23rem] lg:h-[30rem]'
-        : 'h-[17rem] sm:h-[23rem] lg:h-[30rem]'
+        ? `sm:translate-y-8 ${height}`
+        : height
 
   return (
     <Reveal delay={delay} className={`relative overflow-hidden ${shift}`}>
-      <img
-        src={src}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        decoding="async"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      {sliced ? (
+        <img
+          src={src}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="absolute top-0 h-full w-[300%] max-w-none object-cover"
+          style={{ left: `${(slice as number) * -100}%` }}
+        />
+      ) : (
+        <img
+          src={src}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      )}
       <div
         className="absolute inset-0 bg-linear-to-t from-navy-950 via-navy-950/45 to-transparent"
         aria-hidden="true"

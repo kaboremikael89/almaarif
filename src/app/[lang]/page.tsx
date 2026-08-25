@@ -15,7 +15,8 @@ import { featuredPrograms } from '@/content/programs'
 import { site } from '@/content/site'
 import { href, isLocale, type Locale } from '@/lib/i18n'
 
-const formatImages = ['/images/formats-1.jpg', '/images/formats-2.jpg', '/images/formats-3.jpg']
+// Une seule photo large, répartie en trois tranches sur les cartes de la zone haute
+const formatsImage = '/images/formats.jpg'
 const moroccoImages = ['/images/maroc-1.jpg', '/images/maroc-2.jpg', '/images/maroc-3.jpg']
 
 export async function generateMetadata({
@@ -111,7 +112,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               {home.formats.items.slice(0, 3).map((item, i) => (
                 <PortraitCard
                   key={item.tag}
-                  src={formatImages[i]}
+                  src={formatsImage}
+                  slice={i as 0 | 1 | 2}
                   index={`0${i + 1} / ${item.tag}`}
                   title={item.title}
                   offset={i === 1 ? 'up' : 'down'}
