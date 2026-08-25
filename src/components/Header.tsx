@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Logo from './Logo'
 import { ArrowUpRight } from './Icons'
-import { href, locales, type Locale } from '@/lib/i18n'
+import { href, locales, localeShort, type Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/content/dictionary'
 
 type HeaderProps = { lang: Locale; dict: Dictionary }
@@ -104,7 +104,7 @@ export default function Header({ lang, dict }: HeaderProps) {
                     aria-current="true"
                     className="bg-navy-900 px-2 py-0.5 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-ivory-50"
                   >
-                    {locale}
+                    {localeShort[locale]}
                   </span>
                 ) : (
                   <Link
@@ -113,7 +113,7 @@ export default function Header({ lang, dict }: HeaderProps) {
                     hrefLang={locale}
                     className="px-2 py-0.5 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-navy-700 transition-colors hover:text-gold-700"
                   >
-                    {locale}
+                    {localeShort[locale]}
                   </Link>
                 ),
               )}

@@ -197,7 +197,7 @@ export default function ContactForm({ lang, dict }: { lang: Locale; dict: Dictio
       </label>
 
       {status === 'error' && (
-        <p role="alert" className="mt-6 border-l-2 border-red-500 bg-red-50 px-4 py-3 text-sm text-red-800">
+        <p role="alert" className="mt-6 border-s-2 border-red-500 bg-red-50 px-4 py-3 text-sm text-red-800">
           {f.error}
         </p>
       )}

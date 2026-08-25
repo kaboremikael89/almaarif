@@ -17,6 +17,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params
   const dict = getDictionary(lang)
+  // Virgule arabe dans la version de droite à gauche
+  const comma = lang === 'ar' ? '، ' : ', '
   return {
     title: dict.about.hero.title,
     description: dict.about.mission.body[0],
@@ -38,7 +40,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     { label: about.identity.rows.manager, value: site.legal.manager },
     {
       label: about.identity.rows.headquarters,
-      value: `${site.address.street}, ${site.address.city}, ${site.address.country[lang]}`,
+      value: [site.address.street[lang], site.address.city[lang], site.address.country[lang]].join(comma),
     },
     { label: about.identity.rows.court, value: site.legal.court[lang] },
   ]
@@ -83,8 +85,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                   </div>
                   <div className="flex justify-between gap-6">
                     <dt className="text-ivory-100/50">{about.identity.rows.headquarters}</dt>
-                    <dd className="text-right text-ivory-100">
-                      {site.address.city}, {site.address.country[lang]}
+                    <dd className="text-end text-ivory-100">
+                      {site.address.city[lang]}, {site.address.country[lang]}
                     </dd>
                   </div>
                 </dl>

@@ -37,9 +37,16 @@ grep -rn "—\|–" src public README.md netlify.toml   # doit ne rien renvoyer
 - Les informations légales (ICE, siège, gérant, tribunal) proviennent du
   certificat négatif OMPIC n° 3281360 et du contrat de domiciliation. Ne pas les
   modifier sans document à l'appui.
-- Tout texte visible doit exister en français **et** en anglais.
-  `src/content/dictionary.en.ts` est typé d'après `dictionary.fr.ts` : un oubli
-  de traduction casse le build, c'est voulu.
+- Tout texte visible doit exister dans les trois langues : français, anglais,
+  arabe. `dictionary.en.ts` et `dictionary.ar.ts` sont typés d'après
+  `dictionary.fr.ts`, et les champs multilingues de `domains.ts`, `programs.ts`
+  et `site.ts` sont des `Record<Locale, string>` : un oubli de traduction casse
+  le build, c'est voulu.
+- La version arabe s'affiche de droite à gauche. Utiliser les classes logiques
+  de Tailwind (`ps-`, `pe-`, `ms-`, `me-`, `start-`, `end-`, `border-s`) et
+  jamais les classes physiques (`pl-`, `pr-`, `left-`, `right-`, `border-l`).
+- L'arabe ne supporte ni les capitales ni l'interlettrage large : les règles
+  correspondantes sont neutralisées sous `[dir='rtl']` dans `globals.css`.
 
 ## Images
 

@@ -7,8 +7,8 @@ export type Program = {
   reference: string
   title: I18nText
   summary: I18nText
-  /** Durée en jours ouvrés */
-  durationDays: number
+  /** Durée en semaines */
+  durationWeeks: 1 | 2
   level: 'fondamental' | 'perfectionnement' | 'expert'
   audience: I18nList
   objectives: I18nList
@@ -24,15 +24,17 @@ export const programs: Program[] = [
     domain: 'finances-publiques',
     reference: 'FP-101',
     featured: true,
-    durationDays: 5,
+    durationWeeks: 1,
     level: 'perfectionnement',
     title: {
       fr: 'Budget-programme et pilotage de la performance publique',
       en: 'Programme budgeting and public performance management',
+      ar: 'ميزانية البرامج وقيادة الأداء العمومي',
     },
     summary: {
       fr: "Passer d'un budget de moyens à un budget de résultats : construire des programmes, des objectifs et des indicateurs qui tiennent devant le Parlement et devant les bailleurs.",
       en: 'Moving from input-based to results-based budgeting: building programmes, objectives and indicators that hold up before parliament and before donors.',
+      ar: 'الانتقال من ميزانية الوسائل إلى ميزانية النتائج: بناء برامج وأهداف ومؤشرات تصمد أمام البرلمان وأمام المانحين.',
     },
     audience: {
       fr: [
@@ -46,6 +48,12 @@ export const programs: Program[] = [
         'Programme and planning managers',
         'Officers of the general finance inspectorate',
         'Financial controllers and revenue officers',
+      ],
+      ar: [
+        'مديرو الشؤون المالية والميزانية',
+        'مسؤولو البرامج والتخطيط',
+        'أطر المفتشيات العامة للمالية',
+        'المراقبون الماليون والقباض',
       ],
     },
     objectives: {
@@ -62,6 +70,13 @@ export const programs: Program[] = [
         'Connect the annual budget with the medium-term expenditure framework',
         'Produce usable performance plans and annual performance reports',
         'Establish management dialogue between programme owners and operators',
+      ],
+      ar: [
+        'هيكلة بنية برامج منسجمة مع السياسات العمومية',
+        'صياغة أهداف ومؤشرات قابلة للقياس والتحقق',
+        'الربط بين الميزانية السنوية وإطار النفقات متوسط المدى',
+        'إنتاج مشروع وتقرير سنوي للأداء قابلين للاستعمال',
+        'إرساء حوار التدبير بين مسؤولي البرامج والمتدخلين',
       ],
     },
     modules: {
@@ -81,21 +96,31 @@ export const programs: Program[] = [
         'Annual performance plan: drafting workshop',
         'Management dialogue, reporting and management control',
       ],
+      ar: [
+        'أسس التدبير الميزانياتي المبني على النتائج',
+        'بنية البرامج: المهام والبرامج والأنشطة',
+        'الأهداف والمؤشرات والغايات: المنهج والمزالق',
+        'التأطير الماكرو ميزانياتي وإطار النفقات متوسط المدى',
+        'مشروع نجاعة الأداء: ورشة تحرير',
+        'حوار التدبير والتقارير ومراقبة التدبير',
+      ],
     },
   },
   {
     slug: 'comptabilite-publique-ipsas',
     domain: 'finances-publiques',
     reference: 'FP-102',
-    durationDays: 5,
+    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: 'Comptabilité publique et normes IPSAS',
       en: 'Public accounting and IPSAS standards',
+      ar: 'المحاسبة العمومية ومعايير إيبساس',
     },
     summary: {
       fr: "Conduire le passage à la comptabilité d'exercice et produire des états financiers conformes aux normes internationales du secteur public.",
       en: 'Leading the transition to accrual accounting and producing financial statements compliant with international public sector standards.',
+      ar: 'قيادة الانتقال إلى محاسبة الاستحقاق وإنتاج قوائم مالية مطابقة للمعايير المحاسبية الدولية للقطاع العام.',
     },
     audience: {
       fr: [
@@ -109,6 +134,12 @@ export const programs: Program[] = [
         'Finance departments of public agencies',
         'Treasury and budget directorate staff',
         'Auditors and account verifiers',
+      ],
+      ar: [
+        'المحاسبون العموميون والأعوان المحاسبون',
+        'المديريات المالية للمؤسسات العمومية',
+        'أطر الخزينة ومديريات الميزانية',
+        'المدققون ومراجعو الحسابات',
       ],
     },
     objectives: {
@@ -125,6 +156,13 @@ export const programs: Program[] = [
         'Identify, value and depreciate public assets',
         'Build a realistic, sequenced transition plan',
         'Prepare financial statements and their notes',
+      ],
+      ar: [
+        'التمييز بين محاسبة الصندوق ومحاسبة الالتزام ومحاسبة الاستحقاق',
+        'تطبيق أهم معايير إيبساس على العمليات الجارية',
+        'إحصاء ممتلكات الدولة وتقييمها وإهلاكها',
+        'بناء مخطط انتقال واقعي ومرحلي',
+        'إعداد القوائم المالية وملحقاتها',
       ],
     },
     modules: {
@@ -144,6 +182,14 @@ export const programs: Program[] = [
         'Consolidation and the public entity boundary',
         'Workshop: preparing a full set of financial statements',
       ],
+      ar: [
+        'بانوراما المرجعيات: إيبساس وسيسكواداس والمرجعيات الوطنية',
+        'الأصول الثابتة والمخزونات وانخفاض القيمة',
+        'المنتجات والتكاليف وربطها بالسنة المالية',
+        'المؤونات والالتزامات خارج الميزانية والمديونية',
+        'التجميع ومحيط الكيان العمومي',
+        'ورشة: إعداد مجموعة كاملة من القوائم المالية',
+      ],
     },
   },
   {
@@ -151,15 +197,17 @@ export const programs: Program[] = [
     domain: 'commande-publique',
     reference: 'CP-201',
     featured: true,
-    durationDays: 5,
+    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Passation et exécution des marchés publics',
       en: 'Public procurement: tendering and contract execution',
+      ar: 'إبرام الصفقات العمومية وتنفيذها',
     },
     summary: {
       fr: "Maîtriser la chaîne complète de la commande publique, du besoin exprimé à la réception définitive, et sécuriser juridiquement chaque décision.",
       en: 'Mastering the full procurement chain, from needs definition to final acceptance, and legally securing every decision.',
+      ar: 'التحكم في سلسلة الطلبية العمومية بأكملها، من التعبير عن الحاجة إلى التسلم النهائي، وتأمين كل قرار قانونيا.',
     },
     audience: {
       fr: [
@@ -173,6 +221,12 @@ export const programs: Program[] = [
         'Tender committee members',
         'Contracting authorities and project managers',
         'Legal officers and expenditure controllers',
+      ],
+      ar: [
+        'مسؤولو مصالح المشتريات والصفقات',
+        'أعضاء لجان طلب العروض',
+        'أصحاب المشاريع ورؤساء المشاريع',
+        'القانونيون ومراقبو النفقات',
       ],
     },
     objectives: {
@@ -189,6 +243,13 @@ export const programs: Program[] = [
         'Evaluate bids with a defensible scoring grid',
         'Manage execution: service orders, amendments, penalties, acceptance',
         'Prevent and handle appeals and disputes',
+      ],
+      ar: [
+        'اختيار طريقة الإبرام الملائمة للحاجة وللمخاطر',
+        'تحرير ملف طلب عروض واضح وغير تمييزي',
+        'تقييم العروض وفق شبكة قابلة للدفاع عنها',
+        'قيادة التنفيذ: أوامر الخدمة والملحقات والغرامات والتسلم',
+        'الوقاية من الطعون والنزاعات ومعالجتها',
       ],
     },
     modules: {
@@ -208,21 +269,31 @@ export const programs: Program[] = [
         'Financial and technical contract execution',
         'Disputes, integrity and fraud prevention',
       ],
+      ar: [
+        'المبادئ الأساسية وفاعلو الطلبية العمومية',
+        'تحديد الحاجة والتقسيم إلى حصص والتقدير',
+        'طرق الإبرام والإشهار',
+        'فتح الأظرفة والتقييم والإسناد: حالات عملية',
+        'التنفيذ المالي والتقني للصفقة',
+        'المنازعات والنزاهة والوقاية من الغش',
+      ],
     },
   },
   {
     slug: 'passation-marches-bailleurs',
     domain: 'commande-publique',
     reference: 'CP-202',
-    durationDays: 5,
+    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: 'Passation des marchés financés par les bailleurs',
       en: 'Procurement under donor-financed projects',
+      ar: 'إبرام الصفقات الممولة من المانحين',
     },
     summary: {
       fr: "Appliquer les règles de la Banque mondiale, de la BAD et de l'Union européenne sans bloquer le décaissement des projets.",
       en: 'Applying World Bank, AfDB and European Union rules without stalling project disbursement.',
+      ar: 'تطبيق قواعد البنك الدولي والبنك الأفريقي للتنمية والاتحاد الأوروبي دون عرقلة صرف تمويلات المشاريع.',
     },
     audience: {
       fr: [
@@ -236,6 +307,12 @@ export const programs: Program[] = [
         'Project implementation units',
         'Project finance officers',
         'Auditors of externally financed projects',
+      ],
+      ar: [
+        'منسقو ومختصو إبرام الصفقات',
+        'وحدات تدبير المشاريع الممولة',
+        'المسؤولون الماليون عن المشاريع',
+        'مدققو المشاريع ذات التمويل الخارجي',
       ],
     },
     objectives: {
@@ -252,6 +329,13 @@ export const programs: Program[] = [
         'Run consultant selections (QCBS, QBS, direct selection)',
         'Manage prior review and no-objection letters',
         'Document files for audit and post-review',
+      ],
+      ar: [
+        'تحديد موقع قواعد المانحين بالنسبة للقانون الوطني',
+        'إعداد مخطط إبرام الصفقات وتحيينه',
+        'إنجاز مساطر انتقاء المكاتب الاستشارية',
+        'تدبير المراجعة القبلية ورسائل عدم الممانعة',
+        'توثيق الملفات لأغراض التدقيق والمراجعة البعدية',
       ],
     },
     modules: {
@@ -271,6 +355,14 @@ export const programs: Program[] = [
         'Disbursement, designated accounts and supporting documents',
         'Complaints, sanctions and prohibited practices',
       ],
+      ar: [
+        'أطر الإبرام: البنك الدولي والبنك الأفريقي والاتحاد الأوروبي والأنظمة الوطنية',
+        'مخطط الإبرام وتتبع العتبات',
+        'انتقاء المكاتب الاستشارية والموردين',
+        'رسائل عدم الممانعة والمراجعات القبلية',
+        'الصرف والحسابات المخصصة والوثائق المثبتة',
+        'الشكايات والعقوبات والممارسات الممنوعة',
+      ],
     },
   },
   {
@@ -278,15 +370,17 @@ export const programs: Program[] = [
     domain: 'audit-risques',
     reference: 'AR-301',
     featured: true,
-    durationDays: 5,
+    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: 'Audit interne : de la cartographie des risques au rapport',
       en: 'Internal audit: from risk mapping to the audit report',
+      ar: 'التدقيق الداخلي: من خريطة المخاطر إلى التقرير',
     },
     summary: {
       fr: "Conduire une mission d'audit interne complète selon les normes internationales, et produire des recommandations que la direction met réellement en œuvre.",
       en: 'Running a full internal audit assignment to international standards, and producing recommendations management actually implements.',
+      ar: 'إنجاز مهمة تدقيق داخلي كاملة وفق المعايير الدولية، وإصدار توصيات تنفذها الإدارة فعلا.',
     },
     audience: {
       fr: [
@@ -300,6 +394,12 @@ export const programs: Program[] = [
         'Inspectors general and controllers',
         'Audit committee members',
         'Quality and compliance officers',
+      ],
+      ar: [
+        'المدققون الداخليون ورؤساء المهام',
+        'المفتشون العامون والمراقبون',
+        'أعضاء لجان التدقيق',
+        'مسؤولو الجودة والمطابقة',
       ],
     },
     objectives: {
@@ -316,6 +416,13 @@ export const programs: Program[] = [
         'Design a multi-year risk-based audit plan',
         'Conduct interviews, tests and sampling in the field',
         'Write a clear report and follow up recommendations',
+      ],
+      ar: [
+        'تطبيق المعايير الدولية للتدقيق الداخلي',
+        'بناء خريطة مخاطر مرتبة حسب الأولوية',
+        'وضع مخطط تدقيق متعدد السنوات مبني على المخاطر',
+        'إجراء المقابلات والاختبارات والسبر الميداني',
+        'تحرير تقرير واضح وتتبع التوصيات',
       ],
     },
     modules: {
@@ -335,21 +442,31 @@ export const programs: Program[] = [
         'Report writing and management debriefing',
         'Recommendation follow-up and quality assessment',
       ],
+      ar: [
+        'موقع التدقيق الداخلي وميثاقه',
+        'تحديد المخاطر وتنقيطها وترتيبها',
+        'مخطط التدقيق وتوزيع الموارد',
+        'إنجاز المهمة: الأدلة والاختبارات وأوراق العمل',
+        'تحرير التقرير وعرضه على الإدارة',
+        'تتبع التوصيات وتقييم الوظيفة',
+      ],
     },
   },
   {
     slug: 'controle-interne-anti-fraude',
     domain: 'audit-risques',
     reference: 'AR-302',
-    durationDays: 4,
+    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Contrôle interne et dispositif anti-fraude',
       en: 'Internal control and anti-fraud frameworks',
+      ar: 'المراقبة الداخلية ونظام مكافحة الغش',
     },
     summary: {
       fr: "Concevoir un dispositif de contrôle interne proportionné et détecter les schémas de fraude les plus fréquents dans les organisations publiques.",
       en: 'Designing a proportionate internal control system and detecting the fraud schemes most common in public organisations.',
+      ar: 'تصميم نظام مراقبة داخلية متناسب، والكشف عن أكثر أساليب الغش تواترا في المنظمات العمومية.',
     },
     audience: {
       fr: [
@@ -363,6 +480,12 @@ export const programs: Program[] = [
         'Administrative and financial directors',
         'Heads of operational departments',
         'Auditors and inspectors',
+      ],
+      ar: [
+        'مسؤولو المراقبة الداخلية والمطابقة',
+        'المديرون الإداريون والماليون',
+        'رؤساء المصالح العملياتية',
+        'المدققون والمفتشون',
       ],
     },
     objectives: {
@@ -380,6 +503,13 @@ export const programs: Program[] = [
         'Recognise fraud schemes and their red flags',
         'Set up a whistleblowing channel and response plan',
       ],
+      ar: [
+        'هيكلة النظام وفق مرجعية كوزو',
+        'وصف المساطر وتحديد نقاط المراقبة الأساسية',
+        'الفصل بين المهام وتأمين التفويضات',
+        'التعرف على أساليب الغش وإشاراتها الضعيفة',
+        'إرساء قناة للتبليغ ومخطط للاستجابة',
+      ],
     },
     modules: {
       fr: [
@@ -396,6 +526,13 @@ export const programs: Program[] = [
         'Fraud typology: misappropriation, corruption, falsified statements',
         'Whistleblowing, internal investigation and sanctions',
       ],
+      ar: [
+        'مرجعية كوزو ومكونات المراقبة الداخلية',
+        'خريطة المساطر ومصفوفات المراقبة',
+        'الفصل بين المهام والتأهيلات والتفويضات',
+        'أنواع الغش: الاختلاس والرشوة والبيانات المزورة',
+        'التبليغ الأخلاقي والبحث الداخلي والعقوبات',
+      ],
     },
   },
   {
@@ -403,15 +540,17 @@ export const programs: Program[] = [
     domain: 'gouvernance-leadership',
     reference: 'GL-401',
     featured: true,
-    durationDays: 4,
+    durationWeeks: 1,
     level: 'perfectionnement',
     title: {
       fr: 'Leadership exécutif et conduite du changement',
       en: 'Executive leadership and change management',
+      ar: 'القيادة التنفيذية وتدبير التغيير',
     },
     summary: {
       fr: "Un séminaire de haut niveau pour dirigeants : clarifier sa posture, décider sous contrainte et embarquer des équipes dans une réforme.",
       en: 'A senior-level seminar: clarifying your leadership posture, deciding under constraint and carrying teams through reform.',
+      ar: 'ندوة رفيعة المستوى للمسؤولين: توضيح الموقع القيادي، واتخاذ القرار تحت الضغط، وإشراك الفرق في الإصلاح.',
     },
     audience: {
       fr: [
@@ -425,6 +564,12 @@ export const programs: Program[] = [
         'Central and regional directors',
         'Heads of public agencies and enterprises',
         'High-potential senior managers',
+      ],
+      ar: [
+        'المديرون العامون والكتاب العامون',
+        'المديرون المركزيون والجهويون',
+        'مسؤولو المؤسسات والمقاولات العمومية',
+        'الأطر ذات الإمكانات العالية',
       ],
     },
     objectives: {
@@ -441,6 +586,13 @@ export const programs: Program[] = [
         'Build a vision and translate it into a roadmap',
         'Manage resistance and stakeholder dynamics',
         'Instil a culture of accountability and results',
+      ],
+      ar: [
+        'تحديد أسلوب القيادة والنقاط العمياء',
+        'اتخاذ قرارات سريعة وسليمة في بيئة غير مؤكدة',
+        'بناء رؤية وترجمتها إلى خارطة طريق',
+        'تدبير المقاومة وتوازنات الفاعلين',
+        'إرساء ثقافة المسؤولية والنتيجة',
       ],
     },
     modules: {
@@ -460,21 +612,31 @@ export const programs: Program[] = [
         'Change communication and managing resistance',
         'Personal 100-day action plan',
       ],
+      ar: [
+        'تشخيص الموقع التدبيري',
+        'القرار والتحكيم وتدبير الأولويات',
+        'الرؤية والسرد الاستراتيجي والانسجام',
+        'خريطة الفاعلين والتفاوض الداخلي',
+        'التواصل حول التغيير وتدبير المقاومة',
+        'مخطط عمل شخصي لمائة يوم',
+      ],
     },
   },
   {
     slug: 'gouvernance-entreprises-publiques',
     domain: 'gouvernance-leadership',
     reference: 'GL-402',
-    durationDays: 4,
+    durationWeeks: 1,
     level: 'expert',
     title: {
       fr: 'Gouvernance des entreprises et établissements publics',
       en: 'Governance of state-owned enterprises and agencies',
+      ar: 'حكامة المؤسسات والمقاولات العمومية',
     },
     summary: {
       fr: "Professionnaliser le fonctionnement des conseils d'administration : rôles, comités spécialisés, information du conseil et évaluation de la performance.",
       en: 'Professionalising boards: roles, specialised committees, board information and performance assessment.',
+      ar: 'تمهين اشتغال مجالس الإدارة: الأدوار، واللجان المتخصصة، وإخبار المجلس، وتقييم الأداء.',
     },
     audience: {
       fr: [
@@ -488,6 +650,12 @@ export const programs: Program[] = [
         'Board secretaries',
         'CEOs and their executive teams',
         'Technical and financial supervisory bodies',
+      ],
+      ar: [
+        'المتصرفون وممثلو الدولة',
+        'كتاب مجالس الإدارة',
+        'المديرون العامون وفرقهم المقربة',
+        'أجهزة الوصاية التقنية والمالية',
       ],
     },
     objectives: {
@@ -505,6 +673,13 @@ export const programs: Program[] = [
         'Contract performance objectives',
         'Prevent conflicts of interest',
       ],
+      ar: [
+        'توضيح توزيع السلط بين الوصاية والمجلس والإدارة',
+        'تنظيم مجالس فعالة وموثقة',
+        'تنشيط لجان التدقيق والمخاطر والأجور',
+        'التعاقد حول أهداف الأداء',
+        'الوقاية من تضارب المصالح',
+      ],
     },
     modules: {
       fr: [
@@ -521,21 +696,30 @@ export const programs: Program[] = [
         'Performance contracts and dashboards',
         'Transparency, ethics and conflicts of interest',
       ],
+      ar: [
+        'المبادئ الدولية للحكامة العمومية',
+        'دور المتصرف ومسؤوليته',
+        'اللجان المتخصصة وإخبار المجلس',
+        'عقود الأداء ولوحات القيادة',
+        'الشفافية والأخلاقيات وتضارب المصالح',
+      ],
     },
   },
   {
     slug: 'gestion-projets-developpement',
     domain: 'projets-evaluation',
     reference: 'PE-501',
-    durationDays: 5,
+    durationWeeks: 2,
     level: 'fondamental',
     title: {
       fr: 'Gestion des projets de développement : cycle et GAR',
       en: 'Development project management: cycle and RBM',
+      ar: 'تدبير مشاريع التنمية: الدورة والتدبير المبني على النتائج',
     },
     summary: {
       fr: "De la note conceptuelle au rapport d'achèvement : structurer, planifier, budgéter et piloter un projet financé, avec les outils attendus par les bailleurs.",
       en: 'From concept note to completion report: structuring, planning, budgeting and steering a financed project with the tools donors expect.',
+      ar: 'من المذكرة المفاهيمية إلى تقرير الإنجاز: هيكلة مشروع ممول وتخطيطه وبرمجته وقيادته بالأدوات التي ينتظرها المانحون.',
     },
     audience: {
       fr: [
@@ -549,6 +733,12 @@ export const programs: Program[] = [
         'Ministry programme officers',
         'NGO and regional organisation managers',
         'Monitoring and reporting officers',
+      ],
+      ar: [
+        'رؤساء المشاريع ومنسقو وحدات التدبير',
+        'المكلفون بالبرامج في الوزارات',
+        'مسؤولو الجمعيات والمنظمات الجهوية',
+        'المكلفون بالتتبع وإعداد التقارير',
       ],
     },
     objectives: {
@@ -565,6 +755,13 @@ export const programs: Program[] = [
         'Anticipate risks and prepare mitigation measures',
         'Produce credible progress reports',
         'Prepare project closure and lessons learned',
+      ],
+      ar: [
+        'بناء إطار منطقي متين وسلسلة نتائج',
+        'تخطيط الأنشطة والتكاليف والموارد بواقعية',
+        'استباق المخاطر وإعداد تدابير التخفيف',
+        'إنتاج تقارير تقدم ذات مصداقية',
+        'تحضير إقفال المشروع ورسملة تجربته',
       ],
     },
     modules: {
@@ -584,21 +781,31 @@ export const programs: Program[] = [
         'Reporting, mid-term review and closure',
         'Workshop: designing a project from a real case',
       ],
+      ar: [
+        'دورة المشروع وتحليل الإشكاليات',
+        'الإطار المنطقي والمؤشرات والفرضيات',
+        'التخطيط والمسار الحرج وإعداد الميزانية',
+        'تدبير المخاطر والأطراف المعنية',
+        'التقارير والمراجعة النصفية والإقفال',
+        'ورشة: بناء مشروع انطلاقا من حالة واقعية',
+      ],
     },
   },
   {
     slug: 'suivi-evaluation-impact',
     domain: 'projets-evaluation',
     reference: 'PE-502',
-    durationDays: 5,
+    durationWeeks: 2,
     level: 'perfectionnement',
     title: {
       fr: "Suivi-évaluation et mesure d'impact des politiques publiques",
       en: 'Monitoring, evaluation and impact measurement of public policy',
+      ar: 'التتبع والتقييم وقياس أثر السياسات العمومية',
     },
     summary: {
       fr: "Installer un système de suivi-évaluation qui produit des données fiables, et conduire des évaluations dont les conclusions changent réellement les décisions.",
       en: 'Setting up an M&E system that produces reliable data, and running evaluations whose findings actually change decisions.',
+      ar: 'إرساء نظام تتبع وتقييم ينتج معطيات موثوقة، وإنجاز تقييمات تغير القرارات فعلا.',
     },
     audience: {
       fr: [
@@ -612,6 +819,12 @@ export const programs: Program[] = [
         'Planning and foresight departments',
         'Public policy evaluation officers',
         'Technical and financial partners',
+      ],
+      ar: [
+        'مسؤولو التتبع والتقييم والإحصائيون',
+        'مديريات التخطيط والاستشراف',
+        'المكلفون بتقييم السياسات العمومية',
+        'الشركاء التقنيون والماليون',
       ],
     },
     objectives: {
@@ -628,6 +841,13 @@ export const programs: Program[] = [
         'Choose the evaluation method suited to the question',
         'Collect data and control its quality',
         'Present results as decision-oriented dashboards',
+      ],
+      ar: [
+        'تصميم نظام تتبع وتقييم متكامل',
+        'تحديد مؤشرات دقيقة ومصادر التحقق منها',
+        'اختيار منهج التقييم الملائم للسؤال المطروح',
+        'جمع المعطيات ومراقبة جودتها',
+        'عرض النتائج في لوحات قيادة موجهة للقرار',
       ],
     },
     modules: {
@@ -647,21 +867,31 @@ export const programs: Program[] = [
         'Impact evaluation and comparison groups',
         'Dashboards, visualisation and communicating findings',
       ],
+      ar: [
+        'نظرية التغيير وسلسلة النتائج',
+        'تصميم نظام التتبع وأدوات الجمع',
+        'جودة المعطيات وتدقيق المؤشرات',
+        'مناهج التقييم: الكمية والكيفية والمختلطة',
+        'تقييم الأثر ومجموعات المقارنة',
+        'لوحات القيادة والتصوير البياني والتواصل حول النتائج',
+      ],
     },
   },
   {
     slug: 'transformation-digitale-administrations',
     domain: 'transformation-digitale',
     reference: 'TD-601',
-    durationDays: 4,
+    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Transformation digitale des administrations',
       en: 'Digital transformation of public administrations',
+      ar: 'التحول الرقمي للإدارات العمومية',
     },
     summary: {
       fr: "Construire une feuille de route numérique réaliste : dématérialiser les procédures à fort impact, gouverner la donnée et sécuriser les systèmes.",
       en: 'Building a realistic digital roadmap: digitising high-impact processes, governing data and securing systems.',
+      ar: 'بناء خارطة طريق رقمية واقعية: رقمنة المساطر ذات الأثر القوي، وحكامة المعطيات، وتأمين الأنظمة.',
     },
     audience: {
       fr: [
@@ -675,6 +905,12 @@ export const programs: Program[] = [
         'Modernisation project managers',
         'Citizen service managers',
         'Secretaries general and chiefs of staff',
+      ],
+      ar: [
+        'مديرو أنظمة المعلومات',
+        'رؤساء مشاريع التحديث',
+        'مسؤولو العلاقة مع المرتفقين',
+        'الكتاب العامون ومديرو الدواوين',
       ],
     },
     objectives: {
@@ -692,6 +928,13 @@ export const programs: Program[] = [
         'Embed cybersecurity by design',
         'Drive change and staff adoption',
       ],
+      ar: [
+        'إنجاز تشخيص للنضج الرقمي',
+        'ترتيب الخدمات المراد رقمنتها حسب قيمتها للمرتفق',
+        'هيكلة حكامة المعطيات وقابلية التشغيل البيني',
+        'إدماج الأمن السيبراني منذ التصميم',
+        'قيادة التغيير وتبني الأعوان للأدوات',
+      ],
     },
     modules: {
       fr: [
@@ -708,6 +951,13 @@ export const programs: Program[] = [
         'Personal data protection and cybersecurity',
         'Roadmap, budget and monitoring indicators',
       ],
+      ar: [
+        'تشخيص النضج والمقارنة الدولية',
+        'مسار المرتفق وإعادة تصميم المساطر',
+        'البنية وقابلية التشغيل البيني والهوية الرقمية',
+        'حماية المعطيات الشخصية والأمن السيبراني',
+        'خارطة الطريق والميزانية ومؤشرات التتبع',
+      ],
     },
   },
   {
@@ -715,15 +965,17 @@ export const programs: Program[] = [
     domain: 'transformation-digitale',
     reference: 'TD-602',
     featured: true,
-    durationDays: 3,
+    durationWeeks: 1,
     level: 'fondamental',
     title: {
       fr: 'Data et intelligence artificielle pour dirigeants',
       en: 'Data and artificial intelligence for executives',
+      ar: 'المعطيات والذكاء الاصطناعي لفائدة المسؤولين',
     },
     summary: {
       fr: "Trois jours pour comprendre ce que l'IA change concrètement dans le pilotage d'une organisation, et décider où l'utiliser et où s'en abstenir.",
       en: 'Three days to understand what AI actually changes in running an organisation, and to decide where to use it and where not to.',
+      ar: 'ثلاثة أيام لفهم ما يغيره الذكاء الاصطناعي فعليا في قيادة منظمة، ولتحديد أين يستعمل وأين يتحفظ عنه.',
     },
     audience: {
       fr: [
@@ -737,6 +989,12 @@ export const programs: Program[] = [
         'Non-technical business directors',
         'Strategy and innovation managers',
         'Data and performance officers',
+      ],
+      ar: [
+        'المسؤولون وأعضاء لجان الإدارة',
+        'المديرون غير التقنيين',
+        'مسؤولو الاستراتيجية والابتكار',
+        'المكلفون بالمعطيات والقيادة',
       ],
     },
     objectives: {
@@ -754,6 +1012,13 @@ export const programs: Program[] = [
         'Frame a pilot and measure its return on investment',
         'Set a responsible-use policy for your teams',
       ],
+      ar: [
+        'فهم ما يستطيعه الذكاء الاصطناعي وما لا يستطيعه، بلا مصطلحات تقنية',
+        'تحديد حالات الاستعمال ذات القيمة السريعة',
+        'تقييم المخاطر: التحيز والسرية والتبعية والمطابقة',
+        'تأطير مشروع تجريبي وقياس مردوديته',
+        'وضع سياسة استعمال مسؤول للفرق',
+      ],
     },
     modules: {
       fr: [
@@ -769,6 +1034,13 @@ export const programs: Program[] = [
         'Risks, ethics and regulatory frameworks',
         'Framing a pilot project and value indicators',
         'Internal AI usage policy',
+      ],
+      ar: [
+        'بانوراما: المعطيات والخوارزميات والذكاء الاصطناعي التوليدي',
+        'ورشات استعمال: التحرير والتحليل وخدمة المرتفقين',
+        'المخاطر والأخلاقيات والإطار التنظيمي',
+        'تأطير مشروع تجريبي ومؤشرات القيمة',
+        'السياسة الداخلية لاستعمال الذكاء الاصطناعي',
       ],
     },
   },

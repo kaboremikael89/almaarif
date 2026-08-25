@@ -14,19 +14,25 @@ export const site = {
   tagline: {
     fr: 'Formation · Conseil · Performance',
     en: 'Training · Advisory · Performance',
+    ar: 'تكوين · استشارة · أداء',
   } satisfies I18nText,
   baseline: {
     fr: "L'expertise au service des dirigeants et des institutions",
     en: 'Expertise at the service of leaders and institutions',
+    ar: 'الخبرة في خدمة المسؤولين والمؤسسات',
   } satisfies I18nText,
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.almaarif-expertise.com',
   formEndpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT || '',
 
   address: {
-    street: '12, rue Saria Ben Zounaim, étage 3, appt 3, Palmier',
-    city: 'Casablanca',
+    street: {
+      fr: '12, rue Saria Ben Zounaim, étage 3, appt 3, Palmier',
+      en: '12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier',
+      ar: '12، زنقة ساريا بن زنيم، الطابق الثالث، الشقة 3، النخيل',
+    } satisfies I18nText,
+    city: { fr: 'Casablanca', en: 'Casablanca', ar: 'الدار البيضاء' } satisfies I18nText,
     postalCode: '20340',
-    country: { fr: 'Maroc', en: 'Morocco' } satisfies I18nText,
+    country: { fr: 'Maroc', en: 'Morocco', ar: 'المغرب' } satisfies I18nText,
     countryCode: 'MA',
   },
 
@@ -48,12 +54,14 @@ export const site = {
     activity: {
       fr: 'Conseil de gestion et formation professionnelle continue',
       en: 'Management consulting and professional training',
+      ar: 'الاستشارة في التدبير والتكوين المهني المستمر',
     } satisfies I18nText,
     manager: 'Ousseni Soulama',
-    managerRole: { fr: 'Gérant', en: 'Managing Director' } satisfies I18nText,
+    managerRole: { fr: 'Gérant', en: 'Managing Director', ar: 'المسير' } satisfies I18nText,
     court: {
       fr: 'Tribunal de commerce de Casablanca',
       en: 'Casablanca Commercial Court',
+      ar: 'المحكمة التجارية بالدار البيضاء',
     } satisfies I18nText,
   },
 

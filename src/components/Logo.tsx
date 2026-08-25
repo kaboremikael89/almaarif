@@ -43,7 +43,7 @@ export default function Logo({
     <Link
       href={href(lang, '/')}
       className={`group inline-flex items-center gap-3 ${
-        boxed ? `border py-2 pl-2.5 pr-4 ${light ? 'border-ivory-100/20' : 'border-navy-900/15'}` : ''
+        boxed ? `border py-2 ps-2.5 pe-4 ${light ? 'border-ivory-100/20' : 'border-navy-900/15'}` : ''
       } ${className}`}
       aria-label={label}
     >
@@ -57,18 +57,22 @@ export default function Logo({
       />
       <span className="flex flex-col leading-none">
         <span
-          className={`whitespace-nowrap font-logo text-[0.95rem] uppercase tracking-[0.2em] ${
-            light ? 'text-ivory-50' : 'text-navy-900'
-          }`}
+          className={`whitespace-nowrap ${
+            lang === 'ar'
+              ? 'font-arabic text-[1.05rem]'
+              : 'font-logo text-[0.95rem] uppercase tracking-[0.2em]'
+          } ${light ? 'text-ivory-50' : 'text-navy-900'}`}
         >
-          Al Maârif
+          {lang === 'ar' ? 'المعارف' : 'Al Maârif'}
         </span>
         <span
-          className={`mt-1 whitespace-nowrap text-[0.5rem] font-semibold uppercase tracking-[0.36em] ${
-            light ? 'text-gold-400' : 'text-gold-600'
-          }`}
+          className={`mt-1 whitespace-nowrap font-semibold ${
+            lang === 'ar'
+              ? 'font-arabic text-[0.6875rem]'
+              : 'text-[0.5rem] uppercase tracking-[0.36em]'
+          } ${light ? 'text-gold-400' : 'text-gold-600'}`}
         >
-          Expertise
+          {lang === 'ar' ? 'للخبرة' : 'Expertise'}
         </span>
       </span>
     </Link>

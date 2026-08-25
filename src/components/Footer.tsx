@@ -66,9 +66,11 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
             <h2 className="label text-gold-500">{dict.footer.contactTitle}</h2>
             <address className="mt-6 space-y-3 text-sm not-italic text-ivory-100/75">
               <p>
-                {site.address.street}
+                {site.address.street[lang]}
                 <br />
-                {site.address.city}, {site.address.country[lang]}
+                {site.address.city[lang]}
+                {lang === 'ar' ? '، ' : ', '}
+                {site.address.country[lang]}
               </p>
               <p>
                 <a href={`tel:${site.contact.phoneHref}`} className="link-underline hover:text-ivory-50">

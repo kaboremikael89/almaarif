@@ -83,9 +83,9 @@ export function StatRow({
         <Reveal
           key={stat.label}
           delay={i * 90}
-          className={`px-5 py-7 first:pl-0 ${
+          className={`px-5 py-7 first:ps-0 ${
             light ? 'border-ivory-100/15' : 'border-navy-900/12'
-          } ${i > 0 ? 'border-l' : ''}`}
+          } ${i > 0 ? 'border-s' : ''}`}
         >
           <dt className="sr-only">{stat.label}</dt>
           <dd>

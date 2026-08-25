@@ -57,7 +57,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <SectionLabel>{home.hero.eyebrow}</SectionLabel>
             </Reveal>
             <Reveal delay={120} className="hidden lg:block">
-              <p className="max-w-xs text-sm leading-relaxed text-muted lg:text-right">
+              <p className="max-w-xs text-sm leading-relaxed text-muted lg:text-end">
                 {home.hero.aside}
               </p>
             </Reveal>
@@ -129,14 +129,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <div className="grid gap-5 md:grid-cols-3">
             {home.process.steps.slice(0, 3).map((step, i) => (
               <Reveal key={step.title} delay={i * 110}>
-                <article className="relative flex h-full flex-col bg-ivory-100 p-8 pr-14">
+                <article className="relative flex h-full flex-col bg-ivory-100 p-8 pe-14">
                   <p className="index">
                     {String(i + 1).padStart(2, '0')} / {step.tag}
                   </p>
                   <h3 className="mt-5 text-xl text-navy-900">{step.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{step.body}</p>
-                  <span className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center bg-gold-500 text-navy-950">
-                    <ArrowRight className="h-4 w-4" />
+                  <span className="absolute end-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center bg-gold-500 text-navy-950">
+                    <ArrowRight className="h-4 w-4 arrow-flip" />
                   </span>
                 </article>
               </Reveal>

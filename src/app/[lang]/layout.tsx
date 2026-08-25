@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Marcellus, Archivo } from 'next/font/google'
+import { Marcellus, Archivo, Tajawal } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import '../globals.css'
 
@@ -7,7 +7,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getDictionary } from '@/content/dictionary'
 import { site } from '@/content/site'
-import { isLocale, locales, localeHtmlLang, type Locale } from '@/lib/i18n'
+import { isLocale, locales, localeHtmlLang, localeDir, type Locale } from '@/lib/i18n'
 
 const marcellus = Marcellus({
   subsets: ['latin'],
@@ -20,6 +20,14 @@ const archivo = Archivo({
   subsets: ['latin'],
   weight: ['200', '300', '400', '500', '600', '700'],
   variable: '--font-archivo',
+  display: 'swap',
+})
+
+// Police arabe : Tajawal, dessinée pour l'arabe moderne, avec des graisses fines
+const tajawal = Tajawal({
+  subsets: ['arabic'],
+  weight: ['200', '300', '400', '500', '700'],
+  variable: '--font-tajawal',
   display: 'swap',
 })
 
@@ -65,7 +73,18 @@ export async function generateMetadata({
             'conseil de gestion',
             'Al Maarif Expertise',
           ]
-        : [
+        : lang === 'ar'
+          ? [
+              'التكوين المستمر المغرب',
+              'ندوة الدار البيضاء',
+              'تكوين الأطر',
+              'المالية العمومية',
+              'الصفقات العمومية',
+              'التدقيق الداخلي',
+              'الاستشارة في التدبير',
+              'المعارف للخبرة',
+            ]
+          : [
             'professional training Morocco',
             'Casablanca seminar',
             'African executives training',
@@ -81,6 +100,7 @@ export async function generateMetadata({
       languages: {
         fr: `${site.url}/fr/`,
         en: `${site.url}/en/`,
+        ar: `${site.url}/ar/`,
         'x-default': `${site.url}/fr/`,
       },
     },
@@ -90,7 +110,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${site.url}/${lang}/`,
-      locale: lang === 'fr' ? 'fr_MA' : 'en_US',
+      locale: lang === 'fr' ? 'fr_MA' : lang === 'ar' ? 'ar_MA' : 'en_US',
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: site.name }],
     },
     twitter: {
@@ -136,23 +156,27 @@ export default async function LocaleLayout({
     founder: { '@type': 'Person', name: site.legal.manager },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: site.address.street,
-      addressLocality: site.address.city,
+      streetAddress: site.address.street.fr,
+      addressLocality: site.address.city.fr,
       postalCode: site.address.postalCode,
       addressCountry: site.address.countryCode,
     },
     areaServed: ['MA', 'Africa'],
-    knowsLanguage: ['fr', 'en'],
+    knowsLanguage: ['fr', 'en', 'ar'],
   }
 
   return (
-    <html lang={localeHtmlLang[locale]} className={`${marcellus.variable} ${archivo.variable}`}>
+    <html
+      lang={localeHtmlLang[locale]}
+      dir={localeDir[locale]}
+      className={`${marcellus.variable} ${archivo.variable} ${tajawal.variable}`}
+    >
       <body className="min-h-screen antialiased">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:bg-navy-900 focus:px-5 focus:py-3 focus:text-sm focus:text-ivory-50"
         >
-          {locale === 'fr' ? 'Aller au contenu' : 'Skip to content'}
+          {locale === 'fr' ? 'Aller au contenu' : locale === 'ar' ? 'الانتقال إلى المحتوى' : 'Skip to content'}
         </a>
         <Header lang={locale} dict={dict} />
         <main id="main">{children}</main>

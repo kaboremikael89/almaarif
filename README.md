@@ -1,6 +1,6 @@
 # Al Maârif Expertise, site institutionnel
 
-Site vitrine bilingue (français / anglais) d'**AL MAARIF EXPERTISE**, cabinet de conseil de gestion
+Site vitrine trilingue (français, anglais, arabe) d'**AL MAARIF EXPERTISE**, cabinet de conseil de gestion
 et de formation professionnelle établi à Casablanca, spécialisé dans l'organisation au Maroc de
 formations pour les institutions et entreprises africaines.
 
@@ -69,7 +69,8 @@ Tout le contenu éditorial est centralisé dans `src/content/`, **aucun code à 
 | `domains.ts` | Les 6 domaines d'expertise et leurs thématiques |
 | `programs.ts` | Le catalogue des 12 formations (objectifs, modules, public, durée…) |
 | `dictionary.fr.ts` | Tous les textes du site en français |
-| `dictionary.en.ts` | Leur traduction anglaise (même structure, vérifiée par TypeScript) |
+| `dictionary.en.ts` | Traduction anglaise (même structure, vérifiée par TypeScript) |
+| `dictionary.ar.ts` | Traduction arabe, affichée de droite à gauche |
 
 **Ajouter une formation** : dupliquer un bloc dans `programs.ts`, changer `slug`, `reference`,
 `domain` et les textes. La page de détail, le catalogue, le sitemap et les données structurées

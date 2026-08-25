@@ -56,7 +56,7 @@ export default async function ProgramsPage({ params }: { params: Promise<{ lang:
           <ProgramCatalogue programs={programs} lang={lang} dict={dict} />
 
           <Reveal>
-            <p className="mt-16 max-w-3xl border-l-2 border-gold-500 pl-6 text-sm leading-relaxed text-muted">
+            <p className="mt-16 max-w-3xl border-s-2 border-gold-500 ps-6 text-sm leading-relaxed text-muted">
               {dict.programs.note}
             </p>
           </Reveal>

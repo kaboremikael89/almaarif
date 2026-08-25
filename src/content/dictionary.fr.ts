@@ -25,8 +25,8 @@ export const fr = {
     readMore: 'En savoir plus',
     discover: 'Découvrir',
     allPrograms: 'Voir tous les programmes',
-    days: 'jours',
-    day: 'jour',
+    weeks: 'semaines',
+    week: 'semaine',
     reference: 'Réf.',
     level: 'Niveau',
     levels: {
@@ -66,7 +66,7 @@ export const fr = {
     stats: [
       { value: '06', label: 'domaines d’expertise' },
       { value: '12', label: 'programmes au catalogue' },
-      { value: '3 à 10', label: 'jours par session' },
+      { value: '1 à 2', label: 'semaines par session' },
       { value: 'FR / EN', label: 'langues de travail' },
     ],
     intro: {

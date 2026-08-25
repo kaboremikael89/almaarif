@@ -27,8 +27,8 @@ export const en: Dictionary = {
     readMore: 'Learn more',
     discover: 'Explore',
     allPrograms: 'View all programmes',
-    days: 'days',
-    day: 'day',
+    weeks: 'weeks',
+    week: 'week',
     reference: 'Ref.',
     level: 'Level',
     levels: {
@@ -68,7 +68,7 @@ export const en: Dictionary = {
     stats: [
       { value: '06', label: 'fields of expertise' },
       { value: '12', label: 'programmes in the catalogue' },
-      { value: '3 to 10', label: 'days per session' },
+      { value: '1 to 2', label: 'weeks per session' },
       { value: 'FR / EN', label: 'working languages' },
     ],
     intro: {

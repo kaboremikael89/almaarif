@@ -22,7 +22,15 @@
   force = true
   conditions = { Language = ["fr"] }
 
-# 2. Navigateur anglophone (sans français) → version anglaise
+# 2. Navigateur arabophone → version arabe
+[[redirects]]
+  from = "/"
+  to = "/ar/"
+  status = 302
+  force = true
+  conditions = { Language = ["ar"] }
+
+# 3. Navigateur anglophone (sans français ni arabe) → version anglaise
 [[redirects]]
   from = "/"
   to = "/en/"
@@ -30,7 +38,7 @@
   force = true
   conditions = { Language = ["en"] }
 
-# 3. Toute autre langue → français (langue principale du cabinet)
+# 4. Toute autre langue → français (langue principale du cabinet)
 [[redirects]]
   from = "/"
   to = "/fr/"

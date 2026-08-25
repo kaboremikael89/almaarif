@@ -30,6 +30,7 @@
 
   --font-sans: var(--font-archivo), 'Helvetica Neue', Arial, sans-serif;
   --font-logo: var(--font-marcellus), 'Times New Roman', serif;
+  --font-arabic: var(--font-tajawal), 'Noto Naskh Arabic', 'Geeza Pro', serif;
 
   --radius-none: 0px;
 }
@@ -80,6 +81,69 @@
   }
 
   p { text-wrap: pretty; }
+
+  /* ---------------------------------------------------------------
+     Version arabe : écriture de droite à gauche.
+     Les capitales et l'interlettrage large, qui font la signature
+     latine du site, cassent la liaison des lettres arabes : ils sont
+     donc neutralisés, et la graisse est légèrement remontée pour
+     compenser le contraste plus faible du Tajawal.
+  ---------------------------------------------------------------- */
+  [dir='rtl'] body,
+  [dir='rtl'] .label,
+  [dir='rtl'] .index,
+  [dir='rtl'] .btn,
+  [dir='rtl'] .pill,
+  [dir='rtl'] h1,
+  [dir='rtl'] h2,
+  [dir='rtl'] h3,
+  [dir='rtl'] h4 {
+    font-family: var(--font-arabic);
+  }
+
+  [dir='rtl'] h1,
+  [dir='rtl'] h2 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 300;
+    line-height: 1.35;
+  }
+
+  [dir='rtl'] h3,
+  [dir='rtl'] h4 {
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
+  [dir='rtl'] .label,
+  [dir='rtl'] .index {
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 0.75rem;
+  }
+
+  [dir='rtl'] .btn {
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 0.8125rem;
+  }
+
+  [dir='rtl'] .field-label {
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 0.75rem;
+  }
+
+  /* Les flèches suivent le sens de lecture */
+  [dir='rtl'] .btn svg,
+  [dir='rtl'] .arrow-flip {
+    transform: scaleX(-1);
+  }
+
+  /* Le triptyque photo garde son ordre de lecture d'origine */
+  [dir='rtl'] figure[data-ltr] {
+    direction: ltr;
+  }
 
   ::selection {
     background: var(--color-gold-200);
@@ -263,6 +327,10 @@
 }
 
 @layer utilities {
+  .font-arabic {
+    font-family: var(--font-arabic);
+  }
+
   .container-page {
     width: 100%;
     margin-inline: auto;

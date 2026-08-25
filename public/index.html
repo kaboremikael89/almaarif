@@ -8,6 +8,7 @@
     <link rel="canonical" href="/fr/" />
     <link rel="alternate" hreflang="fr" href="/fr/" />
     <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="alternate" hreflang="ar" href="/ar/" />
     <link rel="alternate" hreflang="x-default" href="/fr/" />
     <link rel="icon" href="/favicon-32.png" type="image/png" />
     <meta http-equiv="refresh" content="0; url=/fr/" />
@@ -15,7 +16,8 @@
       // Redirection vers la langue du navigateur (le repli est le français).
       (function () {
         var lang = (navigator.language || 'fr').slice(0, 2).toLowerCase()
-        window.location.replace(lang === 'en' ? '/en/' : '/fr/')
+        var target = lang === 'en' ? '/en/' : lang === 'ar' ? '/ar/' : '/fr/'
+        window.location.replace(target)
       })()
     </script>
     <style>
@@ -35,6 +37,6 @@
     </style>
   </head>
   <body>
-    <p>Al Maârif Expertise : <a href="/fr/">Français</a> · <a href="/en/">English</a></p>
+    <p>Al Maârif Expertise : <a href="/fr/">Français</a> · <a href="/en/">English</a> · <a href="/ar/">العربية</a></p>
   </body>
 </html>

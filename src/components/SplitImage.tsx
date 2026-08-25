@@ -16,7 +16,7 @@ type SplitImageProps = {
  */
 export default function SplitImage({ src, alt, caption, className = '' }: SplitImageProps) {
   return (
-    <figure className={className}>
+    <figure data-ltr="" className={className}>
       <div className="relative aspect-4/3 overflow-hidden sm:hidden">
         <img src={src} alt={alt} loading="lazy" decoding="async" className="h-full w-full object-cover" />
       </div>
