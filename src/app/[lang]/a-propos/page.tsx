@@ -17,8 +17,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params
   const dict = getDictionary(lang)
-  // Virgule arabe dans la version de droite à gauche
-  const comma = lang === 'ar' ? '، ' : ', '
   return {
     title: dict.about.hero.title,
     description: dict.about.mission.body[0],
@@ -30,6 +28,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const { lang: raw } = await params
   const lang = (isLocale(raw) ? raw : 'fr') as Locale
   const dict = getDictionary(lang)
+  // Virgule arabe dans la version de droite à gauche
+  const comma = lang === 'ar' ? '، ' : ', '
   const about = dict.about
 
   const identity = [
