@@ -39,7 +39,7 @@ export const fr = {
     domain: 'Domaine',
     duration: 'Durée',
     languages: 'Langues',
-    languagesValue: 'Français · Anglais',
+    languagesValue: 'Français · Anglais · Arabe',
     location: 'Lieu',
     locationValue: 'Casablanca, Rabat, Marrakech, dans vos locaux ou dans le pays de votre choix',
     price: 'Tarif',
@@ -66,7 +66,7 @@ export const fr = {
       { value: '06', label: 'domaines d’expertise' },
       { value: '12', label: 'programmes au catalogue' },
       { value: '1 à 2', label: 'semaines par session' },
-      { value: 'FR / EN', label: 'langues de travail' },
+      { value: 'FR / EN / AR', label: 'langues de travail' },
     ],
     intro: {
       eyebrow: 'Qui sommes-nous',
@@ -134,8 +134,8 @@ export const fr = {
           body: 'Hébergement, restauration et transport à la demande, à des coûts maîtrisés.',
         },
         {
-          title: 'Une expertise bilingue',
-          body: 'Un vivier d’intervenants francophones et anglophones formés aux standards internationaux, familiers des réalités administratives maghrébines et africaines.',
+          title: 'Une expertise multilingue',
+          body: 'Un vivier d’intervenants francophones, anglophones et arabophones formés aux standards internationaux, familiers des réalités administratives maghrébines et africaines.',
         },
         {
           title: 'Une logistique prise en charge',
@@ -312,7 +312,7 @@ export const fr = {
     network: {
       eyebrow: 'Nos intervenants',
       title: 'Un réseau d’experts associés',
-      lead: "Nous ne mobilisons un intervenant que s’il exerce réellement le métier qu’il enseigne. Nos experts associés interviennent en français et en anglais.",
+      lead: "Nous ne mobilisons un intervenant que s’il exerce réellement le métier qu’il enseigne. Nos experts associés interviennent en français, en anglais et en arabe.",
       items: [
         'Anciens cadres dirigeants d’administrations et d’établissements publics',
         'Auditeurs internes et externes certifiés',

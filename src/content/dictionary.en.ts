@@ -41,7 +41,7 @@ export const en: Dictionary = {
     domain: 'Field',
     duration: 'Duration',
     languages: 'Languages',
-    languagesValue: 'French · English',
+    languagesValue: 'French · English · Arabic',
     location: 'Location',
     locationValue: 'Casablanca, Rabat, Marrakech, your premises or the country of your choice',
     price: 'Fee',
@@ -68,7 +68,7 @@ export const en: Dictionary = {
       { value: '06', label: 'fields of expertise' },
       { value: '12', label: 'programmes in the catalogue' },
       { value: '1 to 2', label: 'weeks per session' },
-      { value: 'FR / EN', label: 'working languages' },
+      { value: 'FR / EN / AR', label: 'working languages' },
     ],
     intro: {
       eyebrow: 'Who we are',
@@ -136,8 +136,8 @@ export const en: Dictionary = {
           body: 'Accommodation, catering and transport arranged on request, at controlled costs.',
         },
         {
-          title: 'Bilingual expertise',
-          body: 'A pool of French- and English-speaking practitioners trained to international standards, familiar with North African and sub-Saharan administrative realities.',
+          title: 'Multilingual expertise',
+          body: 'A pool of French-, English- and Arabic-speaking practitioners trained to international standards, familiar with North African and sub-Saharan administrative realities.',
         },
         {
           title: 'Logistics handled for you',
@@ -314,7 +314,7 @@ export const en: Dictionary = {
     network: {
       eyebrow: 'Our trainers',
       title: 'A network of associate experts',
-      lead: 'We only bring in a trainer who actually practises the profession they teach. Our associate experts work in French and in English.',
+      lead: 'We only bring in a trainer who actually practises the profession they teach. Our associate experts work in French, English and Arabic.',
       items: [
         'Former senior executives of administrations and public agencies',
         'Certified internal and external auditors',
