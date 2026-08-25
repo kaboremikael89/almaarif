@@ -77,7 +77,7 @@ c'est ce qui donne une série cohérente plutôt que cinq images étrangères.
 
 ---
 
-**1. `formats.jpg`** — trois barres verticales de la page d'accueil. Chaque tiers
+**1. `formats.jpg`** : trois barres verticales de la page d'accueil. Chaque tiers
 de l'image devient une barre : il faut donc une personne bien lisible dans chaque
 tiers, et rien d'important dans les 5 % de bord.
 
@@ -93,7 +93,7 @@ tiers, et rien d'important dans les 5 % de bord.
 > sérieuse et haut de gamme, aucun sourire forcé, aucun regard caméra, aucun texte
 > ni logo visible, rendu photographique réaliste.
 
-**2. `salle-de-formation.jpg`** — bande triptyque, plus bas dans la page. L'image
+**2. `salle-de-formation.jpg`** : bande triptyque, plus bas dans la page. L'image
 est découpée en trois panneaux séparés par un filet, la scène doit rester lisible
 sur toute la largeur.
 
@@ -107,7 +107,7 @@ sur toute la largeur.
 > institutionnel, aucun sourire forcé, aucun texte ni logo, rendu photographique
 > réaliste.
 
-**3. `maroc-1.jpg`** — argument « sol facile d'accès depuis toute l'Afrique ».
+**3. `maroc-1.jpg`** : argument « sol facile d'accès depuis toute l'Afrique ».
 
 > Photographie éditoriale professionnelle, format paysage 3:2. Deux cadres
 > africains en tenue professionnelle, bagage cabine à la main, traversant le hall
@@ -116,7 +116,7 @@ sur toute la largeur.
 > compagnie, aucun panneau lisible, aucun logo. Registre sobre et haut de gamme,
 > rendu photographique réaliste.
 
-**4. `maroc-2.jpg`** — argument « hébergement, restauration et transport à la
+**4. `maroc-2.jpg`** : argument « hébergement, restauration et transport à la
 demande, à des coûts maîtrisés ».
 
 > Photographie éditoriale professionnelle, format paysage 3:2. Hall d'accueil d'un
@@ -126,7 +126,7 @@ demande, à des coûts maîtrisés ».
 > chaude de fin de journée. Aucun texte ni logo visible, registre haut de gamme,
 > rendu photographique réaliste.
 
-**5. `maroc-3.jpg`** — argument « expertise multilingue ».
+**5. `maroc-3.jpg`** : argument « expertise multilingue ».
 
 > Photographie éditoriale professionnelle, format paysage 3:2. Pause de séminaire
 > dans un salon attenant à une salle de formation. Trois intervenants debout autour
