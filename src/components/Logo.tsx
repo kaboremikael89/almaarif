@@ -55,7 +55,7 @@ export default function Logo({
         height={352}
         className="h-10 w-auto shrink-0 transition-transform duration-500 group-hover:scale-105"
       />
-      <span className="flex flex-col leading-none">
+      <span className="hidden flex-col leading-none min-[420px]:flex">
         <span
           className={`whitespace-nowrap ${
             lang === 'ar'

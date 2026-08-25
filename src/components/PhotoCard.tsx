@@ -70,9 +70,13 @@ export function PortraitCard({
         className="absolute inset-0 bg-linear-to-t from-navy-950 via-navy-950/45 to-transparent"
         aria-hidden="true"
       />
-      <div className="absolute inset-x-0 bottom-0 p-5">
-        <p className="index text-gold-400">{index}</p>
-        <h3 className="mt-2 text-base leading-snug text-ivory-50">{title}</h3>
+      <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-5">
+        <p className="index break-words text-[0.5rem] leading-relaxed text-gold-400 sm:text-[0.625rem]">
+          {index}
+        </p>
+        <h3 className="mt-1.5 break-words text-[0.8125rem] leading-snug text-ivory-50 sm:mt-2 sm:text-base">
+          {title}
+        </h3>
         {body && <p className="mt-2 text-xs leading-relaxed text-ivory-100/70">{body}</p>}
         {cta && (
           <Link href={cta.href} className="btn btn-outline-light mt-5 w-full !py-2.5 !text-[0.625rem]">

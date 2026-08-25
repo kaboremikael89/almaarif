@@ -15,7 +15,8 @@ code n'est nécessaire.
 | `logo-embleme.png` | Emblème seul, sans le mot EXPERTISE, pour l'en-tête. **En place** | PNG à fond transparent |
 | `logo-embleme-clair.png` | Emblème seul pour fonds sombres, favicon. **En place** | PNG à fond transparent |
 | `logo.svg` | Version vectorielle, si le graphiste vous la fournit | SVG, meilleure qualité à toutes les tailles |
-| `formats.jpg` | **Une seule photo large** pour les trois cartes verticales de la page d'accueil. Elle est découpée en trois tranches qui recomposent la scène | 2400 x 1200 px, format large, sujet réparti sur toute la largeur |
+| `formats.jpg` | **Une seule photo** pour les trois cartes verticales de la page d'accueil. Elle est découpée en trois tranches qui recomposent la scène. **En place** | Rapport proche du carré. Une photo très large sera recadrée : trois barres hautes ne peuvent pas afficher un panorama entier |
+| `source-accueil.jpg` | Photo d'origine non recadrée, conservée pour pouvoir refaire le cadrage sans redemander le fichier | Ne s'affiche pas sur le site |
 | `maroc-1.jpg` | Carte horizontale, section sur le Maroc | 1200 x 800 px |
 | `maroc-2.jpg` | Carte horizontale, section sur le Maroc | 1200 x 800 px |
 | `maroc-3.jpg` | Carte horizontale, section sur le Maroc | 1200 x 800 px |
