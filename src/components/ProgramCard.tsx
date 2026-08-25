@@ -31,7 +31,7 @@ export default function ProgramCard({ program, lang, dict }: Props) {
       <div className="mt-7 flex items-center justify-between border-t border-navy-900/10 pt-5">
         <span className="label flex items-center gap-2 text-navy-700">
           <Clock className="h-3.5 w-3.5 text-gold-600" />
-          {dict.common.durationValue}
+          {dict.common.durationShort}
         </span>
         <span className="label text-gold-700">{dict.common.levels[program.level]}</span>
       </div>

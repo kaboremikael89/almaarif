@@ -48,7 +48,7 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
 
           <nav aria-label={dict.footer.programsTitle}>
             <h2 className="label text-gold-500">{dict.footer.programsTitle}</h2>
-            <ul className="mt-6 space-y-3 text-sm">
+            <ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               {domains.map((domain) => (
                 <li key={domain.slug}>
                   <Link

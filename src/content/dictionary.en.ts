@@ -28,6 +28,7 @@ export const en: Dictionary = {
     discover: 'Explore',
     allPrograms: 'View all programmes',
     durationValue: '1 to 2 weeks, depending on content',
+    durationShort: '1 to 2 weeks',
     reference: 'Ref.',
     level: 'Level',
     levels: {
@@ -65,7 +66,7 @@ export const en: Dictionary = {
       scroll: 'Explore',
     },
     stats: [
-      { value: '06', label: 'fields of expertise' },
+      { value: '12', label: 'fields of expertise' },
       { value: '12', label: 'programmes in the catalogue' },
       { value: '1 to 2', label: 'weeks per session' },
       { value: 'FR / EN / AR', label: 'working languages' },
@@ -81,8 +82,8 @@ export const en: Dictionary = {
     },
     domains: {
       eyebrow: 'Our fields',
-      title: 'Six fields of intervention',
-      titleTop: 'Six fields',
+      title: 'Twelve fields of intervention',
+      titleTop: 'Twelve fields',
       titleAccent: 'of intervention',
       lead: 'Themes selected to match the modernisation priorities of the administrations and organisations we work with.',
     },
@@ -206,9 +207,10 @@ export const en: Dictionary = {
     hero: {
       eyebrow: 'Expertise',
       title: 'Our fields of intervention',
-      lead: 'Six fields, one principle: start from your institution’s actual regulations and practices to build skills that can be used immediately.',
+      lead: 'Twelve fields, one principle: start from your institution’s actual regulations and practices to build skills that can be used immediately.',
     },
-    topicsLabel: 'Topics covered',
+    topicsLabel: 'Modules in this field',
+    onDemand: 'Programmes in this field are designed on request, from your terms of reference or your annual training plan.',
     programsLabel: 'Related programmes',
     cta: {
       title: 'Your need is not on this list?',
@@ -261,11 +263,11 @@ export const en: Dictionary = {
       title: 'Your delegations are expected',
       lead: 'For groups travelling from abroad, a seminar succeeds as much through its practical organisation as through its content.',
       items: [
-        'Official invitation letter and enrolment certificate for visa procedures',
-        'Negotiated hotel booking close to the training venue',
-        'Airport transfers and daily shuttles',
-        'Equipped rooms, coffee breaks and lunches included for sessions in Morocco',
-        'Optional cultural programme at the end of the seminar',
+        'Official invitations and visa support: invitation letters, visa files, coordination with embassies and consulates',
+        'Accommodation and transfers: negotiated hotel booking, airport transfers, travel arrangements',
+        'Teaching materials: handbook design, participant kits, equipped rooms',
+        'Event logistics coordination: seminars, workshops, study visits and immersion trips',
+        'Administrative follow-up and reporting: agreements, certificates, session reports, immediate and delayed evaluation',
         'A single point of contact reachable throughout the stay',
       ],
     },

@@ -190,7 +190,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'marches-publics-passation-execution',
-    domain: 'commande-publique',
+    domain: 'finances-publiques',
     reference: 'CP-201',
     featured: true,
     level: 'fondamental',
@@ -276,7 +276,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'passation-marches-bailleurs',
-    domain: 'commande-publique',
+    domain: 'projets-programmes-evaluation',
     reference: 'CP-202',
     level: 'perfectionnement',
     title: {
@@ -361,7 +361,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'audit-interne-risques',
-    domain: 'audit-risques',
+    domain: 'finances-publiques',
     reference: 'AR-301',
     featured: true,
     level: 'perfectionnement',
@@ -447,7 +447,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'controle-interne-anti-fraude',
-    domain: 'audit-risques',
+    domain: 'finances-publiques',
     reference: 'AR-302',
     level: 'fondamental',
     title: {
@@ -697,7 +697,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'gestion-projets-developpement',
-    domain: 'projets-evaluation',
+    domain: 'projets-programmes-evaluation',
     reference: 'PE-501',
     level: 'fondamental',
     title: {
@@ -782,7 +782,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'suivi-evaluation-impact',
-    domain: 'projets-evaluation',
+    domain: 'projets-programmes-evaluation',
     reference: 'PE-502',
     level: 'perfectionnement',
     title: {
@@ -867,7 +867,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'transformation-digitale-administrations',
-    domain: 'transformation-digitale',
+    domain: 'digital-data-ia',
     reference: 'TD-601',
     level: 'fondamental',
     title: {
@@ -949,7 +949,7 @@ export const programs: Program[] = [
   },
   {
     slug: 'data-ia-dirigeants',
-    domain: 'transformation-digitale',
+    domain: 'digital-data-ia',
     reference: 'TD-602',
     featured: true,
     level: 'fondamental',

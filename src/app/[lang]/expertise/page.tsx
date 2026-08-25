@@ -87,6 +87,14 @@ export default async function ExpertisePage({ params }: { params: Promise<{ lang
               </div>
             </div>
 
+            {related.length === 0 && (
+              <div className="container-page mt-12">
+                <p className="max-w-3xl border-s-2 border-gold-500 ps-6 text-sm leading-relaxed text-muted">
+                  {dict.expertise.onDemand}
+                </p>
+              </div>
+            )}
+
             {related.length > 0 && (
               <div className="container-page mt-14">
                 <Reveal>

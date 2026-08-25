@@ -26,6 +26,7 @@ export const fr = {
     discover: 'Découvrir',
     allPrograms: 'Voir tous les programmes',
     durationValue: '1 à 2 semaines, selon le contenu',
+    durationShort: '1 à 2 semaines',
     reference: 'Réf.',
     level: 'Niveau',
     levels: {
@@ -63,7 +64,7 @@ export const fr = {
       scroll: 'Découvrir',
     },
     stats: [
-      { value: '06', label: 'domaines d’expertise' },
+      { value: '12', label: 'domaines d’expertise' },
       { value: '12', label: 'programmes au catalogue' },
       { value: '1 à 2', label: 'semaines par session' },
       { value: 'FR / EN / AR', label: 'langues de travail' },
@@ -79,8 +80,8 @@ export const fr = {
     },
     domains: {
       eyebrow: 'Nos domaines',
-      title: 'Six domaines d’intervention',
-      titleTop: 'Six domaines',
+      title: 'Douze domaines d’intervention',
+      titleTop: 'Douze domaines',
       titleAccent: 'd’intervention',
       lead: "Des thématiques choisies pour répondre aux priorités de modernisation des administrations et des organisations que nous accompagnons.",
     },
@@ -204,9 +205,10 @@ export const fr = {
     hero: {
       eyebrow: 'Expertise',
       title: 'Nos domaines d’intervention',
-      lead: "Six domaines, un même principe : partir des textes et des pratiques réelles de votre institution pour produire des compétences immédiatement utilisables.",
+      lead: "Douze domaines, un même principe : partir des textes et des pratiques réelles de votre institution pour produire des compétences immédiatement utilisables.",
     },
-    topicsLabel: 'Thématiques traitées',
+    topicsLabel: 'Modules du domaine',
+    onDemand: "Les programmes de ce domaine sont conçus à la demande, à partir de votre cahier des charges ou de votre plan de formation annuel.",
     programsLabel: 'Programmes associés',
     cta: {
       title: 'Votre besoin ne figure pas dans cette liste ?',
@@ -259,11 +261,11 @@ export const fr = {
       title: 'Vos délégations sont attendues',
       lead: "Pour les groupes venant de l’étranger, la réussite d’un séminaire tient autant à son organisation matérielle qu’à son contenu.",
       items: [
-        'Lettre d’invitation officielle et attestation d’inscription pour les démarches de visa',
-        'Réservation hôtelière négociée à proximité du lieu de formation',
-        'Transferts aéroport et navettes quotidiennes',
-        'Salles équipées, pauses-café et déjeuners inclus dans les sessions au Maroc',
-        'Programme culturel optionnel en fin de séminaire',
+        'Invitations officielles et appui visa : lettres d’invitation, dossiers de visa, coordination avec les ambassades et consulats',
+        'Hébergement et transferts : réservation hôtelière négociée, transferts aéroport, organisation des déplacements',
+        'Supports et matériel pédagogique : conception des supports, kits pédagogiques, salles équipées',
+        'Coordination logistique événementielle : séminaires, ateliers, visites d’étude et voyages d’immersion',
+        'Suivi administratif et restitution : conventions, attestations, rapports de formation, évaluation à chaud et à froid',
         'Interlocuteur unique joignable pendant toute la durée du séjour',
       ],
     },
