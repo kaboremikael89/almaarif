@@ -33,7 +33,7 @@ export function PortraitCard({
   // sinon la scène ne se recompose plus. Le décalage vertical reste.
   const sliced = slice !== undefined
   const height = sliced
-    ? 'h-[18rem] sm:h-[25rem] lg:h-[32rem]'
+    ? 'h-[16rem] sm:h-[22rem] lg:h-[26rem]'
     : offset === 'up'
       ? 'h-[19rem] sm:h-[26rem] lg:h-[34rem]'
       : 'h-[17rem] sm:h-[23rem] lg:h-[30rem]'
