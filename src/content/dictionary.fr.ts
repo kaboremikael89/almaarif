@@ -186,11 +186,11 @@ export const fr = {
     },
     legalStrip: {
       eyebrow: 'Cadre légal',
-      body: "Al Maarif Expertise est une société de droit marocain établie à Casablanca. Sa dénomination est enregistrée auprès de l’Office marocain de la propriété industrielle et commerciale. Les sessions organisées au Maroc se tiennent dans le cadre juridique et fiscal marocain.",
+      body: 'Al Maarif Expertise est une société à responsabilité limitée à associé unique de droit marocain, au capital de 100 000 dirhams, immatriculée au registre de commerce de Casablanca. Les sessions organisées au Maroc se tiennent dans le cadre juridique et fiscal marocain.',
       formLabel: 'Forme',
-      formValue: 'Société de droit marocain',
-      rccmLabel: 'RCCM',
-      ifuLabel: 'IFU',
+      formValue: 'SARL à associé unique',
+      rcLabel: 'Registre de commerce',
+      taxIdLabel: 'Identifiant fiscal',
       courtLabel: 'Tribunal compétent',
       courtValue: 'Commerce de Casablanca',
     },
@@ -307,9 +307,8 @@ export const fr = {
     direction: {
       eyebrow: 'Direction',
       title: 'Une direction engagée sur le terrain',
-      name: 'Ousseni Soulama',
-      role: 'Gérant',
-      body: "Al Maarif Expertise est dirigé par M. Ousseni Soulama, qui porte la relation avec les institutions clientes, le cadrage des besoins et la sélection des intervenants. Le cabinet s’appuie sur un réseau d’experts associés (praticiens des finances publiques, de l’audit, de la commande publique, de la gestion de projets et du numérique), mobilisés selon la nature de chaque mission.",
+      caption: 'La gérance',
+      body: 'La gérance du cabinet porte la relation avec les institutions clientes, le cadrage des besoins et la sélection des intervenants. Al Maarif Expertise s’appuie sur un réseau d’experts associés (praticiens des finances publiques, de l’audit, de la commande publique, de la gestion de projets et du numérique), mobilisés selon la nature de chaque mission.',
     },
     network: {
       eyebrow: 'Nos intervenants',
@@ -328,10 +327,11 @@ export const fr = {
       title: 'Identité de la société',
       rows: {
         legalName: 'Dénomination',
+        legalForm: 'Forme juridique',
         activity: 'Activité',
-        rccm: 'RCCM',
-        ifu: 'IFU',
-        manager: 'Gérant',
+        capital: 'Capital social',
+        rc: 'Registre de commerce',
+        taxId: 'Identifiant fiscal',
         headquarters: 'Siège social',
         court: 'Tribunal compétent',
       },
@@ -398,7 +398,7 @@ export const fr = {
       sections: [
         {
           title: 'Éditeur du site',
-          body: "Le présent site est édité par AL MAARIF EXPERTISE, société de conseil de gestion et de formation, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Certificat négatif OMPIC n° 3281360. Représentant légal et directeur de la publication : M. Ousseni Soulama, gérant.",
+          body: 'Le présent site est édité par AL MAARIF EXPERTISE, société à responsabilité limitée à associé unique au capital de 100 000 dirhams, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Société immatriculée au registre de commerce de Casablanca sous le numéro 746831, identifiant fiscal 73367480, identifiant de la taxe professionnelle 34773778. La direction de la publication est assurée par la gérance de la société.',
         },
         {
           title: 'Contact',

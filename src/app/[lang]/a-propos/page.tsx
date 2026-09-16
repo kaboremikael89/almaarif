@@ -34,10 +34,11 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 
   const identity = [
     { label: about.identity.rows.legalName, value: site.legalName },
+    { label: about.identity.rows.legalForm, value: dict.home.legalStrip.formValue },
     { label: about.identity.rows.activity, value: site.legal.activity[lang] },
-    { label: about.identity.rows.rccm, value: site.legal.rccm || about.identity.pending },
-    { label: about.identity.rows.ifu, value: site.legal.ifu || about.identity.pending },
-    { label: about.identity.rows.manager, value: site.legal.manager },
+    { label: about.identity.rows.capital, value: `${site.legal.capital} ${site.legal.currency}` },
+    { label: about.identity.rows.rc, value: site.legal.rc || about.identity.pending },
+    { label: about.identity.rows.taxId, value: site.legal.taxId || about.identity.pending },
     {
       label: about.identity.rows.headquarters,
       value: [site.address.street[lang], site.address.city[lang], site.address.country[lang]].join(comma),
@@ -80,8 +81,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                 <Divider className="my-8" />
                 <dl className="space-y-4 text-sm">
                   <div className="flex justify-between gap-6">
-                    <dt className="text-ivory-100/50">{about.identity.rows.manager}</dt>
-                    <dd className="text-ivory-100">{site.legal.manager}</dd>
+                    <dt className="text-ivory-100/50">{about.identity.rows.rc}</dt>
+                    <dd className="text-ivory-100">{site.legal.rc}</dd>
                   </div>
                   <div className="flex justify-between gap-6">
                     <dt className="text-ivory-100/50">{about.identity.rows.headquarters}</dt>
@@ -120,8 +121,8 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               <div className="zellige-bg pointer-events-none absolute inset-0 opacity-[0.10]" aria-hidden="true" />
               <Rosette className="h-40 w-40 text-gold-500/70" strokeWidth={0.9} />
               <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy-950 to-transparent p-8 pt-20">
-                <p className="text-2xl font-light text-ivory-50">{about.direction.name}</p>
-                <p className="label mt-2 text-gold-400">{about.direction.role}</p>
+                <p className="label text-gold-400">{about.direction.caption}</p>
+                <p className="mt-2 text-2xl font-light text-ivory-50">{site.name}</p>
               </div>
             </div>
           </Reveal>

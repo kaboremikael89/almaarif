@@ -2,7 +2,9 @@ import type { I18nText } from '@/lib/i18n'
 
 /**
  * Informations légales et de contact d'Al Maarif Expertise.
- * Source : certificat négatif OMPIC n° 3281360 et contrat de domiciliation
+ * Sources : extrait du registre analytique n° 746831 délivré par le tribunal de
+ * commerce de Casablanca le 16/09/2026, bulletin de notification de
+ * l'identifiant fiscal du 14/09/2026, et contrat de domiciliation
  * (Centre d'Affaires Meryama SARL, Casablanca).
  *
  * ⚠️ Les champs marqués TODO doivent être complétés dès leur obtention
@@ -46,18 +48,20 @@ export const site = {
   },
 
   legal: {
-    // Numéros d'immatriculation, à renseigner dès leur attribution.
-    // Tant qu'une valeur est vide, la ligne correspondante n'est pas affichée.
-    rccm: '', // TODO : n° d'immatriculation au registre du commerce
-    ifu: '', // TODO : identifiant fiscal unique
-    ompicCertificate: '3281360',
+    rc: '746831', // registre de commerce, tribunal de commerce de Casablanca
+    taxId: '73367480', // identifiant fiscal
+    professionalTaxId: '34773778', // identifiant de la taxe professionnelle
+    // Identifiant commun de l'entreprise : connu, mais non affiché sur le site
+    // à la demande du client, qui a retenu le registre de commerce et
+    // l'identifiant fiscal comme références publiques.
+    ice: '004026098000053',
+    capital: '100 000',
+    currency: 'MAD',
     activity: {
       fr: 'Conseil de gestion et formation professionnelle continue',
       en: 'Management consulting and professional training',
       ar: 'الاستشارة في التدبير والتكوين المهني المستمر',
     } satisfies I18nText,
-    manager: 'Ousseni Soulama',
-    managerRole: { fr: 'Gérant', en: 'Managing Director', ar: 'المسير' } satisfies I18nText,
     court: {
       fr: 'Tribunal de commerce de Casablanca',
       en: 'Casablanca Commercial Court',

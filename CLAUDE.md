@@ -34,9 +34,14 @@ grep -rn "—\|–" src public README.md netlify.toml   # doit ne rien renvoyer
   cadres formés, témoignages clients, logos de références. La société a été
   créée en 2026, ce type de mention se retourne contre elle auprès
   d'institutions publiques.
-- Les informations légales (ICE, siège, gérant, tribunal) proviennent du
-  certificat négatif OMPIC n° 3281360 et du contrat de domiciliation. Ne pas les
-  modifier sans document à l'appui.
+- Les informations légales (registre de commerce 746831, identifiant fiscal
+  73367480, taxe professionnelle 34773778, forme SARL à associé unique, capital
+  100 000 MAD, siège, tribunal) proviennent de l'extrait du registre analytique
+  du tribunal de commerce de Casablanca et du bulletin de notification de
+  l'identifiant fiscal. Ne pas les modifier sans document à l'appui.
+- **Le nom de l'associé unique et gérant ne doit apparaître nulle part** sur le
+  site, y compris dans les mentions légales et les données structurées. La
+  direction de la publication est attribuée à « la gérance de la société ».
 - Tout texte visible doit exister dans les trois langues : français, anglais,
   arabe. `dictionary.en.ts` et `dictionary.ar.ts` sont typés d'après
   `dictionary.fr.ts`, et les champs multilingues de `domains.ts`, `programs.ts`

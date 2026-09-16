@@ -153,7 +153,6 @@ export default async function LocaleLayout({
     description: dict.home.hero.lead,
     email: site.contact.email,
     telephone: site.contact.phone,
-    founder: { '@type': 'Person', name: site.legal.manager },
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.address.street.fr,

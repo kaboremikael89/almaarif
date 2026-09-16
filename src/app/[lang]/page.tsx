@@ -41,8 +41,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
   // Les numéros d'immatriculation ne s'affichent qu'une fois renseignés
   const legalItems = [
     { label: home.legalStrip.formLabel, value: home.legalStrip.formValue },
-    { label: home.legalStrip.rccmLabel, value: site.legal.rccm },
-    { label: home.legalStrip.ifuLabel, value: site.legal.ifu },
+    { label: home.legalStrip.rcLabel, value: site.legal.rc },
+    { label: home.legalStrip.taxIdLabel, value: site.legal.taxId },
     { label: home.legalStrip.courtLabel, value: home.legalStrip.courtValue },
   ].filter((item) => item.value)
 

@@ -188,11 +188,11 @@ export const en: Dictionary = {
     },
     legalStrip: {
       eyebrow: 'Legal standing',
-      body: 'Al Maarif Expertise is a company incorporated under Moroccan law and based in Casablanca. Its trade name is registered with the Moroccan Industrial and Commercial Property Office. Sessions held in Morocco take place within the Moroccan legal and tax framework.',
+      body: 'Al Maarif Expertise is a single-shareholder limited liability company incorporated under Moroccan law, with a share capital of 100,000 dirhams, registered with the Casablanca trade register. Sessions held in Morocco take place within the Moroccan legal and tax framework.',
       formLabel: 'Legal form',
-      formValue: 'Company under Moroccan law',
-      rccmLabel: 'Trade register',
-      ifuLabel: 'Tax identifier',
+      formValue: 'Single-shareholder limited company',
+      rcLabel: 'Trade register',
+      taxIdLabel: 'Tax identifier',
       courtLabel: 'Competent court',
       courtValue: 'Casablanca Commercial Court',
     },
@@ -309,9 +309,8 @@ export const en: Dictionary = {
     direction: {
       eyebrow: 'Leadership',
       title: 'Leadership present in the field',
-      name: 'Ousseni Soulama',
-      role: 'Managing Director',
-      body: 'Al Maarif Expertise is led by Mr Ousseni Soulama, who handles relationships with client institutions, the framing of needs and the selection of trainers. The firm draws on a network of associate experts (practitioners in public finance, audit, procurement, project management and digital), mobilised according to the nature of each assignment.',
+      caption: 'Management',
+      body: "The firm's management handles relationships with client institutions, the framing of needs and the selection of trainers. Al Maarif Expertise draws on a network of associate experts (practitioners in public finance, audit, procurement, project management and digital), mobilised according to the nature of each assignment.",
     },
     network: {
       eyebrow: 'Our trainers',
@@ -330,10 +329,11 @@ export const en: Dictionary = {
       title: 'Company identity',
       rows: {
         legalName: 'Legal name',
+        legalForm: 'Legal form',
         activity: 'Activity',
-        rccm: 'Trade register',
-        ifu: 'Tax identifier',
-        manager: 'Managing Director',
+        capital: 'Share capital',
+        rc: 'Trade register',
+        taxId: 'Tax identifier',
         headquarters: 'Registered office',
         court: 'Competent court',
       },
@@ -400,7 +400,7 @@ export const en: Dictionary = {
       sections: [
         {
           title: 'Site publisher',
-          body: 'This website is published by AL MAARIF EXPERTISE, a management consulting and training company whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. OMPIC negative certificate no. 3281360. Legal representative and publication director: Mr Ousseni Soulama, Managing Director.',
+          body: "This website is published by AL MAARIF EXPERTISE, a single-shareholder limited liability company with a share capital of 100,000 dirhams, whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. Registered with the Casablanca trade register under number 746831, tax identifier 73367480, professional tax identifier 34773778. Publication is directed by the company's management.",
         },
         {
           title: 'Contact',
