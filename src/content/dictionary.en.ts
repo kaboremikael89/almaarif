@@ -404,7 +404,7 @@ export const en: Dictionary = {
         },
         {
           title: 'Contact',
-          body: 'Any question relating to this website may be sent by email to contact@almaarif-expertise.com or by phone to +212 667 46 19 10.',
+          body: 'Any question relating to this website may be sent by email to contact@almaarifexpertise.com or by phone to +212 667 46 19 10.',
         },
         {
           title: 'Hosting',
@@ -450,7 +450,7 @@ export const en: Dictionary = {
         },
         {
           title: 'Your rights',
-          body: 'In accordance with Moroccan law 09-08 on the protection of individuals with regard to the processing of personal data, and with the General Data Protection Regulation for data subjects in the European Union, you have the right to access, rectify, object to and delete your data. To exercise these rights, write to contact@almaarif-expertise.com.',
+          body: 'In accordance with Moroccan law 09-08 on the protection of individuals with regard to the processing of personal data, and with the General Data Protection Regulation for data subjects in the European Union, you have the right to access, rectify, object to and delete your data. To exercise these rights, write to contact@almaarifexpertise.com.',
         },
         {
           title: 'Security',

@@ -402,7 +402,7 @@ export const fr = {
         },
         {
           title: 'Contact',
-          body: "Toute question relative au site peut être adressée par e-mail à contact@almaarif-expertise.com ou par téléphone au +212 667 46 19 10.",
+          body: "Toute question relative au site peut être adressée par e-mail à contact@almaarifexpertise.com ou par téléphone au +212 667 46 19 10.",
         },
         {
           title: 'Hébergement',
@@ -448,7 +448,7 @@ export const fr = {
         },
         {
           title: 'Vos droits',
-          body: "Conformément à la loi marocaine 09-08 relative à la protection des personnes physiques à l’égard du traitement des données à caractère personnel, et au Règlement général sur la protection des données pour les personnes concernées dans l’Union européenne, vous disposez d’un droit d’accès, de rectification, d’opposition et de suppression. Pour l’exercer, écrivez à contact@almaarif-expertise.com.",
+          body: "Conformément à la loi marocaine 09-08 relative à la protection des personnes physiques à l’égard du traitement des données à caractère personnel, et au Règlement général sur la protection des données pour les personnes concernées dans l’Union européenne, vous disposez d’un droit d’accès, de rectification, d’opposition et de suppression. Pour l’exercer, écrivez à contact@almaarifexpertise.com.",
         },
         {
           title: 'Sécurité',

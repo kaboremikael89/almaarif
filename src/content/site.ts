@@ -23,7 +23,7 @@ export const site = {
     en: 'Expertise at the service of leaders and institutions',
     ar: 'الخبرة في خدمة المسؤولين والمؤسسات',
   } satisfies I18nText,
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.almaarif-expertise.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://almaarifexpertise.com',
   formEndpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT || '',
 
   address: {
@@ -43,8 +43,8 @@ export const site = {
     phone: '+212 667 46 19 10',
     phoneHref: '+212667461910',
     whatsapp: '212667461910',
-    email: 'contact@almaarif-expertise.com',
-    trainingEmail: 'formations@almaarif-expertise.com',
+    email: 'contact@almaarifexpertise.com',
+    trainingEmail: 'formations@almaarifexpertise.com',
   },
 
   legal: {

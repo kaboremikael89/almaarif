@@ -46,10 +46,45 @@ npm run typecheck    # vérification TypeScript
 
    | Variable | Rôle |
    | --- | --- |
-   | `NEXT_PUBLIC_SITE_URL` | URL canonique définitive (ex. `https://www.almaarif-expertise.com`), sert aux métadonnées, au sitemap et aux balises `hreflang` |
+   | `NEXT_PUBLIC_SITE_URL` | URL canonique définitive (ex. `https://almaarifexpertise.com`), sert aux métadonnées, au sitemap et aux balises `hreflang` |
    | `NEXT_PUBLIC_FORM_ENDPOINT` | URL du service qui reçoit le formulaire de contact (Formspree, Web3Forms, Basin…). **Si la variable est vide, le formulaire bascule automatiquement sur un envoi par e-mail (mailto).** |
 
-4. Brancher le nom de domaine dans **Domain management** ; le certificat HTTPS est automatique.
+4. Brancher le nom de domaine (voir 3.1) ; le certificat HTTPS est automatique.
+
+### 3.1 Nom de domaine `almaarifexpertise.com` (registrar Cloudflare)
+
+Le domaine est enregistré chez Cloudflare, l'hébergement reste sur Netlify. Les
+enregistrements DNS sont donc gérés dans Cloudflare et pointent vers Netlify.
+
+**Côté Cloudflare** (onglet DNS → Records) :
+
+| Type | Nom | Contenu | Proxy |
+| --- | --- | --- | --- |
+| CNAME | `@` | `almaarif-expertise.netlify.app` | DNS only (nuage gris) |
+| CNAME | `www` | `almaarif-expertise.netlify.app` | DNS only (nuage gris) |
+
+Le CNAME sur la racine `@` fonctionne grâce au *CNAME flattening* de Cloudflare.
+Le proxy (nuage orange) doit rester **désactivé** : sinon Netlify ne peut ni valider
+le domaine ni émettre le certificat Let's Encrypt, et le site se retrouve avec deux
+couches de cache et de redirections.
+
+**Côté Netlify** (Site configuration → Domain management → Add a domain) :
+
+1. Ajouter `almaarifexpertise.com`, puis `www.almaarifexpertise.com`.
+2. Définir `almaarifexpertise.com` comme **primary domain** : Netlify redirige
+   alors automatiquement `www` vers la racine.
+3. Lancer **Verify DNS configuration**, puis laisser Netlify provisionner le
+   certificat (quelques minutes après la propagation DNS).
+4. Mettre `NEXT_PUBLIC_SITE_URL` à `https://almaarifexpertise.com` et relancer un
+   déploiement pour que les métadonnées, le sitemap et les balises `hreflang`
+   utilisent la nouvelle adresse.
+
+**Boîtes e-mail** : les adresses `contact@almaarifexpertise.com` et
+`formations@almaarifexpertise.com` affichées sur le site doivent exister. Elles se
+créent chez un fournisseur de messagerie (Google Workspace, Microsoft 365, Zoho
+Mail), en ajoutant ses enregistrements MX, SPF, DKIM et DMARC dans le même onglet
+DNS de Cloudflare. Tant que ces boîtes n'existent pas, les messages envoyés depuis
+le site restent sans destinataire.
 
 Le fichier `netlify.toml` gère aussi :
 - la redirection de `/` vers `/fr/` ou `/en/` selon la langue du navigateur ;
@@ -118,15 +153,17 @@ dimensions définitives, à remplacer par des photographies réelles.
 Les points suivants proviennent des documents fournis (certificat négatif OMPIC n° 3281360 et
 contrat de domiciliation) ; les champs manquants sont signalés par un `TODO` dans `src/content/site.ts` :
 
-- [ ] **Numéro de registre de commerce** (une fois l'immatriculation faite) → `site.legal.rc`
-- [ ] **Téléphone et e-mails définitifs** de la société : les valeurs actuelles reprennent la ligne
-      du centre de domiciliation et des adresses à créer sur le domaine
+- [x] **Numéro de registre de commerce** : 746831 (tribunal de commerce de Casablanca) → `site.legal.rc`
+- [ ] **Boîtes e-mail** `contact@almaarifexpertise.com` et `formations@almaarifexpertise.com` à créer
+      chez un fournisseur de messagerie (voir 3.1) ; le téléphone affiché reprend la ligne du centre
+      de domiciliation
 - [ ] **Profils LinkedIn / Facebook** → `site.social`
 - [ ] **Photo du gérant et visuels de sessions** (la page « À propos » utilise pour l'instant un motif
       graphique à la place du portrait)
-- [ ] **Logo officiel** : le site utilise une reconstitution vectorielle de la rosette du logo
+- [ ] **Logo officiel au format vectoriel** : le site utilise le PNG fourni
+      (`public/images/logo.png`) et une reconstitution de la rosette pour les ornements
       (`src/components/Ornament.tsx`, `public/favicon.svg`). Fournir le fichier source (SVG/AI/EPS)
-      pour le remplacer à l'identique.
+      améliorerait le rendu sur grands écrans et à l'impression.
 - [ ] **Calendrier des sessions 2027** et grille tarifaire, si vous souhaitez les afficher
 
 ## 8. Structure du projet
