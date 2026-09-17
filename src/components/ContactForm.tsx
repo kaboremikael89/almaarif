@@ -39,7 +39,7 @@ export default function ContactForm({ lang, dict }: { lang: Locale; dict: Dictio
       data.message,
     ].join('\n')
 
-    return `mailto:${site.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    return `mailto:${site.contact.trainingEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {

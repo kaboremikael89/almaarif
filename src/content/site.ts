@@ -43,8 +43,10 @@ export const site = {
     phone: '+212 667 46 19 10',
     phoneHref: '+212667461910',
     whatsapp: '212667461910',
-    email: 'contact@almaarifexpertise.com',
+    // Adresse générique des demandes : inscriptions, devis, programmes sur mesure
     trainingEmail: 'formations@almaarifexpertise.com',
+    // Adresse de la gérance : partenariats, courriers officiels, questions légales
+    directionEmail: 'direction@almaarifexpertise.com',
   },
 
   legal: {

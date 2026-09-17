@@ -79,8 +79,8 @@ couches de cache et de redirections.
    déploiement pour que les métadonnées, le sitemap et les balises `hreflang`
    utilisent la nouvelle adresse.
 
-**Boîtes e-mail** : les adresses `contact@almaarifexpertise.com` et
-`formations@almaarifexpertise.com` affichées sur le site doivent exister. Elles se
+**Boîtes e-mail** : les adresses `formations@almaarifexpertise.com` et
+`direction@almaarifexpertise.com` affichées sur le site doivent exister. Elles se
 créent chez un fournisseur de messagerie (Google Workspace, Microsoft 365, Zoho
 Mail), en ajoutant ses enregistrements MX, SPF, DKIM et DMARC dans le même onglet
 DNS de Cloudflare. Tant que ces boîtes n'existent pas, les messages envoyés depuis
@@ -154,7 +154,7 @@ Les points suivants proviennent des documents fournis (certificat négatif OMPIC
 contrat de domiciliation) ; les champs manquants sont signalés par un `TODO` dans `src/content/site.ts` :
 
 - [x] **Numéro de registre de commerce** : 746831 (tribunal de commerce de Casablanca) → `site.legal.rc`
-- [ ] **Boîtes e-mail** `contact@almaarifexpertise.com` et `formations@almaarifexpertise.com` à créer
+- [ ] **Boîtes e-mail** `formations@almaarifexpertise.com` et `direction@almaarifexpertise.com` à créer
       chez un fournisseur de messagerie (voir 3.1) ; le téléphone affiché reprend la ligne du centre
       de domiciliation
 - [ ] **Profils LinkedIn / Facebook** → `site.social`

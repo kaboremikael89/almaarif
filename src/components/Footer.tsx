@@ -78,8 +78,15 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
                 </a>
               </p>
               <p>
-                <a href={`mailto:${site.contact.email}`} className="link-underline hover:text-ivory-50">
-                  {site.contact.email}
+                <span className="block text-ivory-100/45">{dict.contact.emailLabel}</span>
+                <a href={`mailto:${site.contact.trainingEmail}`} className="link-underline hover:text-ivory-50">
+                  {site.contact.trainingEmail}
+                </a>
+              </p>
+              <p>
+                <span className="block text-ivory-100/45">{dict.contact.emailDirectionLabel}</span>
+                <a href={`mailto:${site.contact.directionEmail}`} className="link-underline hover:text-ivory-50">
+                  {site.contact.directionEmail}
                 </a>
               </p>
             </address>

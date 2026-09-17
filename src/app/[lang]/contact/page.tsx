@@ -38,7 +38,18 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       href: 'https://www.google.com/maps/search/?api=1&query=12+Rue+Saria+Ben+Zounaim+Palmier+Casablanca',
     },
     { icon: Phone, label: dict.contact.phoneLabel, value: site.contact.phone, href: `tel:${site.contact.phoneHref}` },
-    { icon: Mail, label: dict.contact.emailLabel, value: site.contact.email, href: `mailto:${site.contact.email}` },
+    {
+      icon: Mail,
+      label: dict.contact.emailLabel,
+      value: site.contact.trainingEmail,
+      href: `mailto:${site.contact.trainingEmail}`,
+    },
+    {
+      icon: Mail,
+      label: dict.contact.emailDirectionLabel,
+      value: site.contact.directionEmail,
+      href: `mailto:${site.contact.directionEmail}`,
+    },
     { icon: Clock, label: dict.contact.hoursLabel, value: dict.contact.hoursValue },
   ]
 
