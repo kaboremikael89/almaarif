@@ -108,17 +108,31 @@ export function StatRow({
   )
 }
 
-/** Bandeau de mots-clés séparés par des losanges */
+/**
+ * Bandeau de mots-clés séparés par des losanges, défilant en continu.
+ * La liste est écrite deux fois : la piste se décale de la moitié de sa
+ * largeur, la seconde copie prend exactement la place de la première et la
+ * boucle ne se voit pas. La copie est masquée aux lecteurs d'écran.
+ * Le défilement s'inverse en arabe et s'arrête au survol, au focus clavier
+ * et lorsque le visiteur demande à réduire les animations.
+ */
 export function KeywordRibbon({ items }: { items: string[] }) {
+  const track = (copy = false) => (
+    <div className={`ribbon-track${copy ? ' ribbon-copy' : ''}`} aria-hidden={copy || undefined}>
+      {items.map((item) => (
+        <span key={item} className="ribbon-item">
+          <span className="label ribbon-label text-navy-700">{item}</span>
+          <Diamond className="h-1 w-1 flex-none text-gold-500" />
+        </span>
+      ))}
+    </div>
+  )
+
   return (
-    <div className="border-y border-navy-900/10 bg-ivory-100">
-      <div className="container-page flex flex-wrap items-center justify-center gap-x-8 gap-y-3 py-5">
-        {items.map((item, i) => (
-          <span key={item} className="flex items-center gap-8">
-            {i > 0 && <Diamond className="h-1.5 w-1.5 text-gold-500" />}
-            <span className="label text-navy-700">{item}</span>
-          </span>
-        ))}
+    <div className="ribbon-mask border-y border-navy-900/10 bg-ivory-100">
+      <div className="ribbon">
+        {track()}
+        {track(true)}
       </div>
     </div>
   )

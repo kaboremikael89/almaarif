@@ -189,6 +189,98 @@
     flex: none;
   }
 
+  /* ---------------------------------------------------------------
+     Bandeau de mots-clés défilant (page d'accueil).
+     La piste contient deux fois la même liste et se décale de la moitié
+     de sa largeur : la boucle est invisible. Le défilement s'inverse en
+     arabe, s'arrête au survol et au focus, et disparaît si le visiteur
+     demande à réduire les animations.
+  ---------------------------------------------------------------- */
+  .ribbon-mask {
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 4rem,
+      #000 calc(100% - 4rem),
+      transparent
+    );
+  }
+
+  .ribbon {
+    display: flex;
+    width: max-content;
+    padding-block: 0.6rem;
+    animation: ribbon-scroll 60s linear infinite;
+  }
+
+  /* En arabe la piste part de la droite : elle se décale vers la droite,
+     les mots entrent donc par la gauche, dans le sens de lecture. */
+  [dir='rtl'] .ribbon {
+    animation-name: ribbon-scroll-rtl;
+  }
+
+  .ribbon-mask:hover .ribbon,
+  .ribbon-mask:focus-within .ribbon {
+    animation-play-state: paused;
+  }
+
+  .ribbon-track {
+    display: flex;
+    align-items: center;
+    flex: none;
+  }
+
+  .ribbon-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.6rem;
+    padding-inline-end: 1.6rem;
+    flex: none;
+    white-space: nowrap;
+  }
+
+  .ribbon-label {
+    font-size: 0.5625rem;
+    letter-spacing: 0.2em;
+  }
+
+  [dir='rtl'] .ribbon-label {
+    font-size: 0.6875rem;
+    letter-spacing: 0;
+  }
+
+  @keyframes ribbon-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes ribbon-scroll-rtl {
+    from { transform: translateX(0); }
+    to { transform: translateX(50%); }
+  }
+
+  /* Sans animation : la liste reprend sa mise en page statique sur
+     plusieurs lignes, la copie devient inutile. */
+  @media (prefers-reduced-motion: reduce) {
+    .ribbon-mask { mask-image: none; }
+    .ribbon {
+      animation: none !important;
+      width: auto;
+      padding-block: 0.9rem;
+      padding-inline: 1.5rem;
+    }
+    .ribbon-track {
+      flex: 1 1 auto;
+      min-width: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 0.35rem;
+    }
+    .ribbon-item:last-child svg { display: none; }
+    .ribbon-copy { display: none; }
+  }
+
   /* Index numéroté : 01 / BRIEF */
   .index {
     font-size: 0.625rem;
