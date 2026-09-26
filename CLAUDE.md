@@ -35,10 +35,19 @@ grep -rn "—\|–" src public README.md netlify.toml   # doit ne rien renvoyer
   créée en 2026, ce type de mention se retourne contre elle auprès
   d'institutions publiques.
 - Les informations légales (registre de commerce 746831, identifiant fiscal
-  73367480, taxe professionnelle 34773778, forme SARL à associé unique, capital
-  100 000 MAD, siège, tribunal) proviennent de l'extrait du registre analytique
-  du tribunal de commerce de Casablanca et du bulletin de notification de
-  l'identifiant fiscal. Ne pas les modifier sans document à l'appui.
+  73367480, identifiant commun de l'entreprise 004026098000053, taxe
+  professionnelle 34773778, forme SARL à associé unique, capital 100 000 MAD,
+  siège, tribunal) proviennent de l'extrait du registre analytique du tribunal
+  de commerce de Casablanca, du bulletin de notification de l'identifiant
+  fiscal et du cachet de la société. Ne pas les modifier sans document à
+  l'appui.
+- **L'identifiant commun de l'entreprise (ICE) est obligatoire sur le site** :
+  il figure dans le bandeau « Cadre légal » de l'accueil, dans le tableau
+  d'identité de la page « À propos », dans les mentions légales et dans le pied
+  de page de chaque page. Ne pas le retirer.
+- **Aucun numéro de téléphone ne doit être affiché** tant que la société n'a pas
+  sa propre ligne : la ligne du centre de domiciliation n'est pas celle de la
+  société.
 - **Le nom de l'associé unique et gérant ne doit apparaître nulle part** sur le
   site, y compris dans les mentions légales et les données structurées. La
   direction de la publication est attribuée à « la gérance de la société ».

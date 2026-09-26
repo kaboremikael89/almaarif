@@ -191,6 +191,8 @@ export const fr = {
       formValue: 'SARL à associé unique',
       rcLabel: 'Registre de commerce',
       taxIdLabel: 'Identifiant fiscal',
+      iceLabel: 'Identifiant commun (ICE)',
+      professionalTaxLabel: 'Taxe professionnelle',
       courtLabel: 'Tribunal compétent',
       courtValue: 'Commerce de Casablanca',
     },
@@ -332,6 +334,8 @@ export const fr = {
         capital: 'Capital social',
         rc: 'Registre de commerce',
         taxId: 'Identifiant fiscal',
+        ice: 'Identifiant commun (ICE)',
+        professionalTaxId: 'Taxe professionnelle',
         headquarters: 'Siège social',
         court: 'Tribunal compétent',
       },
@@ -346,13 +350,10 @@ export const fr = {
     },
     infoTitle: 'Nos coordonnées',
     addressLabel: 'Siège social',
-    phoneLabel: 'Téléphone',
     emailLabel: 'Formations',
     emailDirectionLabel: 'Direction',
     hoursLabel: 'Horaires',
     hoursValue: 'Du lundi au vendredi, de 9h à 18h (GMT+1)',
-    whatsapp: 'Écrire sur WhatsApp',
-    whatsappMessage: 'Bonjour, je souhaite des informations sur vos formations.',
     form: {
       title: 'Formulaire de demande',
       name: 'Nom et prénom',
@@ -399,11 +400,11 @@ export const fr = {
       sections: [
         {
           title: 'Éditeur du site',
-          body: 'Le présent site est édité par AL MAARIF EXPERTISE, société à responsabilité limitée à associé unique au capital de 100 000 dirhams, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Société immatriculée au registre de commerce de Casablanca sous le numéro 746831, identifiant fiscal 73367480, identifiant de la taxe professionnelle 34773778. La direction de la publication est assurée par la gérance de la société.',
+          body: 'Le présent site est édité par AL MAARIF EXPERTISE, société à responsabilité limitée à associé unique au capital de 100 000 dirhams, dont le siège social est situé au 12, rue Saria Ben Zounaim, étage 3, appartement 3, Palmier, Casablanca, Maroc. Société immatriculée au registre de commerce de Casablanca sous le numéro 746831, identifiant fiscal 73367480, identifiant commun de l’entreprise (ICE) 004026098000053, identifiant de la taxe professionnelle 34773778. La direction de la publication est assurée par la gérance de la société.',
         },
         {
           title: 'Contact',
-          body: "Toute question relative au site peut être adressée par e-mail à direction@almaarifexpertise.com ou par téléphone au +212 667 46 19 10.",
+          body: "Toute question relative au site peut être adressée par e-mail à direction@almaarifexpertise.com.",
         },
         {
           title: 'Hébergement',

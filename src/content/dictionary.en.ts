@@ -193,6 +193,8 @@ export const en: Dictionary = {
       formValue: 'Single-shareholder limited company',
       rcLabel: 'Trade register',
       taxIdLabel: 'Tax identifier',
+      iceLabel: 'Common enterprise identifier (ICE)',
+      professionalTaxLabel: 'Professional tax',
       courtLabel: 'Competent court',
       courtValue: 'Casablanca Commercial Court',
     },
@@ -334,6 +336,8 @@ export const en: Dictionary = {
         capital: 'Share capital',
         rc: 'Trade register',
         taxId: 'Tax identifier',
+        ice: 'Common enterprise identifier (ICE)',
+        professionalTaxId: 'Professional tax',
         headquarters: 'Registered office',
         court: 'Competent court',
       },
@@ -348,13 +352,10 @@ export const en: Dictionary = {
     },
     infoTitle: 'Our details',
     addressLabel: 'Registered office',
-    phoneLabel: 'Phone',
     emailLabel: 'Training',
     emailDirectionLabel: 'Management',
     hoursLabel: 'Opening hours',
     hoursValue: 'Monday to Friday, from 9am to 6pm (GMT+1)',
-    whatsapp: 'Message us on WhatsApp',
-    whatsappMessage: 'Hello, I would like information about your training programmes.',
     form: {
       title: 'Enquiry form',
       name: 'Full name',
@@ -401,11 +402,11 @@ export const en: Dictionary = {
       sections: [
         {
           title: 'Site publisher',
-          body: "This website is published by AL MAARIF EXPERTISE, a single-shareholder limited liability company with a share capital of 100,000 dirhams, whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. Registered with the Casablanca trade register under number 746831, tax identifier 73367480, professional tax identifier 34773778. Publication is directed by the company's management.",
+          body: "This website is published by AL MAARIF EXPERTISE, a single-shareholder limited liability company with a share capital of 100,000 dirhams, whose registered office is at 12 rue Saria Ben Zounaim, 3rd floor, apt 3, Palmier, Casablanca, Morocco. Registered with the Casablanca trade register under number 746831, tax identifier 73367480, common enterprise identifier (ICE) 004026098000053, professional tax identifier 34773778. Publication is directed by the company's management.",
         },
         {
           title: 'Contact',
-          body: 'Any question relating to this website may be sent by email to direction@almaarifexpertise.com or by phone to +212 667 46 19 10.',
+          body: 'Any question relating to this website may be sent by email to direction@almaarifexpertise.com.',
         },
         {
           title: 'Hosting',

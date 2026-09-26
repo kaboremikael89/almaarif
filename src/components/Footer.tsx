@@ -73,11 +73,6 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
                 {site.address.country[lang]}
               </p>
               <p>
-                <a href={`tel:${site.contact.phoneHref}`} className="link-underline hover:text-ivory-50">
-                  {site.contact.phone}
-                </a>
-              </p>
-              <p>
                 <span className="block text-ivory-100/45">{dict.contact.emailLabel}</span>
                 <a href={`mailto:${site.contact.trainingEmail}`} className="link-underline hover:text-ivory-50">
                   {site.contact.trainingEmail}
@@ -94,8 +89,10 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-ivory-100/10 pt-8 text-xs text-ivory-100/50 md:flex-row md:items-center md:justify-between">
+          {/* L'ICE doit figurer sur tous les supports de la société : il est
+              donc repris dans le pied de page, présent sur chaque page. */}
           <p>
-            © {year} {site.legalName}. {dict.footer.rights}
+            © {year} {site.legalName}. {dict.footer.rights} ICE {site.legal.ice}
           </p>
           <div className="flex flex-wrap items-center gap-6">
             <Link href={href(lang, '/mentions-legales')} className="link-underline hover:text-ivory-100">

@@ -39,6 +39,11 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     { label: about.identity.rows.capital, value: `${site.legal.capital} ${site.legal.currency}` },
     { label: about.identity.rows.rc, value: site.legal.rc || about.identity.pending },
     { label: about.identity.rows.taxId, value: site.legal.taxId || about.identity.pending },
+    { label: about.identity.rows.ice, value: site.legal.ice || about.identity.pending },
+    {
+      label: about.identity.rows.professionalTaxId,
+      value: site.legal.professionalTaxId || about.identity.pending,
+    },
     {
       label: about.identity.rows.headquarters,
       value: [site.address.street[lang], site.address.city[lang], site.address.country[lang]].join(comma),

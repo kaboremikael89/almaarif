@@ -43,6 +43,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
     { label: home.legalStrip.formLabel, value: home.legalStrip.formValue },
     { label: home.legalStrip.rcLabel, value: site.legal.rc },
     { label: home.legalStrip.taxIdLabel, value: site.legal.taxId },
+    { label: home.legalStrip.iceLabel, value: site.legal.ice },
+    { label: home.legalStrip.professionalTaxLabel, value: site.legal.professionalTaxId },
     { label: home.legalStrip.courtLabel, value: home.legalStrip.courtValue },
   ].filter((item) => item.value)
 
@@ -367,7 +369,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <p className="max-w-3xl text-sm leading-relaxed text-muted">{home.legalStrip.body}</p>
             </Reveal>
 
-            <dl className="mt-10 grid gap-px border border-navy-900/10 bg-navy-900/10 sm:grid-cols-2 lg:grid-cols-4">
+            <dl className="mt-10 grid gap-px border border-navy-900/10 bg-navy-900/10 sm:grid-cols-2 lg:grid-cols-3">
               {legalItems.map((item, i) => (
                 <Reveal key={item.label} delay={i * 80} className="bg-ivory-50 px-6 py-5">
                   <dt className="label text-muted/75">{item.label}</dt>

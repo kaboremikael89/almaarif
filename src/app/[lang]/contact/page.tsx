@@ -4,9 +4,9 @@ import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import ContactForm from '@/components/ContactForm'
 import { Rosette } from '@/components/Ornament'
-import { Mail, Phone, Pin, Clock, Whatsapp } from '@/components/Icons'
+import { Mail, Pin, Clock } from '@/components/Icons'
 import { getDictionary } from '@/content/dictionary'
-import { site, whatsappLink } from '@/content/site'
+import { site } from '@/content/site'
 import { isLocale, type Locale } from '@/lib/i18n'
 
 export async function generateMetadata({
@@ -37,7 +37,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       value: [site.address.street[lang], site.address.city[lang], site.address.country[lang]].join(comma),
       href: 'https://www.google.com/maps/search/?api=1&query=12+Rue+Saria+Ben+Zounaim+Palmier+Casablanca',
     },
-    { icon: Phone, label: dict.contact.phoneLabel, value: site.contact.phone, href: `tel:${site.contact.phoneHref}` },
     {
       icon: Mail,
       label: dict.contact.emailLabel,
@@ -106,16 +105,6 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                     </div>
                   ))}
                 </dl>
-
-                <a
-                  href={whatsappLink(dict.contact.whatsappMessage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline-light mt-10 w-full"
-                >
-                  <Whatsapp />
-                  {dict.contact.whatsapp}
-                </a>
               </div>
             </div>
           </Reveal>

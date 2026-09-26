@@ -8,7 +8,7 @@ import type { I18nText } from '@/lib/i18n'
  * (Centre d'Affaires Meryama SARL, Casablanca).
  *
  * ⚠️ Les champs marqués TODO doivent être complétés dès leur obtention
- * (numéro de registre de commerce, téléphones et e-mails définitifs, réseaux sociaux).
+ * (ligne téléphonique de la société, réseaux sociaux).
  */
 export const site = {
   name: 'Al Maarif Expertise',
@@ -39,10 +39,8 @@ export const site = {
   },
 
   contact: {
-    // TODO : remplacer par la ligne définitive de la société
-    phone: '+212 667 46 19 10',
-    phoneHref: '+212667461910',
-    whatsapp: '212667461910',
+    // Pas de numéro de téléphone tant que la ligne de la société n'est pas
+    // ouverte : la ligne du centre de domiciliation ne doit pas être publiée.
     // Adresse générique des demandes : inscriptions, devis, programmes sur mesure
     trainingEmail: 'formations@almaarifexpertise.com',
     // Adresse de la gérance : partenariats, courriers officiels, questions légales
@@ -53,9 +51,8 @@ export const site = {
     rc: '746831', // registre de commerce, tribunal de commerce de Casablanca
     taxId: '73367480', // identifiant fiscal
     professionalTaxId: '34773778', // identifiant de la taxe professionnelle
-    // Identifiant commun de l'entreprise : connu, mais non affiché sur le site
-    // à la demande du client, qui a retenu le registre de commerce et
-    // l'identifiant fiscal comme références publiques.
+    // Identifiant commun de l'entreprise, obligatoire sur les documents
+    // commerciaux et sur le site (relevé sur le cachet de la société).
     ice: '004026098000053',
     capital: '100 000',
     currency: 'MAD',
@@ -79,6 +76,3 @@ export const site = {
   /** Villes d'accueil des sessions */
   cities: ['Casablanca', 'Rabat', 'Marrakech', 'Tanger', 'Agadir'],
 } as const
-
-export const whatsappLink = (message: string) =>
-  `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(message)}`
