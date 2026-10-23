@@ -8,7 +8,7 @@ import type { I18nText } from '@/lib/i18n'
  * (Centre d'Affaires Meryama SARL, Casablanca).
  *
  * ⚠️ Les champs marqués TODO doivent être complétés dès leur obtention
- * (ligne téléphonique de la société, réseaux sociaux).
+ * (réseaux sociaux).
  */
 export const site = {
   name: 'Al Maarif Expertise',
@@ -39,8 +39,9 @@ export const site = {
   },
 
   contact: {
-    // Pas de numéro de téléphone tant que la ligne de la société n'est pas
-    // ouverte : la ligne du centre de domiciliation ne doit pas être publiée.
+    // Ligne de la société
+    phone: '+212 645 49 42 04',
+    phoneHref: '+212645494204',
     // Adresse générique des demandes : inscriptions, devis, programmes sur mesure
     trainingEmail: 'formations@almaarifexpertise.com',
     // Adresse de la gérance : partenariats, courriers officiels, questions légales

@@ -152,6 +152,7 @@ export default async function LocaleLayout({
     slogan: site.baseline[locale],
     description: dict.home.hero.lead,
     email: site.contact.trainingEmail,
+    telephone: site.contact.phone,
     address: {
       '@type': 'PostalAddress',
       streetAddress: site.address.street.fr,

@@ -45,9 +45,9 @@ grep -rn "—\|–" src public README.md netlify.toml   # doit ne rien renvoyer
   il figure dans le bandeau « Cadre légal » de l'accueil, dans le tableau
   d'identité de la page « À propos », dans les mentions légales et dans le pied
   de page de chaque page. Ne pas le retirer.
-- **Aucun numéro de téléphone ne doit être affiché** tant que la société n'a pas
-  sa propre ligne : la ligne du centre de domiciliation n'est pas celle de la
-  société.
+- Le seul numéro de téléphone publiable est la ligne de la société,
+  +212 645 49 42 04, renseignée dans `site.contact`. Ne jamais afficher la ligne
+  du centre de domiciliation.
 - **Le nom de l'associé unique et gérant ne doit apparaître nulle part** sur le
   site, y compris dans les mentions légales et les données structurées. La
   direction de la publication est attribuée à « la gérance de la société ».

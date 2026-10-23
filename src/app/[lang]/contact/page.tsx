@@ -4,7 +4,7 @@ import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import ContactForm from '@/components/ContactForm'
 import { Rosette } from '@/components/Ornament'
-import { Mail, Pin, Clock } from '@/components/Icons'
+import { Mail, Phone, Pin, Clock } from '@/components/Icons'
 import { getDictionary } from '@/content/dictionary'
 import { site } from '@/content/site'
 import { isLocale, type Locale } from '@/lib/i18n'
@@ -36,6 +36,12 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
       label: dict.contact.addressLabel,
       value: [site.address.street[lang], site.address.city[lang], site.address.country[lang]].join(comma),
       href: 'https://www.google.com/maps/search/?api=1&query=12+Rue+Saria+Ben+Zounaim+Palmier+Casablanca',
+    },
+    {
+      icon: Phone,
+      label: dict.contact.phoneLabel,
+      value: site.contact.phone,
+      href: `tel:${site.contact.phoneHref}`,
     },
     {
       icon: Mail,

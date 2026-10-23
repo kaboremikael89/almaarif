@@ -350,6 +350,7 @@ export const fr = {
     },
     infoTitle: 'Nos coordonnées',
     addressLabel: 'Siège social',
+    phoneLabel: 'Téléphone',
     emailLabel: 'Formations',
     emailDirectionLabel: 'Direction',
     hoursLabel: 'Horaires',
@@ -404,7 +405,7 @@ export const fr = {
         },
         {
           title: 'Contact',
-          body: "Toute question relative au site peut être adressée par e-mail à direction@almaarifexpertise.com.",
+          body: "Toute question relative au site peut être adressée par e-mail à direction@almaarifexpertise.com ou par téléphone au +212 645 49 42 04.",
         },
         {
           title: 'Hébergement',

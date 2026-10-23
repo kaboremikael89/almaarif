@@ -352,6 +352,7 @@ export const en: Dictionary = {
     },
     infoTitle: 'Our details',
     addressLabel: 'Registered office',
+    phoneLabel: 'Phone',
     emailLabel: 'Training',
     emailDirectionLabel: 'Management',
     hoursLabel: 'Opening hours',
@@ -406,7 +407,7 @@ export const en: Dictionary = {
         },
         {
           title: 'Contact',
-          body: 'Any question relating to this website may be sent by email to direction@almaarifexpertise.com.',
+          body: 'Any question relating to this website may be sent by email to direction@almaarifexpertise.com or by phone to +212 645 49 42 04.',
         },
         {
           title: 'Hosting',

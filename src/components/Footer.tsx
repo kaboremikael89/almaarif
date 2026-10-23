@@ -73,6 +73,11 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
                 {site.address.country[lang]}
               </p>
               <p>
+                <a href={`tel:${site.contact.phoneHref}`} className="link-underline hover:text-ivory-50">
+                  {site.contact.phone}
+                </a>
+              </p>
+              <p>
                 <span className="block text-ivory-100/45">{dict.contact.emailLabel}</span>
                 <a href={`mailto:${site.contact.trainingEmail}`} className="link-underline hover:text-ivory-50">
                   {site.contact.trainingEmail}

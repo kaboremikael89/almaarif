@@ -352,6 +352,7 @@ export const ar: Dictionary = {
     },
     infoTitle: 'معلومات الاتصال',
     addressLabel: 'المقر الاجتماعي',
+    phoneLabel: 'الهاتف',
     emailLabel: 'التكوينات',
     emailDirectionLabel: 'الإدارة',
     hoursLabel: 'أوقات العمل',
@@ -406,7 +407,7 @@ export const ar: Dictionary = {
         },
         {
           title: 'الاتصال',
-          body: 'يمكن توجيه كل سؤال متعلق بالموقع عبر البريد الإلكتروني direction@almaarifexpertise.com.',
+          body: 'يمكن توجيه كل سؤال متعلق بالموقع عبر البريد الإلكتروني direction@almaarifexpertise.com أو عبر الهاتف 04 42 49 645 212+.',
         },
         {
           title: 'الاستضافة',

@@ -100,7 +100,7 @@ Tout le contenu éditorial est centralisé dans `src/content/`, **aucun code à 
 
 | Fichier | Contenu |
 | --- | --- |
-| `site.ts` | Adresse, identifiants légaux (RC, IF, ICE, taxe professionnelle), e-mails |
+| `site.ts` | Adresse, téléphone, identifiants légaux (RC, IF, ICE, taxe professionnelle), e-mails |
 | `domains.ts` | Les 6 domaines d'expertise et leurs thématiques |
 | `programs.ts` | Le catalogue des 12 formations (objectifs, modules, public, durée…) |
 | `dictionary.fr.ts` | Tous les textes du site en français |
@@ -156,9 +156,8 @@ contrat de domiciliation) ; les champs manquants sont signalés par un `TODO` da
 - [x] **Numéro de registre de commerce** : 746831 (tribunal de commerce de Casablanca) → `site.legal.rc`
 - [ ] **Boîtes e-mail** `formations@almaarifexpertise.com` et `direction@almaarifexpertise.com` à créer
       chez un fournisseur de messagerie (voir 3.1)
-- [ ] **Ligne téléphonique de la société** : aucun numéro n'est affiché pour l'instant. Dès son
-      ouverture, l'ajouter dans `site.contact` et le remettre dans le pied de page, la page contact
-      et les données structurées
+- [x] **Ligne téléphonique de la société** : +212 645 49 42 04, affichée dans le pied de page,
+      sur la page contact, dans les mentions légales et dans les données structurées
 - [ ] **Profils LinkedIn / Facebook** → `site.social`
 - [ ] **Photo du gérant et visuels de sessions** (la page « À propos » utilise pour l'instant un motif
       graphique à la place du portrait)
